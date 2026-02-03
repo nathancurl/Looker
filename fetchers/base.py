@@ -80,3 +80,25 @@ def resilient_post(url: str, **kwargs) -> requests.Response:
     if resp.status_code >= 500:
         raise requests.ConnectionError(f"Server error {resp.status_code} from {url}")
     return resp
+
+
+@retry(
+    retry=retry_if_exception_type((requests.ConnectionError, requests.Timeout)),
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=2, max=15),
+    reraise=True,
+)
+def resilient_session_request(
+    session: requests.Session, method: str, url: str, **kwargs
+) -> requests.Response:
+    """Send a request via a Session with retry on connection errors and timeouts.
+
+    Useful for fetchers that need cookie/CSRF persistence (e.g. Apple, Meta).
+    """
+    kwargs.setdefault("timeout", DEFAULT_TIMEOUT)
+    kwargs.setdefault("headers", {})
+    kwargs["headers"].setdefault("User-Agent", USER_AGENT)
+    resp = session.request(method, url, **kwargs)
+    if resp.status_code >= 500:
+        raise requests.ConnectionError(f"Server error {resp.status_code} from {url}")
+    return resp

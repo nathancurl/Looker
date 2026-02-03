@@ -8,16 +8,27 @@ import time
 
 from config import AppConfig, is_dry_run, load_config
 from discord_notifier import notify
+from fetchers.amazon import AmazonFetcher
+from fetchers.apple import AppleFetcher
 from fetchers.ashby import AshbyFetcher
 from fetchers.base import BaseFetcher
+from fetchers.google import GoogleFetcher
 from fetchers.greenhouse import GreenhouseFetcher
 from fetchers.hnhiring import HNHiringFetcher
+from fetchers.icims import ICIMSFetcher
+from fetchers.jobvite import JobviteFetcher
 from fetchers.lever import LeverFetcher
+from fetchers.meta import MetaFetcher
+from fetchers.microsoft import MicrosoftFetcher
+from fetchers.netflix import NetflixFetcher
 from fetchers.newgrad_json import NewGradJSONFetcher
 from fetchers.newgrad_markdown import NewGradMarkdownFetcher
 from fetchers.smartrecruiters import SmartRecruitersFetcher
+from fetchers.taleo import TaleoFetcher
 from fetchers.workable import WorkableFetcher
 from fetchers.workday import WorkdayFetcher
+from fetchers.wellfound import WellfoundFetcher
+from fetchers.yc import YCFetcher
 from filtering import filter_job
 from state import StateStore
 
@@ -33,6 +44,17 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "smartrecruiters": SmartRecruitersFetcher,
     "workday": WorkdayFetcher,
     "hn_hiring": HNHiringFetcher,
+    "google": GoogleFetcher,
+    "amazon": AmazonFetcher,
+    "microsoft": MicrosoftFetcher,
+    "netflix": NetflixFetcher,
+    "apple": AppleFetcher,
+    "meta": MetaFetcher,
+    "jobvite": JobviteFetcher,
+    "icims": ICIMSFetcher,
+    "taleo": TaleoFetcher,
+    "wellfound": WellfoundFetcher,
+    "yc": YCFetcher,
 }
 
 _shutdown = False

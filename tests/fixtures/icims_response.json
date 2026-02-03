@@ -1,0 +1,27 @@
+{
+  "totalPages": 1,
+  "jobs": [
+    {
+      "id": 12345,
+      "title": "Software Engineer I",
+      "city": "Austin",
+      "state": "TX",
+      "country": "USA",
+      "applyUrl": "https://careers.acme.com/jobs/12345/apply",
+      "description": "<p>Join our engineering team to build cutting-edge software solutions.</p>",
+      "postedDate": "2026-01-22T09:00:00Z",
+      "category": "Engineering"
+    },
+    {
+      "id": 12346,
+      "title": "Junior Developer",
+      "city": "Chicago",
+      "state": "IL",
+      "country": "USA",
+      "applyUrl": "https://careers.acme.com/jobs/12346/apply",
+      "shortDescription": "Entry-level developer position for recent graduates.",
+      "postedDate": "2026-01-21T15:00:00Z",
+      "jobCategory": "Technology"
+    }
+  ]
+}

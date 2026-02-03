@@ -1,0 +1,23 @@
+{
+  "count": 2,
+  "positions": [
+    {
+      "id": 790312512674,
+      "name": "Software Engineer, Platform",
+      "location": "Los Gatos, CA",
+      "locations": ["Los Gatos, CA"],
+      "department": "Engineering",
+      "business_unit": "Streaming",
+      "canonicalPositionUrl": "https://explore.jobs.netflix.net/careers/job/790312512674"
+    },
+    {
+      "id": 790313777659,
+      "name": "UI Engineer",
+      "location": "Remote, USA",
+      "locations": ["Remote, USA", "Los Angeles, CA"],
+      "department": "Product Design",
+      "business_unit": "Streaming",
+      "canonicalPositionUrl": "https://explore.jobs.netflix.net/careers/job/790313777659"
+    }
+  ]
+}

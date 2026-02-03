@@ -75,3 +75,12 @@ def load_fixture():
         with open(FIXTURES_DIR / name) as f:
             return json.load(f)
     return _load
+
+
+@pytest.fixture
+def load_fixture_text():
+    """Return a function that loads a fixture as raw text (e.g. XML)."""
+    def _load(name: str) -> str:
+        with open(FIXTURES_DIR / name) as f:
+            return f.read()
+    return _load

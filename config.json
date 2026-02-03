@@ -1,22 +1,111 @@
 {
   "poll_interval_seconds": 600,
-
   "filtering": {
     "include_keywords": [
-      "software engineer", "backend", "back-end", "full stack", "full-stack",
-      "python", "react", "typescript", "postgres", "api", "developer"
+      "software engineer",
+      "software developer",
+      "software development engineer",
+      "backend engineer",
+      "backend developer",
+      "back-end",
+      "frontend engineer",
+      "frontend developer",
+      "front-end",
+      "full stack",
+      "full-stack",
+      "fullstack",
+      "web developer",
+      "application developer",
+      "platform engineer",
+      "systems engineer",
+      "infrastructure engineer",
+      "mobile engineer",
+      "mobile developer",
+      "ios engineer",
+      "android engineer",
+      "devops engineer",
+      "site reliability",
+      "sre",
+      "cloud engineer",
+      "data engineer",
+      "ml engineer",
+      "machine learning engineer",
+      "ai engineer",
+      "python",
+      "java",
+      "javascript",
+      "typescript",
+      "golang",
+      "rust",
+      "c++",
+      "react",
+      "node",
+      "kubernetes",
+      "aws",
+      "gcp",
+      "azure"
     ],
     "exclude_keywords": [
-      "senior", "staff", "principal", "lead", "manager", "director", "vp",
-      "head of", "phd required", "clearance", "secret clearance"
+      "senior",
+      "sr.",
+      "staff",
+      "principal",
+      "lead",
+      "architect",
+      "manager",
+      "director",
+      "vp",
+      "vice president",
+      "head of",
+      "chief",
+      "10+ years",
+      "8+ years",
+      "7+ years",
+      "6+ years",
+      "5+ years",
+      "phd required",
+      "doctoral",
+      "clearance required",
+      "secret clearance",
+      "ts/sci",
+      "security clearance",
+      "intern",
+      "internship",
+      "co-op",
+      "contractor",
+      "contract position"
     ],
     "level_keywords": {
       "enabled": true,
-      "terms": ["new grad", "newgrad", "entry level", "entry-level", "junior", "jr", "early career"]
+      "terms": [
+        "new grad",
+        "newgrad",
+        "new graduate",
+        "recent graduate",
+        "entry level",
+        "entry-level",
+        "junior",
+        "jr.",
+        "jr ",
+        "early career",
+        "associate",
+        "i",
+        "1",
+        "level 1",
+        "l1",
+        "university grad",
+        "college grad",
+        "0-2 years",
+        "0-1 years",
+        "1-2 years",
+        "2025",
+        "2026"
+      ]
     }
   },
-
   "routing": {
+    "yc": "DISCORD_WEBHOOK_YC",
+    "wellfound": "DISCORD_WEBHOOK_WELLFOUND",
     "hn": "DISCORD_WEBHOOK_HN",
     "github": "DISCORD_WEBHOOK_GITHUB",
     "newgrad": "DISCORD_WEBHOOK_GITHUB",
@@ -24,10 +113,12 @@
     "lever": "DISCORD_WEBHOOK_LEVER",
     "ashby": "DISCORD_WEBHOOK_ASHBY",
     "workable": "DISCORD_WEBHOOK_WORKABLE",
-    "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
-    "workday": "DISCORD_WEBHOOK_WORKDAY"
+    "workday": "DISCORD_WEBHOOK_WORKDAY",
+    "maang": "DISCORD_WEBHOOK_MAANG",
+    "jobvite": "DISCORD_WEBHOOK_JOBVITE",
+    "icims": "DISCORD_WEBHOOK_ICIMS",
+    "taleo": "DISCORD_WEBHOOK_TALEO"
   },
-
   "sources": {
     "newgrad_json": [
       {
@@ -47,28 +138,648 @@
         "poll_interval_seconds": 1800
       }
     ],
-
     "newgrad_markdown": [
       {
         "name": "speedyapply-2026",
         "owner": "speedyapply",
         "repo": "2026-SWE-College-Jobs",
         "branch": "main",
-        "files": ["NEW_GRAD_USA.md"],
+        "files": [
+          "NEW_GRAD_USA.md"
+        ],
         "poll_interval_seconds": 3600
       }
     ],
-
     "hn_hiring": {
       "feed_url": "https://hnrss.org/whoishiring/jobs",
       "poll_interval_seconds": 600
     },
-
-    "greenhouse": [],
-    "lever": [],
-    "ashby": [],
-    "workable": [],
-    "smartrecruiters": [],
-    "workday": []
+    "greenhouse": [
+      {
+        "name": "Airbnb",
+        "board_token": "airbnb",
+        "company": "Airbnb"
+      },
+      {
+        "name": "Affirm",
+        "board_token": "affirm",
+        "company": "Affirm"
+      },
+      {
+        "name": "Airtable",
+        "board_token": "airtable",
+        "company": "Airtable"
+      },
+      {
+        "name": "Amplitude",
+        "board_token": "amplitude",
+        "company": "Amplitude"
+      },
+      {
+        "name": "Anduril",
+        "board_token": "andurilindustries",
+        "company": "Anduril"
+      },
+      {
+        "name": "Anthropic",
+        "board_token": "anthropic",
+        "company": "Anthropic"
+      },
+      {
+        "name": "Asana",
+        "board_token": "asana",
+        "company": "Asana"
+      },
+      {
+        "name": "Ava Labs",
+        "board_token": "avalabs",
+        "company": "Ava Labs"
+      },
+      {
+        "name": "Block",
+        "board_token": "block",
+        "company": "Block"
+      },
+      {
+        "name": "Brex",
+        "board_token": "brex",
+        "company": "Brex"
+      },
+      {
+        "name": "Chime",
+        "board_token": "chime",
+        "company": "Chime"
+      },
+      {
+        "name": "Cloudflare",
+        "board_token": "cloudflare",
+        "company": "Cloudflare"
+      },
+      {
+        "name": "Cockroach Labs",
+        "board_token": "cockroachlabs",
+        "company": "Cockroach Labs"
+      },
+      {
+        "name": "Coinbase",
+        "board_token": "coinbase",
+        "company": "Coinbase"
+      },
+      {
+        "name": "Databricks",
+        "board_token": "databricks",
+        "company": "Databricks"
+      },
+      {
+        "name": "Datadog",
+        "board_token": "datadog",
+        "company": "Datadog"
+      },
+      {
+        "name": "Discord",
+        "board_token": "discord",
+        "company": "Discord"
+      },
+      {
+        "name": "DoorDash",
+        "board_token": "doordashusa",
+        "company": "DoorDash"
+      },
+      {
+        "name": "Dropbox",
+        "board_token": "dropbox",
+        "company": "Dropbox"
+      },
+      {
+        "name": "Duolingo",
+        "board_token": "duolingo",
+        "company": "Duolingo"
+      },
+      {
+        "name": "Elastic",
+        "board_token": "elastic",
+        "company": "Elastic"
+      },
+      {
+        "name": "Epic Games",
+        "board_token": "epicgames",
+        "company": "Epic Games"
+      },
+      {
+        "name": "Faire",
+        "board_token": "faire",
+        "company": "Faire"
+      },
+      {
+        "name": "Figma",
+        "board_token": "figma",
+        "company": "Figma"
+      },
+      {
+        "name": "Flexport",
+        "board_token": "flexport",
+        "company": "Flexport"
+      },
+      {
+        "name": "GitLab",
+        "board_token": "gitlab",
+        "company": "GitLab"
+      },
+      {
+        "name": "Grammarly",
+        "board_token": "grammarly",
+        "company": "Grammarly"
+      },
+      {
+        "name": "Gusto",
+        "board_token": "gusto",
+        "company": "Gusto"
+      },
+      {
+        "name": "HubSpot",
+        "board_token": "hubspotjobs",
+        "company": "HubSpot"
+      },
+      {
+        "name": "Instacart",
+        "board_token": "instacart",
+        "company": "Instacart"
+      },
+      {
+        "name": "Lyft",
+        "board_token": "lyft",
+        "company": "Lyft"
+      },
+      {
+        "name": "MongoDB",
+        "board_token": "mongodb",
+        "company": "MongoDB"
+      },
+      {
+        "name": "Nuro",
+        "board_token": "nuro",
+        "company": "Nuro"
+      },
+      {
+        "name": "Okta",
+        "board_token": "okta",
+        "company": "Okta"
+      },
+      {
+        "name": "Oscar Health",
+        "board_token": "oscar",
+        "company": "Oscar Health"
+      },
+      {
+        "name": "PagerDuty",
+        "board_token": "pagerduty",
+        "company": "PagerDuty"
+      },
+      {
+        "name": "Pinterest",
+        "board_token": "pinterest",
+        "company": "Pinterest"
+      },
+      {
+        "name": "Postman",
+        "board_token": "postman",
+        "company": "Postman"
+      },
+      {
+        "name": "Reddit",
+        "board_token": "reddit",
+        "company": "Reddit"
+      },
+      {
+        "name": "Robinhood",
+        "board_token": "robinhood",
+        "company": "Robinhood"
+      },
+      {
+        "name": "Roku",
+        "board_token": "roku",
+        "company": "Roku"
+      },
+      {
+        "name": "Scale AI",
+        "board_token": "scaleai",
+        "company": "Scale AI"
+      },
+      {
+        "name": "SoFi",
+        "board_token": "sofi",
+        "company": "SoFi"
+      },
+      {
+        "name": "Samsara",
+        "board_token": "samsara",
+        "company": "Samsara"
+      },
+      {
+        "name": "SpaceX",
+        "board_token": "spacex",
+        "company": "SpaceX"
+      },
+      {
+        "name": "Stripe",
+        "board_token": "stripe",
+        "company": "Stripe"
+      },
+      {
+        "name": "The Trade Desk",
+        "board_token": "thetradedesk",
+        "company": "The Trade Desk"
+      },
+      {
+        "name": "Toast",
+        "board_token": "toast",
+        "company": "Toast"
+      },
+      {
+        "name": "Twilio",
+        "board_token": "twilio",
+        "company": "Twilio"
+      },
+      {
+        "name": "Unity",
+        "board_token": "unity3d",
+        "company": "Unity"
+      },
+      {
+        "name": "Upstart",
+        "board_token": "upstart",
+        "company": "Upstart"
+      },
+      {
+        "name": "Vercel",
+        "board_token": "vercel",
+        "company": "Vercel"
+      },
+      {
+        "name": "Waymo",
+        "board_token": "waymo",
+        "company": "Waymo"
+      },
+      {
+        "name": "Zscaler",
+        "board_token": "zscaler",
+        "company": "Zscaler"
+      }
+    ],
+    "lever": [
+      {
+        "name": "Kraken",
+        "slug": "kraken",
+        "company": "Kraken"
+      },
+      {
+        "name": "Olo",
+        "slug": "olo",
+        "company": "Olo"
+      },
+      {
+        "name": "Palantir",
+        "slug": "palantir",
+        "company": "Palantir"
+      },
+      {
+        "name": "Spotify",
+        "slug": "spotify",
+        "company": "Spotify"
+      },
+      {
+        "name": "Zoox",
+        "slug": "zoox",
+        "company": "Zoox"
+      }
+    ],
+    "ashby": [
+      {
+        "name": "Abridge",
+        "clientname": "abridge",
+        "company": "Abridge"
+      },
+      {
+        "name": "Anyscale",
+        "clientname": "anyscale",
+        "company": "Anyscale"
+      },
+      {
+        "name": "Benchling",
+        "clientname": "benchling",
+        "company": "Benchling"
+      },
+      {
+        "name": "Braintrust",
+        "clientname": "braintrust",
+        "company": "Braintrust"
+      },
+      {
+        "name": "Clerk",
+        "clientname": "clerk",
+        "company": "Clerk"
+      },
+      {
+        "name": "Cohere",
+        "clientname": "cohere",
+        "company": "Cohere"
+      },
+      {
+        "name": "Cursor",
+        "clientname": "cursor",
+        "company": "Cursor"
+      },
+      {
+        "name": "Deepgram",
+        "clientname": "deepgram",
+        "company": "Deepgram"
+      },
+      {
+        "name": "ElevenLabs",
+        "clientname": "elevenlabs",
+        "company": "ElevenLabs"
+      },
+      {
+        "name": "Harvey",
+        "clientname": "harvey",
+        "company": "Harvey"
+      },
+      {
+        "name": "LangChain",
+        "clientname": "langchain",
+        "company": "LangChain"
+      },
+      {
+        "name": "Linear",
+        "clientname": "linear",
+        "company": "Linear"
+      },
+      {
+        "name": "Modal",
+        "clientname": "modal",
+        "company": "Modal"
+      },
+      {
+        "name": "Neon",
+        "clientname": "neon",
+        "company": "Neon"
+      },
+      {
+        "name": "Notion",
+        "clientname": "notion",
+        "company": "Notion"
+      },
+      {
+        "name": "OpenAI",
+        "clientname": "openai",
+        "company": "OpenAI"
+      },
+      {
+        "name": "Perplexity",
+        "clientname": "perplexity",
+        "company": "Perplexity"
+      },
+      {
+        "name": "Pinecone",
+        "clientname": "pinecone",
+        "company": "Pinecone"
+      },
+      {
+        "name": "Pylon",
+        "clientname": "pylon",
+        "company": "Pylon"
+      },
+      {
+        "name": "Railway",
+        "clientname": "railway",
+        "company": "Railway"
+      },
+      {
+        "name": "Ramp",
+        "clientname": "ramp",
+        "company": "Ramp"
+      },
+      {
+        "name": "Render",
+        "clientname": "render",
+        "company": "Render"
+      },
+      {
+        "name": "Replit",
+        "clientname": "replit",
+        "company": "Replit"
+      },
+      {
+        "name": "Resend",
+        "clientname": "resend",
+        "company": "Resend"
+      },
+      {
+        "name": "Retool",
+        "clientname": "retool",
+        "company": "Retool"
+      },
+      {
+        "name": "Sentry",
+        "clientname": "sentry",
+        "company": "Sentry"
+      },
+      {
+        "name": "Supabase",
+        "clientname": "supabase",
+        "company": "Supabase"
+      },
+      {
+        "name": "Temporal",
+        "clientname": "temporal",
+        "company": "Temporal"
+      },
+      {
+        "name": "Vercel",
+        "clientname": "vercel",
+        "company": "Vercel"
+      }
+    ],
+    "workable": [
+      {
+        "name": "Bolt.eu",
+        "subdomain": "bolt",
+        "company": "Bolt.eu"
+      },
+      {
+        "name": "Cal.com",
+        "subdomain": "cal",
+        "company": "Cal.com"
+      },
+      {
+        "name": "Hugging Face",
+        "subdomain": "huggingface",
+        "company": "Hugging Face"
+      },
+      {
+        "name": "N8n",
+        "subdomain": "n8n",
+        "company": "N8n"
+      },
+      {
+        "name": "PostHog",
+        "subdomain": "posthog",
+        "company": "PostHog"
+      },
+      {
+        "name": "Remote",
+        "subdomain": "remote",
+        "company": "Remote"
+      },
+      {
+        "name": "Slab",
+        "subdomain": "slab",
+        "company": "Slab"
+      }
+    ],
+    "workday": [
+      {
+        "name": "Adobe",
+        "company": "Adobe",
+        "base_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs"
+      },
+      {
+        "name": "Boeing",
+        "company": "Boeing",
+        "base_url": "https://boeing.wd1.myworkdayjobs.com/wday/cxs/boeing/EXTERNAL_CAREERS/jobs"
+      },
+      {
+        "name": "Capital One",
+        "company": "Capital One",
+        "base_url": "https://capitalone.wd12.myworkdayjobs.com/wday/cxs/capitalone/Capital_One/jobs"
+      },
+      {
+        "name": "Cisco",
+        "company": "Cisco",
+        "base_url": "https://cisco.wd5.myworkdayjobs.com/wday/cxs/cisco/Cisco_Careers/jobs"
+      },
+      {
+        "name": "Citi",
+        "company": "Citi",
+        "base_url": "https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
+      },
+      {
+        "name": "Dell",
+        "company": "Dell",
+        "base_url": "https://dell.wd1.myworkdayjobs.com/wday/cxs/dell/External/jobs"
+      },
+      {
+        "name": "General Motors",
+        "company": "General Motors",
+        "base_url": "https://generalmotors.wd5.myworkdayjobs.com/wday/cxs/generalmotors/Careers_GM/jobs"
+      },
+      {
+        "name": "HP",
+        "company": "HP",
+        "base_url": "https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
+      },
+      {
+        "name": "HPE",
+        "company": "HPE",
+        "base_url": "https://hpe.wd5.myworkdayjobs.com/wday/cxs/hpe/Jobsathpe/jobs"
+      },
+      {
+        "name": "Intel",
+        "company": "Intel",
+        "base_url": "https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
+      },
+      {
+        "name": "MasterCard",
+        "company": "MasterCard",
+        "base_url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
+      },
+      {
+        "name": "NVIDIA",
+        "company": "NVIDIA",
+        "base_url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
+      },
+      {
+        "name": "PayPal",
+        "company": "PayPal",
+        "base_url": "https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/jobs/jobs"
+      },
+      {
+        "name": "PwC",
+        "company": "PwC",
+        "base_url": "https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
+      },
+      {
+        "name": "Salesforce",
+        "company": "Salesforce",
+        "base_url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
+      },
+      {
+        "name": "T-Mobile",
+        "company": "T-Mobile",
+        "base_url": "https://tmobile.wd1.myworkdayjobs.com/wday/cxs/tmobile/External/jobs"
+      },
+      {
+        "name": "Target",
+        "company": "Target",
+        "base_url": "https://target.wd5.myworkdayjobs.com/wday/cxs/target/targetcareers/jobs"
+      },
+      {
+        "name": "Walmart",
+        "company": "Walmart",
+        "base_url": "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs"
+      },
+      {
+        "name": "Workday",
+        "company": "Workday",
+        "base_url": "https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
+      }
+    ],
+    "google": {
+      "name": "Google",
+      "company": "Google",
+      "feed_url": "https://www.google.com/about/careers/applications/jobs/feed.xml",
+      "poll_interval_seconds": 1800
+    },
+    "amazon": {
+      "name": "Amazon",
+      "company": "Amazon",
+      "base_url": "https://www.amazon.jobs/en/search.json",
+      "result_limit": 100,
+      "poll_interval_seconds": 1200
+    },
+    "microsoft": {
+      "name": "Microsoft",
+      "company": "Microsoft",
+      "poll_interval_seconds": 1200
+    },
+    "netflix": {
+      "name": "Netflix",
+      "company": "Netflix",
+      "poll_interval_seconds": 1200
+    },
+    "apple": {
+      "name": "Apple",
+      "company": "Apple",
+      "poll_interval_seconds": 1200
+    },
+    "meta": {
+      "name": "Meta",
+      "company": "Meta",
+      "doc_id": "24779400495047796",
+      "poll_interval_seconds": 3600
+    },
+    "jobvite": [],
+    "icims": [],
+    "taleo": [],
+    "yc": {
+      "name": "YC Jobs",
+      "poll_interval_seconds": 1800
+    },
+    "wellfound": {
+      "name": "Wellfound",
+      "max_scrolls": 15,
+      "headless": true,
+      "poll_interval_seconds": 3600
+    }
   }
 }

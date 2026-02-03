@@ -1,0 +1,29 @@
+{
+  "data": {
+    "job_search": {
+      "results": [
+        {
+          "id": "META001",
+          "title": "Software Engineer, Infrastructure",
+          "locations": [
+            {"city": "Menlo Park", "state": "CA", "country": "US"}
+          ],
+          "description": "<p>Build and maintain Meta's core infrastructure systems.</p>"
+        },
+        {
+          "id": "META002",
+          "title": "Research Scientist, AI",
+          "locations": [
+            {"city": "New York", "state": "NY", "country": "US"},
+            {"city": "Menlo Park", "state": "CA", "country": "US"}
+          ],
+          "description": "Advance the state of the art in artificial intelligence research."
+        }
+      ],
+      "page_info": {
+        "has_next_page": false,
+        "end_cursor": null
+      }
+    }
+  }
+}

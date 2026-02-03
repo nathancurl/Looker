@@ -1,0 +1,27 @@
+{
+  "total": 2,
+  "requisitions": [
+    {
+      "requisitionId": "TAL001",
+      "title": "Associate Software Engineer",
+      "location": {
+        "city": "Redwood City",
+        "state": "CA",
+        "country": "USA"
+      },
+      "applyUrl": "https://oracle.taleo.net/apply/TAL001",
+      "description": "<p>Entry-level software engineering position working on enterprise applications.</p>",
+      "lastPublishedDate": 1737360000000,
+      "category": "Engineering"
+    },
+    {
+      "requisitionId": "TAL002",
+      "jobTitle": "New Grad Developer",
+      "location": "Austin, TX",
+      "applyUrl": "https://oracle.taleo.net/apply/TAL002",
+      "jobDescription": "Join our team as a new graduate developer.",
+      "postedDate": "2026-01-18T12:00:00Z",
+      "jobCategory": "Software Development"
+    }
+  ]
+}
