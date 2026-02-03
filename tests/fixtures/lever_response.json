@@ -1,0 +1,24 @@
+[
+  {
+    "id": "abc-123-def",
+    "text": "Junior Software Engineer",
+    "createdAt": 1737388800000,
+    "hostedUrl": "https://jobs.lever.co/acme/abc-123-def",
+    "descriptionPlain": "Join our engineering team and work on Python microservices.",
+    "categories": {
+      "location": "Remote, US",
+      "team": "Engineering"
+    }
+  },
+  {
+    "id": "ghi-456-jkl",
+    "text": "Staff Engineer",
+    "createdAt": 1737302400000,
+    "hostedUrl": "https://jobs.lever.co/acme/ghi-456-jkl",
+    "descriptionPlain": "Lead architecture decisions across the platform.",
+    "categories": {
+      "location": "San Francisco, CA",
+      "team": "Platform"
+    }
+  }
+]

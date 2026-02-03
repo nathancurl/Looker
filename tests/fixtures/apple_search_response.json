@@ -1,0 +1,24 @@
+{
+  "totalPages": 1,
+  "searchResults": [
+    {
+      "reqId": "200001",
+      "postingTitle": "Software Engineer, iOS",
+      "locations": [
+        {"name": "Cupertino, CA, United States"}
+      ],
+      "jobSummary": "Join the team building the next generation of iOS features.",
+      "team": {"teamName": "iOS Engineering"}
+    },
+    {
+      "reqId": "200002",
+      "postingTitle": "ML Engineer, Siri",
+      "locations": [
+        {"name": "Seattle, WA, United States"},
+        {"name": "Cupertino, CA, United States"}
+      ],
+      "jobSummary": "Apply machine learning to improve Siri.",
+      "team": {"teamName": "Siri"}
+    }
+  ]
+}

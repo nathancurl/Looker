@@ -1,0 +1,21 @@
+{
+  "hits": 2,
+  "jobs": [
+    {
+      "id_icims": "1234567",
+      "title": "Software Development Engineer",
+      "normalized_location": "Seattle, WA",
+      "location": "US, WA, Seattle",
+      "job_path": "/en/jobs/1234567/software-development-engineer",
+      "description_short": "<p>Design and build scalable distributed systems at Amazon.</p>"
+    },
+    {
+      "id_icims": "7654321",
+      "title": "Frontend Engineer, AWS",
+      "normalized_location": "Arlington, VA",
+      "location": "US, VA, Arlington",
+      "job_path": "/en/jobs/7654321/frontend-engineer-aws",
+      "description_short": "Build intuitive UIs for AWS console."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "requisitions": [
+    {
+      "id": "JV001",
+      "title": "Software Engineer",
+      "location": "San Francisco, CA",
+      "department": "Engineering",
+      "applyUrl": "https://jobs.jobvite.com/acme/job/JV001",
+      "briefDescription": "<p>Build scalable web applications using modern technologies.</p>",
+      "datePosted": "2026-01-20T10:00:00Z"
+    },
+    {
+      "id": "JV002",
+      "title": "Backend Developer",
+      "location": "Remote",
+      "department": "Platform",
+      "applyUrl": "https://jobs.jobvite.com/acme/job/JV002",
+      "briefDescription": "Design and implement REST APIs and microservices.",
+      "datePosted": "2026-01-18T14:30:00Z"
+    }
+  ]
+}

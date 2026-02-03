@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+  <item>
+    <id>123456</id>
+    <title>Software Engineer, Backend</title>
+    <employer>Google</employer>
+    <description>&lt;p&gt;Build scalable backend systems for Google Cloud.&lt;/p&gt;</description>
+    <url>https://www.google.com/about/careers/applications/jobs/results/123456</url>
+    <locations>
+      <location>
+        <city>Mountain View</city>
+        <state>CA</state>
+        <country>US</country>
+      </location>
+    </locations>
+  </item>
+  <item>
+    <id>789012</id>
+    <title>Frontend Engineer, YouTube</title>
+    <employer>YouTube</employer>
+    <description>&lt;p&gt;Create engaging user experiences for YouTube.&lt;/p&gt;</description>
+    <url>https://www.google.com/about/careers/applications/jobs/results/789012</url>
+    <locations>
+      <location>
+        <city>San Bruno</city>
+        <state>CA</state>
+        <country>US</country>
+      </location>
+      <location>
+        <city>New York</city>
+        <state>NY</state>
+        <country>US</country>
+      </location>
+    </locations>
+  </item>
+</jobs>

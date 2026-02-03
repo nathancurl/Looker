@@ -1,0 +1,17 @@
+{
+  "totalFound": 1,
+  "content": [
+    {
+      "id": "sr-001",
+      "name": "Python Developer",
+      "location": {
+        "city": "Chicago",
+        "country": "US"
+      },
+      "ref_url": "https://jobs.smartrecruiters.com/Acme/sr-001",
+      "company": {
+        "identifier": "Acme"
+      }
+    }
+  ]
+}

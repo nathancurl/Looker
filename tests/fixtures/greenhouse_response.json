@@ -1,0 +1,20 @@
+{
+  "jobs": [
+    {
+      "id": 4012345,
+      "title": "Software Engineer, Backend",
+      "updated_at": "2026-01-20T18:00:00Z",
+      "absolute_url": "https://boards.greenhouse.io/acme/jobs/4012345",
+      "location": {"name": "San Francisco, CA"},
+      "content": "<p>We're looking for a <strong>backend engineer</strong> to join our team.</p>"
+    },
+    {
+      "id": 4012346,
+      "title": "Senior Software Engineer",
+      "updated_at": "2026-01-19T12:00:00Z",
+      "absolute_url": "https://boards.greenhouse.io/acme/jobs/4012346",
+      "location": {"name": "New York, NY"},
+      "content": "<p>Lead technical projects across the stack.</p>"
+    }
+  ]
+}

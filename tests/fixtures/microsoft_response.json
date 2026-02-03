@@ -1,0 +1,25 @@
+{
+  "operationResult": {
+    "result": {
+      "totalJobs": 2,
+      "jobs": [
+        {
+          "jobId": "MS-100001",
+          "title": "Software Engineer",
+          "properties": {
+            "primaryLocation": "Redmond, WA",
+            "description": "<p>Develop features for Microsoft Azure cloud platform.</p>"
+          }
+        },
+        {
+          "jobId": "MS-100002",
+          "title": "Program Manager, Teams",
+          "properties": {
+            "primaryLocation": "Bellevue, WA",
+            "description": "Drive product strategy for Microsoft Teams collaboration features."
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "jobs": [
+    {
+      "shortcode": "WK001",
+      "title": "Full Stack Developer",
+      "city": "Austin",
+      "state": "TX",
+      "country": "US",
+      "url": "https://apply.workable.com/acme/j/WK001/",
+      "shortDescription": "Build features with React and Node.js."
+    }
+  ]
+}
