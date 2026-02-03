@@ -126,8 +126,8 @@ class WellfoundFetcher(BaseFetcher):
                     job_id = match[2] if len(match) > 2 else match[1]
                     title = match[-1].strip() if match[-1] else ""
 
-                    # Clean up job ID
-                    job_id = re.sub(r'[^a-zA-Z0-9-]', '', job_id)
+                    # Clean up job ID (allow dots to prevent incorrect deduplication)
+                    job_id = re.sub(r'[^a-zA-Z0-9-.]', '', job_id)
 
                     if not job_id or job_id in seen_ids:
                         continue

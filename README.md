@@ -242,6 +242,10 @@ poetry run python scripts/validate_maang.py
 poetry run python scripts/validate_sources.py
 ```
 
+## Maintenance Notice
+
+> **This project requires ongoing maintenance.** Many fetchers rely on web scraping, unofficial APIs, or browser automation which are inherently fragile. Sources like Apple (HTML scraping), Wellfound (Selenium), and Meta (GraphQL) may break when websites update their structure. Expect to periodically fix broken fetchers.
+
 ## How It Works
 
 1. **Polling Loop**: `main.py` runs continuously, checking each source at its configured interval

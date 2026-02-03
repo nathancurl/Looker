@@ -90,7 +90,7 @@ class MetaFetcher(BaseFetcher):
             match = re.search(pattern, resp.text, re.DOTALL)
             if match:
                 try:
-                    data = json.loads(match.group(1).replace('\\"', '"'))
+                    data = json.loads(match.group(1))
                     jobs = self._extract_jobs_from_data(data)
                     if jobs:
                         result["jobs"] = jobs

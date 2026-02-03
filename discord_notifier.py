@@ -1,7 +1,6 @@
 """Discord webhook notification with embeds and retry logic."""
 
 import logging
-import time
 
 import requests
 from tenacity import (
@@ -100,9 +99,16 @@ def _send_with_retry(webhook_url: str, payload: dict) -> None:
     resp = requests.post(webhook_url, json=payload, timeout=15)
 
     if resp.status_code == 429:
-        retry_after = resp.json().get("retry_after", 5)
+        # Prefer Retry-After header, fallback to JSON body or default
+        if "Retry-After" in resp.headers:
+            retry_after = float(resp.headers["Retry-After"])
+        else:
+            try:
+                retry_after = resp.json().get("retry_after", 5)
+            except ValueError:
+                retry_after = 5
         logger.warning("Discord rate limited, retry_after=%s", retry_after)
-        time.sleep(retry_after)
+        # Let tenacity handle the wait via wait_exponential
         raise DiscordRateLimitError(retry_after)
 
     if resp.status_code >= 500:
