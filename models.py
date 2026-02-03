@@ -64,6 +64,8 @@ class Job(BaseModel):
 
 def _canonicalize_url(url: str) -> str:
     """Normalize URL: lowercase host, strip query params and trailing slash."""
-    parsed = urlparse(url.lower())
-    path = parsed.path.rstrip("/")
-    return urlunparse((parsed.scheme, parsed.netloc, path, "", "", ""))
+    parsed = urlparse(url)
+    scheme = (parsed.scheme or "https").lower()
+    netloc = parsed.netloc.lower()
+    path = (parsed.path or "").rstrip("/")
+    return urlunparse((scheme, netloc, path, "", "", ""))

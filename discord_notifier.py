@@ -88,10 +88,17 @@ def notify(job: Job, matched_keywords: list[str], config: AppConfig) -> bool:
         return False
 
 
+def _discord_wait(retry_state):
+    exc = retry_state.outcome.exception() if retry_state.outcome else None
+    if isinstance(exc, DiscordRateLimitError):
+        return max(0.0, float(exc.retry_after))
+    return wait_exponential(multiplier=1, min=2, max=30)(retry_state)
+
+
 @retry(
     retry=retry_if_exception_type((DiscordServerError, DiscordRateLimitError)),
     stop=stop_after_attempt(4),
-    wait=wait_exponential(multiplier=1, min=2, max=30),
+    wait=_discord_wait,
     reraise=True,
 )
 def _send_with_retry(webhook_url: str, payload: dict) -> None:
@@ -108,7 +115,6 @@ def _send_with_retry(webhook_url: str, payload: dict) -> None:
             except ValueError:
                 retry_after = 5
         logger.warning("Discord rate limited, retry_after=%s", retry_after)
-        # Let tenacity handle the wait via wait_exponential
         raise DiscordRateLimitError(retry_after)
 
     if resp.status_code >= 500:

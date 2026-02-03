@@ -131,20 +131,45 @@ def test_jobvite(company: dict) -> tuple[bool, str]:
 def _is_safe_url(url: str) -> bool:
     """Validate URL is not targeting internal/localhost resources (SSRF protection)."""
     from urllib.parse import urlparse
+    import ipaddress
+    import socket
+
     parsed = urlparse(url)
-    hostname = parsed.hostname or ""
-    # Block localhost, internal IPs, and private networks
-    blocked = [
-        "localhost", "127.0.0.1", "0.0.0.0",
-        "169.254.", "10.", "172.16.", "172.17.", "172.18.", "172.19.",
-        "172.20.", "172.21.", "172.22.", "172.23.", "172.24.", "172.25.",
-        "172.26.", "172.27.", "172.28.", "172.29.", "172.30.", "172.31.",
-        "192.168.", "::1", "fe80::",
-    ]
-    for b in blocked:
-        if hostname.startswith(b) or hostname == b:
+    if parsed.scheme not in ("http", "https"):
+        return False
+
+    hostname = parsed.hostname
+    if not hostname:
+        return False
+
+    # Fast block obvious localhost hostnames
+    if hostname in ("localhost",):
+        return False
+
+    # Resolve DNS and block any private/internal targets (prevents DNS rebinding)
+    try:
+        infos = socket.getaddrinfo(hostname, parsed.port or (443 if parsed.scheme == "https" else 80))
+    except OSError:
+        return False
+
+    for info in infos:
+        ip_str = info[4][0]
+        try:
+            ip = ipaddress.ip_address(ip_str)
+        except ValueError:
             return False
-    return parsed.scheme in ("http", "https") and bool(hostname)
+
+        if (
+            ip.is_private
+            or ip.is_loopback
+            or ip.is_link_local
+            or ip.is_multicast
+            or ip.is_reserved
+            or ip.is_unspecified
+        ):
+            return False
+
+    return True
 
 
 def test_icims(company: dict) -> tuple[bool, str]:
@@ -220,7 +245,7 @@ TESTERS = {
 }
 
 # Source types that are singletons (not lists)
-SINGLETON_SOURCES = {"google", "amazon", "microsoft", "netflix", "apple", "meta", "hn_hiring"}
+SINGLETON_SOURCES = {"google", "amazon", "microsoft", "netflix", "apple", "meta"}
 
 
 def main():

@@ -101,7 +101,7 @@ def poll_once(
     new_count = 0
 
     for fetcher, interval in fetchers:
-        key = fetcher.source_name
+        key = f"{fetcher.source_group}:{fetcher.source_name}"
         elapsed = now - last_polled.get(key, 0)
         if elapsed < interval:
             continue
