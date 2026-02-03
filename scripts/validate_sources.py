@@ -128,10 +128,31 @@ def test_jobvite(company: dict) -> tuple[bool, str]:
         return False, str(e)[:50]
 
 
+def _is_safe_url(url: str) -> bool:
+    """Validate URL is not targeting internal/localhost resources (SSRF protection)."""
+    from urllib.parse import urlparse
+    parsed = urlparse(url)
+    hostname = parsed.hostname or ""
+    # Block localhost, internal IPs, and private networks
+    blocked = [
+        "localhost", "127.0.0.1", "0.0.0.0",
+        "169.254.", "10.", "172.16.", "172.17.", "172.18.", "172.19.",
+        "172.20.", "172.21.", "172.22.", "172.23.", "172.24.", "172.25.",
+        "172.26.", "172.27.", "172.28.", "172.29.", "172.30.", "172.31.",
+        "192.168.", "::1", "fe80::",
+    ]
+    for b in blocked:
+        if hostname.startswith(b) or hostname == b:
+            return False
+    return parsed.scheme in ("http", "https") and bool(hostname)
+
+
 def test_icims(company: dict) -> tuple[bool, str]:
     """Test iCIMS API endpoint."""
     portal_url = company.get("portal_url", "").rstrip("/")
     url = f"{portal_url}/jobs"
+    if not _is_safe_url(url):
+        return False, "Invalid or unsafe URL"
     try:
         resp = requests.get(
             url,
@@ -152,6 +173,8 @@ def test_taleo(company: dict) -> tuple[bool, str]:
     """Test Taleo API endpoint."""
     base_url = company.get("base_url", "").rstrip("/")
     url = f"{base_url}/requisition/searchRequisitions"
+    if not _is_safe_url(url):
+        return False, "Invalid or unsafe URL"
     try:
         resp = requests.get(
             url,

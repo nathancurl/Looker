@@ -95,8 +95,10 @@ class MetaFetcher(BaseFetcher):
                     if jobs:
                         result["jobs"] = jobs
                         break
-                except (json.JSONDecodeError, KeyError):
-                    pass
+                except json.JSONDecodeError as e:
+                    logger.debug("Meta: failed to parse embedded JSON: %s", e)
+                except KeyError as e:
+                    logger.debug("Meta: missing key in embedded data: %s", e)
 
         return result
 

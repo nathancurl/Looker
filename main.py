@@ -131,10 +131,34 @@ def poll_once(
 
 def main():
     log_level = os.environ.get("LOG_LEVEL", "INFO").upper()
-    logging.basicConfig(
-        level=getattr(logging, log_level, logging.INFO),
-        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-    )
+    log_format = os.environ.get("LOG_FORMAT", "text").lower()
+
+    if log_format == "json":
+        # Structured JSON logging for production/observability
+        import json as json_lib
+
+        class JsonFormatter(logging.Formatter):
+            def format(self, record):
+                log_obj = {
+                    "timestamp": self.formatTime(record),
+                    "level": record.levelname,
+                    "logger": record.name,
+                    "message": record.getMessage(),
+                }
+                if record.exc_info:
+                    log_obj["exception"] = self.formatException(record.exc_info)
+                return json_lib.dumps(log_obj)
+
+        handler = logging.StreamHandler()
+        handler.setFormatter(JsonFormatter())
+        logging.root.handlers = [handler]
+        logging.root.setLevel(getattr(logging, log_level, logging.INFO))
+    else:
+        # Human-readable text format for development
+        logging.basicConfig(
+            level=getattr(logging, log_level, logging.INFO),
+            format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+        )
 
     signal.signal(signal.SIGTERM, _handle_signal)
     signal.signal(signal.SIGINT, _handle_signal)
