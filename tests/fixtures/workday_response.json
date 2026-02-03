@@ -1,0 +1,12 @@
+{
+  "total": 1,
+  "jobPostings": [
+    {
+      "title": "Software Developer",
+      "locationsText": "Seattle, WA",
+      "externalPath": "/en-US/job/seattle/software-developer/12345",
+      "bulletFields": ["Full-time", "Engineering", "Entry Level"],
+      "postedOn": "2026-01-17T08:00:00Z"
+    }
+  ]
+}

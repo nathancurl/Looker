@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-notification-discord"
+version = "0.1.0"
+description = "Discord job alert system that polls multiple sources and posts matches via webhooks"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+    "feedparser>=6.0",
+    "python-dotenv>=1.0",
+    "tenacity>=8.2",
+    "pydantic>=2.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-mock>=3.12",
+    "responses>=0.24",
+]
+
+[tool.setuptools.packages.find]
+include = ["fetchers*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

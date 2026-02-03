@@ -1,0 +1,12 @@
+{
+  "jobs": [
+    {
+      "id": "ashby-001",
+      "title": "Backend Engineer",
+      "location": "New York, NY",
+      "jobUrl": "https://jobs.ashbyhq.com/acme/ashby-001",
+      "descriptionPlain": "Work on our API layer with Python and PostgreSQL.",
+      "publishedAt": "2026-01-18T10:00:00Z"
+    }
+  ]
+}

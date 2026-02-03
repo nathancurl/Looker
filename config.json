@@ -1,0 +1,74 @@
+{
+  "poll_interval_seconds": 600,
+
+  "filtering": {
+    "include_keywords": [
+      "software engineer", "backend", "back-end", "full stack", "full-stack",
+      "python", "react", "typescript", "postgres", "api", "developer"
+    ],
+    "exclude_keywords": [
+      "senior", "staff", "principal", "lead", "manager", "director", "vp",
+      "head of", "phd required", "clearance", "secret clearance"
+    ],
+    "level_keywords": {
+      "enabled": true,
+      "terms": ["new grad", "newgrad", "entry level", "entry-level", "junior", "jr", "early career"]
+    }
+  },
+
+  "routing": {
+    "hn": "DISCORD_WEBHOOK_HN",
+    "github": "DISCORD_WEBHOOK_GITHUB",
+    "newgrad": "DISCORD_WEBHOOK_GITHUB",
+    "greenhouse": "DISCORD_WEBHOOK_GREENHOUSE",
+    "lever": "DISCORD_WEBHOOK_LEVER",
+    "ashby": "DISCORD_WEBHOOK_ASHBY",
+    "workable": "DISCORD_WEBHOOK_WORKABLE",
+    "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
+    "workday": "DISCORD_WEBHOOK_WORKDAY"
+  },
+
+  "sources": {
+    "newgrad_json": [
+      {
+        "name": "vanshb03-New-Grad-2026",
+        "owner": "vanshb03",
+        "repo": "New-Grad-2026",
+        "branch": "dev",
+        "json_path": ".github/scripts/listings.json",
+        "poll_interval_seconds": 1800
+      },
+      {
+        "name": "SimplifyJobs-New-Grad",
+        "owner": "SimplifyJobs",
+        "repo": "New-Grad-Positions",
+        "branch": "dev",
+        "json_path": "listings.json",
+        "poll_interval_seconds": 1800
+      }
+    ],
+
+    "newgrad_markdown": [
+      {
+        "name": "speedyapply-2026",
+        "owner": "speedyapply",
+        "repo": "2026-SWE-College-Jobs",
+        "branch": "main",
+        "files": ["NEW_GRAD_USA.md"],
+        "poll_interval_seconds": 3600
+      }
+    ],
+
+    "hn_hiring": {
+      "feed_url": "https://hnrss.org/whoishiring/jobs",
+      "poll_interval_seconds": 600
+    },
+
+    "greenhouse": [],
+    "lever": [],
+    "ashby": [],
+    "workable": [],
+    "smartrecruiters": [],
+    "workday": []
+  }
+}
