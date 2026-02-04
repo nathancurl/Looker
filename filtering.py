@@ -21,9 +21,8 @@ def filter_job(job: Job, config: AppConfig) -> tuple[bool, list[str]]:
             return False, []
 
     # Location check — if enabled, check if location is in allowed list
-    location_config = getattr(filtering, 'location', None)
-    if location_config and location_config.get('enabled', False):
-        if not is_allowed_location(job.location, location_config):
+    if filtering.location.enabled:
+        if not is_allowed_location(job.location, filtering.location):
             return False, []
 
     # Include check — at least one include keyword must match (if list non-empty)
@@ -55,7 +54,7 @@ def keyword_matches(keyword: str, text: str) -> bool:
     return bool(re.search(rf"\b{re.escape(keyword_lower)}\b", text))
 
 
-def is_allowed_location(location: str, location_config: dict) -> bool:
+def is_allowed_location(location: str, location_config) -> bool:
     """Check if job location is in allowed list.
 
     Returns True if:
@@ -69,20 +68,18 @@ def is_allowed_location(location: str, location_config: dict) -> bool:
 
     location_lower = location.lower()
 
-    # Check if location contains any allowed keywords
-    allowed_keywords = location_config.get('allowed_keywords', [])
-    for keyword in allowed_keywords:
-        if keyword.lower() in location_lower:
-            return True
-
-    # Check if location contains any excluded keywords (international locations)
-    excluded_keywords = location_config.get('excluded_keywords', [])
-    for keyword in excluded_keywords:
+    # Check if location contains any excluded keywords first (international locations)
+    for keyword in location_config.excluded_keywords:
         if keyword.lower() in location_lower:
             return False
 
+    # Check if location contains any allowed keywords
+    for keyword in location_config.allowed_keywords:
+        if keyword.lower() in location_lower:
+            return True
+
     # If no allowed keywords specified, allow all
-    if not allowed_keywords:
+    if not location_config.allowed_keywords:
         return True
 
     return False
