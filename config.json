@@ -1040,35 +1040,43 @@
     "icims": [
       {
         "name": "ATCC",
-        "customer_id": "3736"
+        "company": "ATCC",
+        "portal_url": "https://careers-atcc.icims.com"
       },
       {
         "name": "Expleo",
-        "customer_id": "7793"
+        "company": "Expleo",
+        "portal_url": "https://careers-expleo.icims.com"
       },
       {
         "name": "Delaware North",
-        "customer_id": "3288"
+        "company": "Delaware North",
+        "portal_url": "https://careers-delawarenorth.icims.com"
       },
       {
         "name": "TDIndustries",
-        "customer_id": "3678"
+        "company": "TDIndustries",
+        "portal_url": "https://careers-tdindustries.icims.com"
       },
       {
         "name": "H&R Block",
-        "customer_id": "3359"
+        "company": "H&R Block",
+        "portal_url": "https://careers-hrblock.icims.com"
       },
       {
         "name": "Smile Brands",
-        "customer_id": "7813"
+        "company": "Smile Brands",
+        "portal_url": "https://careers-smilebrands.icims.com"
       },
       {
         "name": "KEO International",
-        "customer_id": "8463"
+        "company": "KEO International",
+        "portal_url": "https://careers-keointl.icims.com"
       },
       {
         "name": "Johnson Financial Group",
-        "customer_id": "3456"
+        "company": "Johnson Financial Group",
+        "portal_url": "https://careers-johnsonfinancialgroup.icims.com"
       }
     ],
     "taleo": [
