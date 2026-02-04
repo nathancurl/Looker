@@ -106,6 +106,53 @@
         "2025",
         "2026"
       ]
+    },
+    "location": {
+      "enabled": true,
+      "allowed_keywords": [
+        "united states",
+        "usa",
+        "u.s.",
+        "remote",
+        "alabama", "alaska", "arizona", "arkansas", "california", "colorado",
+        "connecticut", "delaware", "florida", "georgia", "hawaii", "idaho",
+        "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana",
+        "maine", "maryland", "massachusetts", "michigan", "minnesota",
+        "mississippi", "missouri", "montana", "nebraska", "nevada",
+        "new hampshire", "new jersey", "new mexico", "new york",
+        "north carolina", "north dakota", "ohio", "oklahoma", "oregon",
+        "pennsylvania", "rhode island", "south carolina", "south dakota",
+        "tennessee", "texas", "utah", "vermont", "virginia", "washington",
+        "west virginia", "wisconsin", "wyoming",
+        "al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga", "hi", "id",
+        "il", "in", "ia", "ks", "ky", "la", "me", "md", "ma", "mi", "mn", "ms",
+        "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc", "nd", "oh", "ok",
+        "or", "pa", "ri", "sc", "sd", "tn", "tx", "ut", "vt", "va", "wa", "wv",
+        "wi", "wy",
+        "new york, ny", "san francisco", "seattle", "austin", "boston",
+        "chicago", "los angeles", "denver", "atlanta", "miami", "dallas",
+        "portland", "washington, dc", "d.c.", "silicon valley", "bay area"
+      ],
+      "excluded_keywords": [
+        "canada", "toronto", "vancouver", "montreal",
+        "united kingdom", "uk", "london", "manchester",
+        "germany", "berlin", "munich",
+        "france", "paris",
+        "india", "bangalore", "mumbai", "hyderabad",
+        "australia", "sydney", "melbourne",
+        "singapore",
+        "israel", "tel aviv",
+        "netherlands", "amsterdam",
+        "ireland", "dublin",
+        "japan", "tokyo",
+        "china", "beijing", "shanghai",
+        "mexico", "mexico city",
+        "brazil", "sao paulo",
+        "poland", "warsaw",
+        "spain", "barcelona", "madrid",
+        "sweden", "stockholm",
+        "switzerland", "zurich"
+      ]
     }
   },
   "routing": {

@@ -10,7 +10,7 @@ def filter_job(job: Job, config: AppConfig) -> tuple[bool, list[str]]:
     """Check if a job matches filtering criteria.
 
     Returns (should_notify, matched_keywords).
-    Order: exclude check -> include check -> optional level gate.
+    Order: exclude check -> location check -> include check -> optional level gate.
     """
     searchable = f"{job.title} {job.snippet} {job.company}".lower()
     filtering = config.filtering
@@ -18,6 +18,12 @@ def filter_job(job: Job, config: AppConfig) -> tuple[bool, list[str]]:
     # Exclude check — if any exclude keyword matches, reject
     for kw in filtering.exclude_keywords:
         if keyword_matches(kw, searchable):
+            return False, []
+
+    # Location check — if enabled, check if location is in allowed list
+    location_config = getattr(filtering, 'location', None)
+    if location_config and location_config.get('enabled', False):
+        if not is_allowed_location(job.location, location_config):
             return False, []
 
     # Include check — at least one include keyword must match (if list non-empty)
@@ -47,3 +53,36 @@ def keyword_matches(keyword: str, text: str) -> bool:
     if " " in keyword_lower or "-" in keyword_lower:
         return keyword_lower in text
     return bool(re.search(rf"\b{re.escape(keyword_lower)}\b", text))
+
+
+def is_allowed_location(location: str, location_config: dict) -> bool:
+    """Check if job location is in allowed list.
+
+    Returns True if:
+    - Location is empty/unknown (benefit of doubt)
+    - Location contains an allowed country/state/keyword
+    - Job is marked as remote in an allowed region
+    """
+    if not location:
+        # If no location specified, allow it (benefit of doubt)
+        return True
+
+    location_lower = location.lower()
+
+    # Check if location contains any allowed keywords
+    allowed_keywords = location_config.get('allowed_keywords', [])
+    for keyword in allowed_keywords:
+        if keyword.lower() in location_lower:
+            return True
+
+    # Check if location contains any excluded keywords (international locations)
+    excluded_keywords = location_config.get('excluded_keywords', [])
+    for keyword in excluded_keywords:
+        if keyword.lower() in location_lower:
+            return False
+
+    # If no allowed keywords specified, allow all
+    if not allowed_keywords:
+        return True
+
+    return False

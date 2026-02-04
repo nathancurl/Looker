@@ -17,10 +17,17 @@ class LevelKeywordsConfig(BaseModel):
     terms: list[str] = []
 
 
+class LocationConfig(BaseModel):
+    enabled: bool = False
+    allowed_keywords: list[str] = []
+    excluded_keywords: list[str] = []
+
+
 class FilteringConfig(BaseModel):
     include_keywords: list[str] = []
     exclude_keywords: list[str] = []
     level_keywords: LevelKeywordsConfig = LevelKeywordsConfig()
+    location: LocationConfig = LocationConfig()
 
 
 class AppConfig(BaseModel):
