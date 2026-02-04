@@ -226,6 +226,40 @@ sudo systemctl enable job-alerts
 sudo systemctl start job-alerts
 ```
 
+## Updating the Bot
+
+When code changes are pushed to the repository, update your running instance:
+
+```bash
+# SSH into your VM
+ssh your-user@your-vm
+
+# Navigate to the repo
+cd ~/job-notification-discord  # or your repo path
+
+# Pull latest changes from main
+git pull origin main
+
+# Install any new dependencies (if needed)
+poetry install
+
+# Restart the service
+sudo systemctl restart job-alerts
+
+# Verify it restarted successfully
+sudo systemctl status job-alerts
+
+# Check logs to ensure it's running properly
+tail -f ~/job-notification-discord/bot.log
+```
+
+### Quick Update Command
+
+For convenience, you can run this one-liner:
+```bash
+cd ~/job-notification-discord && git pull origin main && poetry install && sudo systemctl restart job-alerts && sudo systemctl status job-alerts
+```
+
 ## Development
 
 ### Run Tests
