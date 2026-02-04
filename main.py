@@ -28,6 +28,7 @@ from fetchers.taleo import TaleoFetcher
 from fetchers.workable import WorkableFetcher
 from fetchers.workday import WorkdayFetcher
 from fetchers.wellfound import WellfoundFetcher
+from fetchers.ripplematch import RipplematchFetcher
 from fetchers.yc import YCFetcher
 from filtering import filter_job
 from state import StateStore
@@ -54,6 +55,7 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "icims": ICIMSFetcher,
     "taleo": TaleoFetcher,
     "wellfound": WellfoundFetcher,
+    "ripplematch": RipplematchFetcher,
     "yc": YCFetcher,
 }
 

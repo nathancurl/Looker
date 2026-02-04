@@ -106,6 +106,7 @@
   "routing": {
     "yc": "DISCORD_WEBHOOK_YC",
     "wellfound": "DISCORD_WEBHOOK_WELLFOUND",
+    "ripplematch": "DISCORD_WEBHOOK_RIPPLEMATCH",
     "hn": "DISCORD_WEBHOOK_HN",
     "github": "DISCORD_WEBHOOK_GITHUB",
     "newgrad_json": "DISCORD_WEBHOOK_NEWGRAD",
@@ -778,6 +779,12 @@
     },
     "wellfound": {
       "name": "Wellfound",
+      "max_scrolls": 15,
+      "headless": true,
+      "poll_interval_seconds": 3600
+    },
+    "ripplematch": {
+      "name": "Ripplematch",
       "max_scrolls": 15,
       "headless": true,
       "poll_interval_seconds": 3600
