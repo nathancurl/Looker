@@ -478,6 +478,81 @@
         "name": "Zscaler",
         "board_token": "zscaler",
         "company": "Zscaler"
+      },
+      {
+        "name": "Slack",
+        "board_token": "salesforce",
+        "company": "Slack"
+      },
+      {
+        "name": "Plaid",
+        "board_token": "plaid",
+        "company": "Plaid"
+      },
+      {
+        "name": "Rippling",
+        "board_token": "rippling",
+        "company": "Rippling"
+      },
+      {
+        "name": "Snowflake",
+        "board_token": "snowflake",
+        "company": "Snowflake"
+      },
+      {
+        "name": "Splunk",
+        "board_token": "splunk",
+        "company": "Splunk"
+      },
+      {
+        "name": "Square",
+        "board_token": "square",
+        "company": "Square"
+      },
+      {
+        "name": "Thumbtack",
+        "board_token": "thumbtack",
+        "company": "Thumbtack"
+      },
+      {
+        "name": "Webflow",
+        "board_token": "webflow",
+        "company": "Webflow"
+      },
+      {
+        "name": "Atlassian",
+        "board_token": "atlassian",
+        "company": "Atlassian"
+      },
+      {
+        "name": "Canva",
+        "board_token": "canva",
+        "company": "Canva"
+      },
+      {
+        "name": "Delivery Hero",
+        "board_token": "deliveryhero",
+        "company": "Delivery Hero"
+      },
+      {
+        "name": "GitHubNext",
+        "board_token": "githubnext",
+        "company": "GitHub"
+      },
+      {
+        "name": "HashiCorp",
+        "board_token": "hashicorp",
+        "company": "HashiCorp"
+      },
+      {
+        "name": "Kong",
+        "board_token": "kong",
+        "company": "Kong"
+      },
+      {
+        "name": "Benchling",
+        "board_token": "benchling",
+        "company": "Benchling"
       }
     ],
     "lever": [
@@ -505,6 +580,46 @@
         "name": "Zoox",
         "slug": "zoox",
         "company": "Zoox"
+      },
+      {
+        "name": "Grammarly",
+        "slug": "grammarly",
+        "company": "Grammarly"
+      },
+      {
+        "name": "DraftKings",
+        "slug": "draftkings",
+        "company": "DraftKings"
+      },
+      {
+        "name": "Roblox",
+        "slug": "roblox",
+        "company": "Roblox"
+      },
+      {
+        "name": "Snap",
+        "slug": "snap",
+        "company": "Snap"
+      },
+      {
+        "name": "Twitch",
+        "slug": "twitch",
+        "company": "Twitch"
+      },
+      {
+        "name": "Robinhood",
+        "slug": "robinhood",
+        "company": "Robinhood"
+      },
+      {
+        "name": "Nextdoor",
+        "slug": "nextdoor",
+        "company": "Nextdoor"
+      },
+      {
+        "name": "Chime",
+        "slug": "chime",
+        "company": "Chime"
       }
     ],
     "ashby": [
@@ -652,6 +767,41 @@
         "name": "Vercel",
         "clientname": "vercel",
         "company": "Vercel"
+      },
+      {
+        "name": "Scale AI",
+        "clientname": "scaleai",
+        "company": "Scale AI"
+      },
+      {
+        "name": "Anthropic",
+        "clientname": "anthropic",
+        "company": "Anthropic"
+      },
+      {
+        "name": "Weights & Biases",
+        "clientname": "wandb",
+        "company": "Weights & Biases"
+      },
+      {
+        "name": "Alchemy",
+        "clientname": "alchemy",
+        "company": "Alchemy"
+      },
+      {
+        "name": "dbt Labs",
+        "clientname": "dbtlabs",
+        "company": "dbt Labs"
+      },
+      {
+        "name": "Hightouch",
+        "clientname": "hightouch",
+        "company": "Hightouch"
+      },
+      {
+        "name": "Watershed",
+        "clientname": "watershed",
+        "company": "Watershed"
       }
     ],
     "workable": [
@@ -786,6 +936,41 @@
         "name": "Workday",
         "company": "Workday",
         "base_url": "https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
+      },
+      {
+        "name": "Bank of America",
+        "company": "Bank of America",
+        "base_url": "https://bankofamerica.wd1.myworkdayjobs.com/wday/cxs/bankofamerica/Campus/jobs"
+      },
+      {
+        "name": "Chevron",
+        "company": "Chevron",
+        "base_url": "https://chevron.wd5.myworkdayjobs.com/wday/cxs/chevron/ExternalJobBoard/jobs"
+      },
+      {
+        "name": "Comcast",
+        "company": "Comcast",
+        "base_url": "https://comcast.wd5.myworkdayjobs.com/wday/cxs/comcast/Comcast_Careers/jobs"
+      },
+      {
+        "name": "Deloitte",
+        "company": "Deloitte",
+        "base_url": "https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/US_Careers/jobs"
+      },
+      {
+        "name": "LinkedIn",
+        "company": "LinkedIn",
+        "base_url": "https://linkedin.wd5.myworkdayjobs.com/wday/cxs/linkedin/careers/jobs"
+      },
+      {
+        "name": "Puma",
+        "company": "Puma",
+        "base_url": "https://puma.wd3.myworkdayjobs.com/wday/cxs/puma/Careers/jobs"
+      },
+      {
+        "name": "Sanofi",
+        "company": "Sanofi",
+        "base_url": "https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/Careers/jobs"
       }
     ],
     "google": {
@@ -822,9 +1007,96 @@
       "doc_id": "24779400495047796",
       "poll_interval_seconds": 3600
     },
-    "jobvite": [],
-    "icims": [],
-    "taleo": [],
+    "jobvite": [
+      {
+        "name": "Elire",
+        "company_id": "elire"
+      },
+      {
+        "name": "Altamira Technologies",
+        "company_id": "altamiracorp"
+      },
+      {
+        "name": "Lean Solutions Group",
+        "company_id": "leansolutionsgroup"
+      },
+      {
+        "name": "Hudson Pacific Properties",
+        "company_id": "hudsonpacificproperties"
+      },
+      {
+        "name": "Equity Methods",
+        "company_id": "equitymethods"
+      },
+      {
+        "name": "Sunset Studios",
+        "company_id": "sunsetstudios"
+      },
+      {
+        "name": "Vantagepoint AI",
+        "company_id": "vantagepointai"
+      }
+    ],
+    "icims": [
+      {
+        "name": "ATCC",
+        "customer_id": "3736"
+      },
+      {
+        "name": "Expleo",
+        "customer_id": "7793"
+      },
+      {
+        "name": "Delaware North",
+        "customer_id": "3288"
+      },
+      {
+        "name": "TDIndustries",
+        "customer_id": "3678"
+      },
+      {
+        "name": "H&R Block",
+        "customer_id": "3359"
+      },
+      {
+        "name": "Smile Brands",
+        "customer_id": "7813"
+      },
+      {
+        "name": "KEO International",
+        "customer_id": "8463"
+      },
+      {
+        "name": "Johnson Financial Group",
+        "customer_id": "3456"
+      }
+    ],
+    "taleo": [
+      {
+        "name": "American Express",
+        "base_url": "https://axp.taleo.net/careersection/5/jobsearch.ftl"
+      },
+      {
+        "name": "Marriott",
+        "base_url": "https://marriott.taleo.net/careersection/4/jobsearch.ftl"
+      },
+      {
+        "name": "Kaiser Permanente",
+        "base_url": "https://kp.taleo.net/careersection/externalapplicationbackground/jobsearch.ftl"
+      },
+      {
+        "name": "United Airlines",
+        "base_url": "https://ual-pro.taleo.net/careersection/2/jobsearch.ftl"
+      },
+      {
+        "name": "AutoZone",
+        "base_url": "https://autozone.taleo.net/careersection/az_external/jobsearch.ftl"
+      },
+      {
+        "name": "Pella",
+        "base_url": "https://pella.taleo.net/careersection/pel_external/jobsearch.ftl"
+      }
+    ],
     "yc": {
       "name": "YC Jobs",
       "poll_interval_seconds": 1800
