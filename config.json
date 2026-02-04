@@ -188,7 +188,7 @@
         "owner": "SimplifyJobs",
         "repo": "New-Grad-Positions",
         "branch": "dev",
-        "json_path": "listings.json",
+        "json_path": ".github/scripts/listings.json",
         "poll_interval_seconds": 1800
       }
     ],
