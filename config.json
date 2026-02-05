@@ -202,7 +202,6 @@
     "yelp": "DISCORD_WEBHOOK_CUSTOM",
     "shopify": "DISCORD_WEBHOOK_CUSTOM",
     "tiktok": "DISCORD_WEBHOOK_CUSTOM",
-    "tesla": "DISCORD_WEBHOOK_CUSTOM",
     "goldmansachs": "DISCORD_WEBHOOK_CUSTOM"
   },
   "sources": {
@@ -1653,15 +1652,6 @@
         "headless": true,
         "max_scrolls": 5,
         "keywords": ["software", "engineer", "new grad", "graduate", "early career"]
-      }
-    ],
-    "tesla": [
-      {
-        "name": "Tesla",
-        "company": "Tesla",
-        "headless": true,
-        "max_scrolls": 10,
-        "keywords": ["software", "engineer", "new grad", "graduate", "developer", "early career"]
       }
     ],
     "goldmansachs": [

@@ -31,11 +31,13 @@ from fetchers.workday import WorkdayFetcher
 from fetchers.wellfound import WellfoundFetcher
 from fetchers.ripplematch import RipplematchFetcher
 from fetchers.yc import YCFetcher
-from fetchers.tesla import TeslaFetcher
 from fetchers.rivian import RivianFetcher
 from fetchers.yelp import YelpFetcher
 from fetchers.oracle import OracleFetcher
 from fetchers.shopify import ShopifyFetcher
+from fetchers.tiktok import TikTokFetcher
+from fetchers.qualcomm import QualcommFetcher
+from fetchers.goldmansachs import GoldmanSachsFetcher
 from filtering import filter_job
 from state import StateStore
 
@@ -64,11 +66,13 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "wellfound": WellfoundFetcher,
     "ripplematch": RipplematchFetcher,
     "yc": YCFetcher,
-    "tesla": TeslaFetcher,
     "rivian": RivianFetcher,
     "yelp": YelpFetcher,
     "oracle": OracleFetcher,
     "shopify": ShopifyFetcher,
+    "tiktok": TikTokFetcher,
+    "qualcomm": QualcommFetcher,
+    "goldmansachs": GoldmanSachsFetcher,
 }
 
 _shutdown = False
