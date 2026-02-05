@@ -606,6 +606,46 @@
         "name": "Jump Trading",
         "board_token": "jumptrading",
         "company": "Jump Trading"
+      },
+      {
+        "name": "Remote",
+        "board_token": "remotecom",
+        "company": "Remote"
+      },
+      {
+        "name": "Penn Interactive",
+        "board_token": "penninteractive",
+        "company": "Penn Interactive"
+      },
+      {
+        "name": "Nerdy",
+        "board_token": "nerdy",
+        "company": "Nerdy"
+      },
+      {
+        "name": "Two Six Technologies",
+        "board_token": "twosixtechnologies",
+        "company": "Two Six Technologies"
+      },
+      {
+        "name": "Relativity Space",
+        "board_token": "relativity",
+        "company": "Relativity Space"
+      },
+      {
+        "name": "Philadelphia Eagles",
+        "board_token": "philadelphiaeagles",
+        "company": "Philadelphia Eagles"
+      },
+      {
+        "name": "Alma",
+        "board_token": "alma",
+        "company": "Alma"
+      },
+      {
+        "name": "The New York Times",
+        "board_token": "thenewyorktimes",
+        "company": "The New York Times"
       }
     ],
     "lever": [
@@ -703,6 +743,36 @@
         "name": "SpruceID",
         "slug": "sprucesystems",
         "company": "SpruceID"
+      },
+      {
+        "name": "Metabase",
+        "slug": "metabase",
+        "company": "Metabase"
+      },
+      {
+        "name": "HighLevel",
+        "slug": "gohighlevel",
+        "company": "HighLevel"
+      },
+      {
+        "name": "Basis",
+        "slug": "basis",
+        "company": "Basis"
+      },
+      {
+        "name": "Match Group",
+        "slug": "matchgroup",
+        "company": "Match Group"
+      },
+      {
+        "name": "Ro",
+        "slug": "ro",
+        "company": "Ro"
+      },
+      {
+        "name": "Regrello",
+        "slug": "regrello",
+        "company": "Regrello"
       }
     ],
     "ashby": [
@@ -920,6 +990,31 @@
         "name": "Point One",
         "clientname": "PointOne",
         "company": "Point One"
+      },
+      {
+        "name": "Ashby",
+        "clientname": "ashby",
+        "company": "Ashby"
+      },
+      {
+        "name": "Deel",
+        "clientname": "deel",
+        "company": "Deel"
+      },
+      {
+        "name": "Notable",
+        "clientname": "notable",
+        "company": "Notable"
+      },
+      {
+        "name": "Sola",
+        "clientname": "sola",
+        "company": "Sola"
+      },
+      {
+        "name": "Clipboard",
+        "clientname": "clipboard",
+        "company": "Clipboard"
       }
     ],
     "workable": [
@@ -1274,100 +1369,159 @@
     },
     "jobvite": [
       {
-        "name": "Elire",
-        "company_id": "elire"
+        "name": "WebMD",
+        "company_id": "webmd"
+      },
+      {
+        "name": "Anthology",
+        "company_id": "anthology"
       },
       {
         "name": "Altamira Technologies",
-        "company_id": "altamiracorp"
+        "company_id": "altamiracorps"
       },
       {
-        "name": "Lean Solutions Group",
-        "company_id": "leansolutionsgroup"
+        "name": "Barracuda Networks",
+        "company_id": "barracuda-networks-inc"
       },
       {
-        "name": "Hudson Pacific Properties",
-        "company_id": "hudsonpacificproperties"
+        "name": "NinjaOne",
+        "company_id": "ninjaone"
       },
       {
-        "name": "Equity Methods",
-        "company_id": "equitymethods"
+        "name": "iboss",
+        "company_id": "iboss"
       },
       {
-        "name": "Sunset Studios",
-        "company_id": "sunsetstudios"
+        "name": "Sitecore",
+        "company_id": "sitecore"
       },
       {
-        "name": "Vantagepoint AI",
-        "company_id": "vantagepointai"
+        "name": "CivicPlus",
+        "company_id": "civicplus"
       }
     ],
     "icims": [
       {
-        "name": "ATCC",
-        "company": "ATCC",
-        "portal_url": "https://careers-atcc.icims.com"
+        "name": "Council of Industry",
+        "company": "Council of Industry",
+        "portal_url": "https://careers-councilofindustry.icims.com"
       },
       {
-        "name": "Expleo",
-        "company": "Expleo",
-        "portal_url": "https://careers-expleo.icims.com"
+        "name": "ConstructConnect",
+        "company": "ConstructConnect",
+        "portal_url": "https://careers-constructconnect.icims.com"
       },
       {
-        "name": "Delaware North",
-        "company": "Delaware North",
-        "portal_url": "https://careers-delawarenorth.icims.com"
+        "name": "Applied Systems",
+        "company": "Applied Systems",
+        "portal_url": "https://careers-appliedsystems.icims.com"
       },
       {
-        "name": "TDIndustries",
-        "company": "TDIndustries",
-        "portal_url": "https://careers-tdindustries.icims.com"
+        "name": "HealthEquity",
+        "company": "HealthEquity",
+        "portal_url": "https://careers-healthequity.icims.com"
       },
       {
-        "name": "H&R Block",
-        "company": "H&R Block",
-        "portal_url": "https://careers-hrblock.icims.com"
+        "name": "Waters Corporation",
+        "company": "Waters Corporation",
+        "portal_url": "https://uscareers-waters.icims.com"
       },
       {
-        "name": "Smile Brands",
-        "company": "Smile Brands",
-        "portal_url": "https://careers-smilebrands.icims.com"
+        "name": "Connection",
+        "company": "Connection",
+        "portal_url": "https://careers-connection.icims.com"
       },
       {
-        "name": "KEO International",
-        "company": "KEO International",
-        "portal_url": "https://careers-keointl.icims.com"
+        "name": "Cotiviti",
+        "company": "Cotiviti",
+        "portal_url": "https://globalcareers-cotiviti.icims.com"
       },
       {
-        "name": "Johnson Financial Group",
-        "company": "Johnson Financial Group",
-        "portal_url": "https://careers-johnsonfinancialgroup.icims.com"
+        "name": "Chiron Technology Services",
+        "company": "Chiron Technology Services",
+        "portal_url": "https://careers-chirontech.icims.com"
+      },
+      {
+        "name": "Axway",
+        "company": "Axway",
+        "portal_url": "https://careers-axway.icims.com"
+      },
+      {
+        "name": "Markon",
+        "company": "Markon",
+        "portal_url": "https://careers-markon.icims.com"
+      },
+      {
+        "name": "General Dynamics Mission Systems",
+        "company": "General Dynamics Mission Systems",
+        "portal_url": "https://careers-gdms.icims.com"
+      },
+      {
+        "name": "HealthEdge",
+        "company": "HealthEdge",
+        "portal_url": "https://careers-healthedge.icims.com"
+      },
+      {
+        "name": "Peraton",
+        "company": "Peraton",
+        "portal_url": "https://careers-peraton.icims.com"
+      },
+      {
+        "name": "Wellbe Senior Medical",
+        "company": "Wellbe Senior Medical",
+        "portal_url": "https://careers-wellbeseniormedical.icims.com"
+      },
+      {
+        "name": "iCIMS",
+        "company": "iCIMS",
+        "portal_url": "https://careers.icims.com"
       }
     ],
     "taleo": [
       {
-        "name": "American Express",
-        "base_url": "https://axp.taleo.net/careersection/5/jobsearch.ftl"
+        "name": "Temple University",
+        "base_url": "https://temple.taleo.net/careersection/tu_ex_staff/jobsearch.ftl"
       },
       {
-        "name": "Marriott",
-        "base_url": "https://marriott.taleo.net/careersection/4/jobsearch.ftl"
+        "name": "University of Pittsburgh",
+        "base_url": "https://cfopitt.taleo.net/careersection/pitt_staff_external/jobsearch.ftl"
       },
       {
-        "name": "Kaiser Permanente",
-        "base_url": "https://kp.taleo.net/careersection/externalapplicationbackground/jobsearch.ftl"
+        "name": "NATO",
+        "base_url": "https://nato.taleo.net/careersection/2/jobsearch.ftl"
       },
       {
-        "name": "United Airlines",
-        "base_url": "https://ual-pro.taleo.net/careersection/2/jobsearch.ftl"
+        "name": "City of Chicago",
+        "base_url": "https://chicago.taleo.net/careersection/100/jobsearch.ftl"
       },
       {
-        "name": "AutoZone",
-        "base_url": "https://autozone.taleo.net/careersection/az_external/jobsearch.ftl"
+        "name": "Cook County",
+        "base_url": "https://cookcountyil.taleo.net/careersection/500/jobsearch.ftl"
       },
       {
-        "name": "Pella",
-        "base_url": "https://pella.taleo.net/careersection/pel_external/jobsearch.ftl"
+        "name": "The College of New Jersey",
+        "base_url": "https://tcnj.taleo.net/careersection/00_ex_staff/jobsearch.ftl"
+      },
+      {
+        "name": "Idaho National Laboratory",
+        "base_url": "https://inl.taleo.net/careersection/inl_external/jobsearch.ftl"
+      },
+      {
+        "name": "Food and Agriculture Organization",
+        "base_url": "https://fao.taleo.net/careersection/fao_external/jobsearch.ftl"
+      },
+      {
+        "name": "Vulcan Materials",
+        "base_url": "https://vulcanmat.taleo.net/careersection/2/jobsearch.ftl"
+      },
+      {
+        "name": "State of Texas",
+        "base_url": "https://capps.taleo.net/careersection/ex/jobsearch.ftl"
+      },
+      {
+        "name": "aa080",
+        "base_url": "https://aa080.taleo.net/careersection/sdp_external_career_section/jobsearch.ftl"
       }
     ],
     "yc": {
