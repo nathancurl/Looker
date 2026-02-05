@@ -576,6 +576,36 @@
         "name": "Benchling",
         "board_token": "benchling",
         "company": "Benchling"
+      },
+      {
+        "name": "StubHub",
+        "board_token": "stubhubinc",
+        "company": "StubHub"
+      },
+      {
+        "name": "Flex",
+        "board_token": "flex",
+        "company": "Flex"
+      },
+      {
+        "name": "Applied Intuition",
+        "board_token": "appliedintuition",
+        "company": "Applied Intuition"
+      },
+      {
+        "name": "Cribl",
+        "board_token": "cribl",
+        "company": "Cribl"
+      },
+      {
+        "name": "IXL Learning",
+        "board_token": "ixllearning",
+        "company": "IXL Learning"
+      },
+      {
+        "name": "Jump Trading",
+        "board_token": "jumptrading",
+        "company": "Jump Trading"
       }
     ],
     "lever": [
@@ -643,6 +673,36 @@
         "name": "Chime",
         "slug": "chime",
         "company": "Chime"
+      },
+      {
+        "name": "Peak Games",
+        "slug": "peakgames",
+        "company": "Peak Games"
+      },
+      {
+        "name": "WHOOP",
+        "slug": "whoop",
+        "company": "WHOOP"
+      },
+      {
+        "name": "Dream Games",
+        "slug": "dreamgames",
+        "company": "Dream Games"
+      },
+      {
+        "name": "Mistral AI",
+        "slug": "mistral",
+        "company": "Mistral AI"
+      },
+      {
+        "name": "Midas",
+        "slug": "getmidas",
+        "company": "Midas"
+      },
+      {
+        "name": "SpruceID",
+        "slug": "sprucesystems",
+        "company": "SpruceID"
       }
     ],
     "ashby": [
@@ -820,6 +880,46 @@
         "name": "Watershed",
         "clientname": "watershed",
         "company": "Watershed"
+      },
+      {
+        "name": "Zip",
+        "clientname": "zip",
+        "company": "Zip"
+      },
+      {
+        "name": "Replit",
+        "clientname": "replit",
+        "company": "Replit"
+      },
+      {
+        "name": "Whatnot",
+        "clientname": "whatnot",
+        "company": "Whatnot"
+      },
+      {
+        "name": "N1",
+        "clientname": "n1",
+        "company": "N1"
+      },
+      {
+        "name": "Kernel",
+        "clientname": "usekernel",
+        "company": "Kernel"
+      },
+      {
+        "name": "Magical",
+        "clientname": "magical",
+        "company": "Magical"
+      },
+      {
+        "name": "Anima",
+        "clientname": "anima",
+        "company": "Anima"
+      },
+      {
+        "name": "Point One",
+        "clientname": "PointOne",
+        "company": "Point One"
       }
     ],
     "workable": [
@@ -1026,6 +1126,116 @@
         "name": "Sanofi",
         "company": "Sanofi",
         "base_url": "https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/Careers/jobs"
+      },
+      {
+        "name": "Blue Origin",
+        "company": "Blue Origin",
+        "base_url": "https://blueorigin.wd5.myworkdayjobs.com/wday/cxs/blueorigin/BlueOrigin/jobs"
+      },
+      {
+        "name": "Pima County",
+        "company": "Pima County",
+        "base_url": "https://pimacounty.wd5.myworkdayjobs.com/wday/cxs/pimacounty/pimacareers/jobs"
+      },
+      {
+        "name": "Travelers",
+        "company": "Travelers",
+        "base_url": "https://travelers.wd5.myworkdayjobs.com/wday/cxs/travelers/External/jobs"
+      },
+      {
+        "name": "KBR",
+        "company": "KBR",
+        "base_url": "https://kbr.wd5.myworkdayjobs.com/wday/cxs/kbr/KBR_Careers/jobs"
+      },
+      {
+        "name": "Mimecast",
+        "company": "Mimecast",
+        "base_url": "https://mimecast.wd5.myworkdayjobs.com/wday/cxs/mimecast/Mimecast-Careers/jobs"
+      },
+      {
+        "name": "RTX",
+        "company": "RTX",
+        "base_url": "https://globalhr.wd5.myworkdayjobs.com/wday/cxs/globalhr/REC_RTX_Ext_Gateway/jobs"
+      },
+      {
+        "name": "Cadence",
+        "company": "Cadence",
+        "base_url": "https://cadence.wd1.myworkdayjobs.com/wday/cxs/cadence/External_Careers/jobs"
+      },
+      {
+        "name": "Nelnet",
+        "company": "Nelnet",
+        "base_url": "https://nelnet.wd1.myworkdayjobs.com/wday/cxs/nelnet/MyNelnet/jobs"
+      },
+      {
+        "name": "USAA",
+        "company": "USAA",
+        "base_url": "https://usaa.wd1.myworkdayjobs.com/wday/cxs/usaa/USAAJOBSWD/jobs"
+      },
+      {
+        "name": "Danaher",
+        "company": "Danaher",
+        "base_url": "https://danaher.wd1.myworkdayjobs.com/wday/cxs/danaher/DanaherJobs/jobs"
+      },
+      {
+        "name": "Mastercard",
+        "company": "Mastercard",
+        "base_url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
+      },
+      {
+        "name": "Medtronic",
+        "company": "Medtronic",
+        "base_url": "https://medtronic.wd1.myworkdayjobs.com/wday/cxs/medtronic/MedtronicCareers/jobs"
+      },
+      {
+        "name": "Solera",
+        "company": "Solera",
+        "base_url": "https://solera.wd5.myworkdayjobs.com/wday/cxs/solera/Global_Career_Site/jobs"
+      },
+      {
+        "name": "Checkout.com",
+        "company": "Checkout.com",
+        "base_url": "https://checkout.wd3.myworkdayjobs.com/wday/cxs/checkout/CheckoutCareers/jobs"
+      },
+      {
+        "name": "RELX",
+        "company": "RELX",
+        "base_url": "https://relx.wd3.myworkdayjobs.com/wday/cxs/relx/RiskSolutions/jobs"
+      },
+      {
+        "name": "Red Hat",
+        "company": "Red Hat",
+        "base_url": "https://redhat.wd5.myworkdayjobs.com/wday/cxs/redhat/Jobs/jobs"
+      },
+      {
+        "name": "Globus Medical",
+        "company": "Globus Medical",
+        "base_url": "https://globusmedical.wd5.myworkdayjobs.com/wday/cxs/globusmedical/GMED_Careers/jobs"
+      },
+      {
+        "name": "Columbia Sportswear",
+        "company": "Columbia Sportswear",
+        "base_url": "https://columbiasportswearcompany.wd5.myworkdayjobs.com/wday/cxs/columbiasportswearcompany/CSC_Careers/jobs"
+      },
+      {
+        "name": "Airbus",
+        "company": "Airbus",
+        "base_url": "https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus_Specific/jobs"
+      },
+      {
+        "name": "Franklin Templeton",
+        "company": "Franklin Templeton",
+        "base_url": "https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Invitation-Only/jobs"
+      },
+      {
+        "name": "Morgan Stanley",
+        "company": "Morgan Stanley",
+        "base_url": "https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/external/jobs"
+      },
+      {
+        "name": "Tempus",
+        "company": "Tempus",
+        "base_url": "https://tempus.wd5.myworkdayjobs.com/wday/cxs/tempus/Tempus_Careers/jobs"
       }
     ],
     "google": {
