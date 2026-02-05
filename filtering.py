@@ -49,7 +49,8 @@ def filter_job(job: Job, config: AppConfig) -> tuple[bool, list[str]]:
 def keyword_matches(keyword: str, text: str) -> bool:
     """Match keyword in text. Word boundary for single words, substring for multi-word."""
     keyword_lower = keyword.lower()
-    if " " in keyword_lower or "-" in keyword_lower:
+    # Use substring match for multi-word, hyphenated, or keywords with punctuation
+    if " " in keyword_lower or "-" in keyword_lower or "." in keyword_lower or "," in keyword_lower:
         return keyword_lower in text
     return bool(re.search(rf"\b{re.escape(keyword_lower)}\b", text))
 
