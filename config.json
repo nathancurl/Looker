@@ -193,7 +193,8 @@
     "maang": "DISCORD_WEBHOOK_MAANG",
     "jobvite": "DISCORD_WEBHOOK_JOBVITE",
     "icims": "DISCORD_WEBHOOK_ICIMS",
-    "taleo": "DISCORD_WEBHOOK_TALEO"
+    "taleo": "DISCORD_WEBHOOK_TALEO",
+    "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS"
   },
   "sources": {
     "newgrad_json": [
@@ -856,6 +857,43 @@
         "name": "Slab",
         "subdomain": "slab",
         "company": "Slab"
+      }
+    ],
+    "smartrecruiters": [
+      {
+        "name": "NBCUniversal",
+        "company": "NBCUniversal",
+        "company_id": "NBCUniversal3"
+      },
+      {
+        "name": "Turnitin",
+        "company": "Turnitin",
+        "company_id": "TurnitinLLC"
+      },
+      {
+        "name": "Walmart",
+        "company": "Walmart",
+        "company_id": "Walmart30"
+      },
+      {
+        "name": "ServiceNow",
+        "company": "ServiceNow",
+        "company_id": "ServiceNow"
+      },
+      {
+        "name": "Intuit",
+        "company": "Intuit",
+        "company_id": "Intuit2"
+      },
+      {
+        "name": "Klick",
+        "company": "Klick",
+        "company_id": "Klick1"
+      },
+      {
+        "name": "Oteemo",
+        "company": "Oteemo",
+        "company_id": "OteemoInc"
       }
     ],
     "workday": [
