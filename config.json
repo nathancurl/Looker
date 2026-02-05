@@ -81,7 +81,7 @@
       "contract position"
     ],
     "level_keywords": {
-      "enabled": true,
+      "enabled": false,
       "terms": [
         "new grad",
         "newgrad",
@@ -794,11 +794,6 @@
         "name": "Scale AI",
         "clientname": "scaleai",
         "company": "Scale AI"
-      },
-      {
-        "name": "Anthropic",
-        "clientname": "anthropic",
-        "company": "Anthropic"
       },
       {
         "name": "Weights & Biases",
