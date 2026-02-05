@@ -646,6 +646,16 @@
         "name": "The New York Times",
         "board_token": "thenewyorktimes",
         "company": "The New York Times"
+      },
+      {
+        "name": "Uber Freight",
+        "board_token": "uberfreight",
+        "company": "Uber Freight"
+      },
+      {
+        "name": "Bloomberg Philanthropies",
+        "board_token": "bloombergorg",
+        "company": "Bloomberg Philanthropies"
       }
     ],
     "lever": [
@@ -1015,6 +1025,11 @@
         "name": "Clipboard",
         "clientname": "clipboard",
         "company": "Clipboard"
+      },
+      {
+        "name": "Confluent",
+        "clientname": "confluent",
+        "company": "Confluent"
       }
     ],
     "workable": [
@@ -1331,6 +1346,26 @@
         "name": "Tempus",
         "company": "Tempus",
         "base_url": "https://tempus.wd5.myworkdayjobs.com/wday/cxs/tempus/Tempus_Careers/jobs"
+      },
+      {
+        "name": "Zillow",
+        "company": "Zillow",
+        "base_url": "https://zillow.wd5.myworkdayjobs.com/wday/cxs/zillow/Zillow_Group_External/jobs"
+      },
+      {
+        "name": "X (Twitter)",
+        "company": "X",
+        "base_url": "https://twitter.wd5.myworkdayjobs.com/wday/cxs/twitter/X/jobs"
+      },
+      {
+        "name": "Broadcom",
+        "company": "Broadcom",
+        "base_url": "https://broadcom.wd1.myworkdayjobs.com/wday/cxs/broadcom/External_Career/jobs"
+      },
+      {
+        "name": "Bloomberg Industry Group",
+        "company": "Bloomberg Industry Group",
+        "base_url": "https://bloomberg.wd1.myworkdayjobs.com/wday/cxs/bloomberg/Bloombergindustrygroup_External_Career_Site/jobs"
       }
     ],
     "google": {
@@ -1476,6 +1511,11 @@
         "name": "iCIMS",
         "company": "iCIMS",
         "portal_url": "https://careers.icims.com"
+      },
+      {
+        "name": "AMD",
+        "company": "AMD",
+        "portal_url": "https://careers-amd.icims.com"
       }
     ],
     "taleo": [
