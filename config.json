@@ -1,5 +1,5 @@
 {
-  "poll_interval_seconds": 600,
+  "poll_interval_seconds": 300,
   "filtering": {
     "include_keywords": [
       "software engineer",
