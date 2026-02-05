@@ -25,6 +25,16 @@ class WorkdayFetcher(BaseFetcher):
         self._base_url = source_config["base_url"]
         self._payload_template = source_config.get("payload", dict(DEFAULT_PAYLOAD))
 
+        # Extract job board base URL for constructing job links
+        # API URL: https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs
+        # Job URL: https://adobe.wd5.myworkdayjobs.com/external_experienced/job/...
+        parsed = urlparse(self._base_url)
+        path_parts = parsed.path.split('/')
+        # Path is typically: /wday/cxs/{company}/{job_board_name}/jobs
+        # We want: https://{domain}/{job_board_name}
+        job_board_name = path_parts[-2] if len(path_parts) >= 2 else ""
+        self._job_board_base = f"{parsed.scheme}://{parsed.netloc}/{job_board_name}"
+
     def fetch(self) -> list[Job]:
         jobs = []
         offset = 0
@@ -48,9 +58,8 @@ class WorkdayFetcher(BaseFetcher):
                 location = item.get("locationsText", "")
                 external_path = item.get("externalPath", "")
 
-                # Build full URL from base_url domain + externalPath
-                parsed = urlparse(self._base_url)
-                full_url = f"{parsed.scheme}://{parsed.netloc}{external_path}"
+                # Build full URL from job board base + externalPath
+                full_url = f"{self._job_board_base}{external_path}"
 
                 bullet_fields = item.get("bulletFields", [])
                 snippet = " | ".join(bullet_fields) if bullet_fields else ""
