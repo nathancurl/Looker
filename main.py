@@ -17,6 +17,7 @@ from fetchers.greenhouse import GreenhouseFetcher
 from fetchers.hnhiring import HNHiringFetcher
 from fetchers.icims import ICIMSFetcher
 from fetchers.jobvite import JobviteFetcher
+from fetchers.jpmorgan import JPMorganFetcher
 from fetchers.lever import LeverFetcher
 from fetchers.meta import MetaFetcher
 from fetchers.microsoft import MicrosoftFetcher
@@ -30,6 +31,11 @@ from fetchers.workday import WorkdayFetcher
 from fetchers.wellfound import WellfoundFetcher
 from fetchers.ripplematch import RipplematchFetcher
 from fetchers.yc import YCFetcher
+from fetchers.tesla import TeslaFetcher
+from fetchers.rivian import RivianFetcher
+from fetchers.yelp import YelpFetcher
+from fetchers.oracle import OracleFetcher
+from fetchers.shopify import ShopifyFetcher
 from filtering import filter_job
 from state import StateStore
 
@@ -53,10 +59,16 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "meta": MetaFetcher,
     "jobvite": JobviteFetcher,
     "icims": ICIMSFetcher,
+    "jpmorgan": JPMorganFetcher,
     "taleo": TaleoFetcher,
     "wellfound": WellfoundFetcher,
     "ripplematch": RipplematchFetcher,
     "yc": YCFetcher,
+    "tesla": TeslaFetcher,
+    "rivian": RivianFetcher,
+    "yelp": YelpFetcher,
+    "oracle": OracleFetcher,
+    "shopify": ShopifyFetcher,
 }
 
 _shutdown = False

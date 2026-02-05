@@ -194,7 +194,16 @@
     "jobvite": "DISCORD_WEBHOOK_JOBVITE",
     "icims": "DISCORD_WEBHOOK_ICIMS",
     "taleo": "DISCORD_WEBHOOK_TALEO",
-    "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS"
+    "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
+    "jpmorgan": "DISCORD_WEBHOOK_CUSTOM",
+    "oracle": "DISCORD_WEBHOOK_CUSTOM",
+    "qualcomm": "DISCORD_WEBHOOK_CUSTOM",
+    "rivian": "DISCORD_WEBHOOK_CUSTOM",
+    "yelp": "DISCORD_WEBHOOK_CUSTOM",
+    "shopify": "DISCORD_WEBHOOK_CUSTOM",
+    "tiktok": "DISCORD_WEBHOOK_CUSTOM",
+    "tesla": "DISCORD_WEBHOOK_CUSTOM",
+    "goldmansachs": "DISCORD_WEBHOOK_CUSTOM"
   },
   "sources": {
     "newgrad_json": [
@@ -1584,6 +1593,86 @@
       "max_scrolls": 15,
       "headless": true,
       "poll_interval_seconds": 3600
-    }
+    },
+    "jpmorgan": [
+      {
+        "name": "JPMorgan Chase",
+        "company": "JPMorgan Chase",
+        "department": "Software Engineering"
+      }
+    ],
+    "oracle": [
+      {
+        "name": "Oracle",
+        "company": "Oracle",
+        "requisition_area": "Software Development"
+      }
+    ],
+    "qualcomm": [
+      {
+        "name": "Qualcomm",
+        "company": "Qualcomm"
+      }
+    ],
+    "rivian": [
+      {
+        "name": "Rivian",
+        "company": "Rivian"
+      }
+    ],
+    "yelp": [
+      {
+        "name": "Yelp",
+        "company": "Yelp"
+      }
+    ],
+    "shopify": [
+      {
+        "name": "Shopify",
+        "company": "Shopify",
+        "keywords": ["engineer", "software", "new grad", "intern", "early career"],
+        "use_selenium": false,
+        "auto_fallback_to_selenium": true,
+        "request_delay": 2.0,
+        "poll_interval_seconds": 3600
+      }
+    ],
+    "tiktok": [
+      {
+        "name": "TikTok",
+        "company": "TikTok",
+        "brand": "tiktok",
+        "headless": true,
+        "max_scrolls": 5,
+        "keywords": ["software", "engineer", "new grad", "graduate", "early career"]
+      },
+      {
+        "name": "ByteDance",
+        "company": "ByteDance",
+        "brand": "bytedance",
+        "headless": true,
+        "max_scrolls": 5,
+        "keywords": ["software", "engineer", "new grad", "graduate", "early career"]
+      }
+    ],
+    "tesla": [
+      {
+        "name": "Tesla",
+        "company": "Tesla",
+        "headless": true,
+        "max_scrolls": 10,
+        "keywords": ["software", "engineer", "new grad", "graduate", "developer", "early career"]
+      }
+    ],
+    "goldmansachs": [
+      {
+        "name": "Goldman Sachs",
+        "company": "Goldman Sachs",
+        "experiences": ["EARLY_CAREER", "PROFESSIONAL"],
+        "search_term": "software engineer",
+        "keywords": ["software", "engineering", "technology", "developer"],
+        "page_size": 50
+      }
+    ]
   }
 }
