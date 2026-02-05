@@ -1,7 +1,6 @@
 """Fetcher for Greenhouse job boards API."""
 
 import logging
-import re
 from datetime import datetime
 
 from fetchers.base import BaseFetcher, resilient_get
@@ -38,8 +37,8 @@ class GreenhouseFetcher(BaseFetcher):
             if loc_data:
                 location = loc_data.get("name", "")
 
-            content = item.get("content", "")
-            snippet = _strip_html(content)
+            # Skip description - often contains HTML entities/garbage
+            snippet = ""
 
             uid = Job.generate_uid(self.source_group, raw_id=str(item["id"]))
 
@@ -59,10 +58,3 @@ class GreenhouseFetcher(BaseFetcher):
             )
 
         return jobs
-
-
-def _strip_html(html: str) -> str:
-    """Remove HTML tags and collapse whitespace."""
-    text = re.sub(r"<[^>]+>", " ", html)
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
