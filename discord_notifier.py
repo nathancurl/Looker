@@ -1,6 +1,8 @@
 """Discord webhook notification with embeds and retry logic."""
 
 import logging
+import time
+from typing import Dict
 
 import requests
 from tenacity import (
@@ -17,11 +19,19 @@ logger = logging.getLogger(__name__)
 
 DISCORD_BLURPLE = 0x5865F2
 
+# Global rate limit tracker: webhook_url -> timestamp when cooldown expires
+_rate_limit_cooldowns: Dict[str, float] = {}
+
 
 def build_embed(job: Job, matched_keywords: list[str]) -> dict:
     """Build a Discord embed dict for a job posting."""
+    # Truncate title if needed (Discord limit: 256 chars)
+    title = f"{job.company} — {job.title}"
+    if len(title) > 256:
+        title = title[:253] + "..."
+
     embed = {
-        "title": f"{job.company} — {job.title}",
+        "title": title,
         "url": job.url,
         "color": DISCORD_BLURPLE,
         "fields": [
@@ -30,7 +40,11 @@ def build_embed(job: Job, matched_keywords: list[str]) -> dict:
     }
 
     if job.snippet:
-        embed["description"] = job.snippet
+        # Truncate description if needed (Discord limit: 2048 chars)
+        snippet = job.snippet
+        if len(snippet) > 2048:
+            snippet = snippet[:2045] + "..."
+        embed["description"] = snippet
 
     if job.location:
         embed["fields"].append(
@@ -67,7 +81,7 @@ class DiscordServerError(Exception):
 
 
 def notify(job: Job, matched_keywords: list[str], config: AppConfig) -> bool:
-    """Post a job embed to Discord. Returns True on success, False on failure."""
+    """Post a job embed to Discord. Returns True on success, False on failure (or rate-limited)."""
     if is_dry_run():
         logger.info("[DRY RUN] Would notify: %s — %s (%s)", job.company, job.title, job.url)
         return True
@@ -77,32 +91,37 @@ def notify(job: Job, matched_keywords: list[str], config: AppConfig) -> bool:
         logger.warning("No webhook URL for source group '%s', skipping", job.source_group)
         return False
 
+    # Check if this webhook is currently rate-limited
+    now = time.time()
+    cooldown_until = _rate_limit_cooldowns.get(webhook_url, 0)
+    if now < cooldown_until:
+        # Still in cooldown, skip without blocking
+        return False
+
     embed = build_embed(job, matched_keywords)
     payload = {"embeds": [embed]}
 
     try:
         _send_with_retry(webhook_url, payload)
         return True
+    except DiscordRateLimitError as e:
+        # Record the cooldown and return False to retry later
+        _rate_limit_cooldowns[webhook_url] = now + e.retry_after
+        logger.warning("Discord rate limited for %s, cooldown until %s", job.source_group, time.ctime(now + e.retry_after))
+        return False
     except Exception:
         logger.exception("Failed to send Discord notification for %s", job.uid)
         return False
 
 
-def _discord_wait(retry_state):
-    exc = retry_state.outcome.exception() if retry_state.outcome else None
-    if isinstance(exc, DiscordRateLimitError):
-        return max(0.0, float(exc.retry_after))
-    return wait_exponential(multiplier=1, min=2, max=30)(retry_state)
-
-
 @retry(
-    retry=retry_if_exception_type((DiscordServerError, DiscordRateLimitError)),
-    stop=stop_after_attempt(4),
-    wait=_discord_wait,
+    retry=retry_if_exception_type(DiscordServerError),
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=2, max=30),
     reraise=True,
 )
 def _send_with_retry(webhook_url: str, payload: dict) -> None:
-    """POST to Discord webhook with retry on 5xx and 429."""
+    """POST to Discord webhook with retry only on 5xx. Raises DiscordRateLimitError on 429."""
     resp = requests.post(webhook_url, json=payload, timeout=15)
 
     if resp.status_code == 429:
@@ -114,7 +133,7 @@ def _send_with_retry(webhook_url: str, payload: dict) -> None:
                 retry_after = resp.json().get("retry_after", 5)
             except ValueError:
                 retry_after = 5
-        logger.warning("Discord rate limited, retry_after=%s", retry_after)
+        # Don't log here, let the caller handle it
         raise DiscordRateLimitError(retry_after)
 
     if resp.status_code >= 500:
