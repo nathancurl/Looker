@@ -85,8 +85,8 @@ A job alert system that continuously polls career sites and sends notifications 
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/job-notification-discord.git
-cd job-notification-discord
+git clone https://github.com/nathancurl/Looker-Discord-Bot.git
+cd Looker-Discord-Bot
 
 # Install Poetry (if not installed)
 pip install poetry
@@ -179,8 +179,8 @@ Find the company_id from their careers URL:
 ```bash
 # On your GCP VM
 sudo apt update && sudo apt install -y python3-pip git chromium-browser
-git clone https://github.com/YOUR_USERNAME/job-notification-discord.git
-cd job-notification-discord
+git clone https://github.com/YOUR_USERNAME/Looker-Discord-Bot.git
+cd Looker-Discord-Bot
 pip3 install poetry
 poetry install
 cp .env.example .env && nano .env  # Add webhooks
@@ -211,7 +211,7 @@ After=network.target
 [Service]
 Type=simple
 User=ubuntu
-WorkingDirectory=/home/ubuntu/job-notification-discord
+WorkingDirectory=/home/ubuntu/Looker-Discord-Bot
 ExecStart=/home/ubuntu/.local/bin/poetry run python main.py
 Restart=always
 RestartSec=10
@@ -235,7 +235,7 @@ When code changes are pushed to the repository, update your running instance:
 ssh your-user@your-vm
 
 # Navigate to the repo
-cd ~/job-notification-discord  # or your repo path
+cd ~/Looker-Discord-Bot  # or your repo path
 
 # Pull latest changes from main
 git pull origin main
@@ -250,14 +250,14 @@ sudo systemctl restart job-alerts
 sudo systemctl status job-alerts
 
 # Check logs to ensure it's running properly
-tail -f ~/job-notification-discord/bot.log
+tail -f ~/Looker-Discord-Bot/bot.log
 ```
 
 ### Quick Update Command
 
 For convenience, you can run this one-liner:
 ```bash
-cd ~/job-notification-discord && git pull origin main && poetry install && sudo systemctl restart job-alerts && sudo systemctl status job-alerts
+cd ~/Looker-Discord-Bot && git pull origin main && poetry install && sudo systemctl restart job-alerts && sudo systemctl status job-alerts
 ```
 
 ## Development
