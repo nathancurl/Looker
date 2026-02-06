@@ -1125,6 +1125,118 @@
       {
         "company": "Instawork",
         "board_token": "instawork"
+      },
+      {
+        "company": "AppLovin",
+        "board_token": "applovin"
+      },
+      {
+        "company": "Aurora Innovation",
+        "board_token": "aurorainnovation"
+      },
+      {
+        "company": "Braze",
+        "board_token": "braze"
+      },
+      {
+        "company": "Contentful",
+        "board_token": "contentful"
+      },
+      {
+        "company": "Coupang",
+        "board_token": "coupang"
+      },
+      {
+        "company": "CrowdStrike",
+        "board_token": "crowdstrike"
+      },
+      {
+        "company": "Cruise",
+        "board_token": "cruise"
+      },
+      {
+        "company": "Dremio",
+        "board_token": "dremio"
+      },
+      {
+        "company": "Fly.io",
+        "board_token": "flyio"
+      },
+      {
+        "company": "G2",
+        "board_token": "g2"
+      },
+      {
+        "company": "LaunchDarkly",
+        "board_token": "launchdarkly"
+      },
+      {
+        "company": "Liftoff",
+        "board_token": "liftoff"
+      },
+      {
+        "company": "LiveRamp",
+        "board_token": "liveramp"
+      },
+      {
+        "company": "Loom",
+        "board_token": "loom"
+      },
+      {
+        "company": "Movable Ink",
+        "board_token": "movableink"
+      },
+      {
+        "company": "Mux",
+        "board_token": "mux"
+      },
+      {
+        "company": "OneSignal",
+        "board_token": "onesignal"
+      },
+      {
+        "company": "Outreach",
+        "board_token": "outreach"
+      },
+      {
+        "company": "Palo Alto Networks",
+        "board_token": "paloaltonetworks"
+      },
+      {
+        "company": "Persona",
+        "board_token": "persona"
+      },
+      {
+        "company": "Remitly",
+        "board_token": "remitly"
+      },
+      {
+        "company": "SambaNova",
+        "board_token": "sambanova"
+      },
+      {
+        "company": "Snorkel AI",
+        "board_token": "snorkelai"
+      },
+      {
+        "company": "Stytch",
+        "board_token": "stytch"
+      },
+      {
+        "company": "Vanta",
+        "board_token": "vanta"
+      },
+      {
+        "company": "Wealthfront",
+        "board_token": "wealthfront"
+      },
+      {
+        "company": "Whatnot",
+        "board_token": "whatnot"
+      },
+      {
+        "company": "ZoomInfo",
+        "board_token": "zoominfo"
       }
     ],
     "lever": [
@@ -1352,6 +1464,70 @@
       {
         "company": "E-Space",
         "slug": "espace"
+      },
+      {
+        "company": "Astra",
+        "slug": "astra"
+      },
+      {
+        "company": "Coalition",
+        "slug": "coalition"
+      },
+      {
+        "company": "Color Health",
+        "slug": "color"
+      },
+      {
+        "company": "Drata",
+        "slug": "drata"
+      },
+      {
+        "company": "Gecko Robotics",
+        "slug": "geckorobotics"
+      },
+      {
+        "company": "Lob",
+        "slug": "lob"
+      },
+      {
+        "company": "Lucid Motors",
+        "slug": "lucidmotors"
+      },
+      {
+        "company": "Material Security",
+        "slug": "materialsecurity"
+      },
+      {
+        "company": "Navan",
+        "slug": "navan"
+      },
+      {
+        "company": "Persona",
+        "slug": "persona"
+      },
+      {
+        "company": "Pie Insurance",
+        "slug": "pieinsurance"
+      },
+      {
+        "company": "Reliable Robotics",
+        "slug": "reliable"
+      },
+      {
+        "company": "Skyflow",
+        "slug": "skyflow"
+      },
+      {
+        "company": "ThousandEyes",
+        "slug": "thousandeyes"
+      },
+      {
+        "company": "Viam",
+        "slug": "viam"
+      },
+      {
+        "company": "Zeta Global",
+        "slug": "zetaglobal"
       }
     ],
     "ashby": [
@@ -1631,6 +1807,86 @@
       {
         "company": "Rightfoot",
         "clientname": "rightfoot"
+      },
+      {
+        "company": "Codeium",
+        "clientname": "codeium"
+      },
+      {
+        "company": "Continue",
+        "clientname": "continue"
+      },
+      {
+        "company": "Decagon",
+        "clientname": "decagon"
+      },
+      {
+        "company": "Fern",
+        "clientname": "buildwithfern"
+      },
+      {
+        "company": "Fivetran",
+        "clientname": "fivetran"
+      },
+      {
+        "company": "Fly.io",
+        "clientname": "flyio"
+      },
+      {
+        "company": "G2",
+        "clientname": "g2"
+      },
+      {
+        "company": "Groq",
+        "clientname": "groq"
+      },
+      {
+        "company": "Inngest",
+        "clientname": "inngest"
+      },
+      {
+        "company": "Midjourney",
+        "clientname": "midjourney"
+      },
+      {
+        "company": "Mintlify",
+        "clientname": "mintlify"
+      },
+      {
+        "company": "Paraform",
+        "clientname": "paraform"
+      },
+      {
+        "company": "Sourcegraph",
+        "clientname": "sourcegraph"
+      },
+      {
+        "company": "Stytch",
+        "clientname": "stytch"
+      },
+      {
+        "company": "Suno",
+        "clientname": "suno"
+      },
+      {
+        "company": "The Browser Company",
+        "clientname": "thebrowsercompany"
+      },
+      {
+        "company": "Unify",
+        "clientname": "unify"
+      },
+      {
+        "company": "Vanta",
+        "clientname": "vanta"
+      },
+      {
+        "company": "Warp",
+        "clientname": "warp"
+      },
+      {
+        "company": "Writer",
+        "clientname": "writer"
       }
     ],
     "workable": [
@@ -1668,6 +1924,31 @@
         "name": "Slab",
         "subdomain": "slab",
         "company": "Slab"
+      },
+      {
+        "name": "Depot",
+        "subdomain": "depot",
+        "company": "Depot"
+      },
+      {
+        "name": "Gitpod",
+        "subdomain": "gitpod",
+        "company": "Gitpod"
+      },
+      {
+        "name": "Raycast",
+        "subdomain": "raycast",
+        "company": "Raycast"
+      },
+      {
+        "name": "Tinybird",
+        "subdomain": "tinybird",
+        "company": "Tinybird"
+      },
+      {
+        "name": "Zed Industries",
+        "subdomain": "zed",
+        "company": "Zed Industries"
       }
     ],
     "smartrecruiters": [
@@ -1705,6 +1986,26 @@
         "name": "Oteemo",
         "company": "Oteemo",
         "company_id": "OteemoInc"
+      },
+      {
+        "name": "Bosch",
+        "company": "Bosch",
+        "company_id": "bosch"
+      },
+      {
+        "name": "Equinix",
+        "company": "Equinix",
+        "company_id": "equinix"
+      },
+      {
+        "name": "IKEA",
+        "company": "IKEA",
+        "company_id": "ikea"
+      },
+      {
+        "name": "Visa",
+        "company": "Visa",
+        "company_id": "visa"
       }
     ],
     "workday": [
@@ -1977,6 +2278,116 @@
         "name": "Etsy",
         "company": "Etsy",
         "base_url": "https://etsy.wd5.myworkdayjobs.com/wday/cxs/etsy/Etsy_Careers/jobs"
+      },
+      {
+        "name": "Accenture",
+        "company": "Accenture",
+        "base_url": "https://accenture.wd3.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs"
+      },
+      {
+        "name": "American Express",
+        "company": "American Express",
+        "base_url": "https://aexp.wd5.myworkdayjobs.com/wday/cxs/aexp/AEXP/jobs"
+      },
+      {
+        "name": "AT&T",
+        "company": "AT&T",
+        "base_url": "https://att.wd5.myworkdayjobs.com/wday/cxs/att/ATT/jobs"
+      },
+      {
+        "name": "Booking",
+        "company": "Booking",
+        "base_url": "https://booking.wd5.myworkdayjobs.com/wday/cxs/booking/Booking/jobs"
+      },
+      {
+        "name": "Caterpillar",
+        "company": "Caterpillar",
+        "base_url": "https://caterpillar.wd5.myworkdayjobs.com/wday/cxs/caterpillar/Caterpillar/jobs"
+      },
+      {
+        "name": "Charles Schwab",
+        "company": "Charles Schwab",
+        "base_url": "https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/Schwab_External_Careers/jobs"
+      },
+      {
+        "name": "CrowdStrike",
+        "company": "CrowdStrike",
+        "base_url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/CrowdStrikeCareers/jobs"
+      },
+      {
+        "name": "Discover Financial",
+        "company": "Discover Financial",
+        "base_url": "https://discover.wd5.myworkdayjobs.com/wday/cxs/discover/Discover_Financial_Services/jobs"
+      },
+      {
+        "name": "Fidelity",
+        "company": "Fidelity",
+        "base_url": "https://fidelity.wd5.myworkdayjobs.com/wday/cxs/fidelity/Fidelity_Careers/jobs"
+      },
+      {
+        "name": "GE",
+        "company": "GE",
+        "base_url": "https://ge.wd5.myworkdayjobs.com/wday/cxs/ge/GE_External_Career_Site/jobs"
+      },
+      {
+        "name": "GDIT",
+        "company": "GDIT",
+        "base_url": "https://gdit.wd5.myworkdayjobs.com/wday/cxs/gdit/GDIT/jobs"
+      },
+      {
+        "name": "Honeywell",
+        "company": "Honeywell",
+        "base_url": "https://honeywell.wd5.myworkdayjobs.com/wday/cxs/honeywell/Honeywell_Careers/jobs"
+      },
+      {
+        "name": "IBM",
+        "company": "IBM",
+        "base_url": "https://ibm.wd5.myworkdayjobs.com/wday/cxs/ibm/IBM_Careers/jobs"
+      },
+      {
+        "name": "John Deere",
+        "company": "John Deere",
+        "base_url": "https://johndeere.wd5.myworkdayjobs.com/wday/cxs/johndeere/JohnDeere/jobs"
+      },
+      {
+        "name": "Leidos",
+        "company": "Leidos",
+        "base_url": "https://leidos.wd5.myworkdayjobs.com/wday/cxs/leidos/External/jobs"
+      },
+      {
+        "name": "Lockheed Martin",
+        "company": "Lockheed Martin",
+        "base_url": "https://lockheedmartin.wd5.myworkdayjobs.com/wday/cxs/lockheedmartin/LMCareers/jobs"
+      },
+      {
+        "name": "MITRE",
+        "company": "MITRE",
+        "base_url": "https://mitre.wd5.myworkdayjobs.com/wday/cxs/mitre/MITRE/jobs"
+      },
+      {
+        "name": "Northrop Grumman",
+        "company": "Northrop Grumman",
+        "base_url": "https://northropgrumman.wd5.myworkdayjobs.com/wday/cxs/northropgrumman/NG_External/jobs"
+      },
+      {
+        "name": "Snap Inc",
+        "company": "Snap Inc",
+        "base_url": "https://snapchat.wd1.myworkdayjobs.com/wday/cxs/snapchat/Snap/jobs"
+      },
+      {
+        "name": "Thomson Reuters",
+        "company": "Thomson Reuters",
+        "base_url": "https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/TR_External_Career_Site/jobs"
+      },
+      {
+        "name": "Verizon",
+        "company": "Verizon",
+        "base_url": "https://verizon.wd5.myworkdayjobs.com/wday/cxs/verizon/verizon/jobs"
+      },
+      {
+        "name": "Visa",
+        "company": "Visa",
+        "base_url": "https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa_Careers/jobs"
       }
     ],
     "google": {
