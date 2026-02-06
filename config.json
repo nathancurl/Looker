@@ -850,11 +850,6 @@
         "company": "The New York Times"
       },
       {
-        "name": "Uber Freight",
-        "board_token": "uberfreight",
-        "company": "Uber Freight"
-      },
-      {
         "name": "Bloomberg Philanthropies",
         "board_token": "bloombergorg",
         "company": "Bloomberg Philanthropies"
@@ -2127,6 +2122,11 @@
         "name": "AMD",
         "company": "AMD",
         "portal_url": "https://careers-amd.icims.com"
+      },
+      {
+        "name": "Uber",
+        "company": "Uber",
+        "portal_url": "https://university-uber.icims.com"
       }
     ],
     "taleo": [
