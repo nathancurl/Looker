@@ -416,6 +416,11 @@
         "company": "Okta"
       },
       {
+        "name": "Oklo",
+        "board_token": "oklo",
+        "company": "Oklo"
+      },
+      {
         "name": "Oscar Health",
         "board_token": "oscar",
         "company": "Oscar Health"
