@@ -50,10 +50,6 @@
       "staff",
       "principal",
       "lead",
-      "leader",
-      "team lead",
-      "tech lead",
-      "technical lead",
       "architect",
       "manager",
       "director",
@@ -118,65 +114,246 @@
         "usa",
         "u.s.",
         "remote",
-        "alabama", "alaska", "arizona", "arkansas", "california", "colorado",
-        "connecticut", "delaware", "florida", "georgia", "hawaii", "idaho",
-        "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana",
-        "maine", "maryland", "massachusetts", "michigan", "minnesota",
-        "mississippi", "missouri", "montana", "nebraska", "nevada",
-        "new hampshire", "new jersey", "new mexico", "new york",
-        "north carolina", "north dakota", "ohio", "oklahoma", "oregon",
-        "pennsylvania", "rhode island", "south carolina", "south dakota",
-        "tennessee", "texas", "utah", "vermont", "virginia", "washington",
-        "west virginia", "wisconsin", "wyoming",
-        "al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga", "hi", "id",
-        "il", "in", "ia", "ks", "ky", "la", "me", "md", "ma", "mi", "mn", "ms",
-        "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc", "nd", "oh", "ok",
-        "or", "pa", "ri", "sc", "sd", "tn", "tx", "ut", "vt", "va", "wa", "wv",
-        "wi", "wy",
-        "new york, ny", "san francisco", "seattle", "austin", "boston",
-        "chicago", "los angeles", "denver", "atlanta", "miami", "dallas",
-        "portland", "washington, dc", "d.c.", "silicon valley", "bay area"
+        "alabama",
+        "alaska",
+        "arizona",
+        "arkansas",
+        "california",
+        "colorado",
+        "connecticut",
+        "delaware",
+        "florida",
+        "georgia",
+        "hawaii",
+        "idaho",
+        "illinois",
+        "indiana",
+        "iowa",
+        "kansas",
+        "kentucky",
+        "louisiana",
+        "maine",
+        "maryland",
+        "massachusetts",
+        "michigan",
+        "minnesota",
+        "mississippi",
+        "missouri",
+        "montana",
+        "nebraska",
+        "nevada",
+        "new hampshire",
+        "new jersey",
+        "new mexico",
+        "new york",
+        "north carolina",
+        "north dakota",
+        "ohio",
+        "oklahoma",
+        "oregon",
+        "pennsylvania",
+        "rhode island",
+        "south carolina",
+        "south dakota",
+        "tennessee",
+        "texas",
+        "utah",
+        "vermont",
+        "virginia",
+        "washington",
+        "west virginia",
+        "wisconsin",
+        "wyoming",
+        "al",
+        "ak",
+        "az",
+        "ar",
+        "ca",
+        "co",
+        "ct",
+        "de",
+        "fl",
+        "ga",
+        "hi",
+        "id",
+        "il",
+        "in",
+        "ia",
+        "ks",
+        "ky",
+        "la",
+        "me",
+        "md",
+        "ma",
+        "mi",
+        "mn",
+        "ms",
+        "mo",
+        "mt",
+        "ne",
+        "nv",
+        "nh",
+        "nj",
+        "nm",
+        "ny",
+        "nc",
+        "nd",
+        "oh",
+        "ok",
+        "or",
+        "pa",
+        "ri",
+        "sc",
+        "sd",
+        "tn",
+        "tx",
+        "ut",
+        "vt",
+        "va",
+        "wa",
+        "wv",
+        "wi",
+        "wy",
+        "new york, ny",
+        "san francisco",
+        "seattle",
+        "austin",
+        "boston",
+        "chicago",
+        "los angeles",
+        "denver",
+        "atlanta",
+        "miami",
+        "dallas",
+        "portland",
+        "washington, dc",
+        "d.c.",
+        "silicon valley",
+        "bay area"
       ],
       "excluded_keywords": [
-        "europe", "european", "emea", "eu", "apac", "asia pacific", "international",
-        "latin america", "latam", "south america", "middle east", "africa",
-        "canada", "toronto", "vancouver", "montreal", "ottawa", "calgary",
-        "united kingdom", "uk", "u.k.", "london", "manchester", "edinburgh", "glasgow",
-        "germany", "berlin", "munich", "frankfurt", "hamburg",
-        "france", "paris", "lyon", "marseille",
-        "india", "bangalore", "mumbai", "hyderabad", "pune", "delhi",
-        "australia", "sydney", "melbourne", "brisbane", "perth",
+        "europe",
+        "european",
+        "emea",
+        "eu",
+        "apac",
+        "asia pacific",
+        "international",
+        "latin america",
+        "latam",
+        "south america",
+        "middle east",
+        "africa",
+        "canada",
+        "toronto",
+        "vancouver",
+        "montreal",
+        "ottawa",
+        "calgary",
+        "united kingdom",
+        "uk",
+        "u.k.",
+        "london",
+        "manchester",
+        "edinburgh",
+        "glasgow",
+        "germany",
+        "berlin",
+        "munich",
+        "frankfurt",
+        "hamburg",
+        "france",
+        "paris",
+        "lyon",
+        "marseille",
+        "india",
+        "bangalore",
+        "mumbai",
+        "hyderabad",
+        "pune",
+        "delhi",
+        "australia",
+        "sydney",
+        "melbourne",
+        "brisbane",
+        "perth",
         "singapore",
-        "israel", "tel aviv", "jerusalem",
-        "netherlands", "amsterdam", "rotterdam",
-        "ireland", "dublin", "cork",
-        "japan", "tokyo", "osaka",
-        "china", "beijing", "shanghai", "shenzhen", "hong kong",
-        "mexico", "mexico city", "guadalajara",
-        "brazil", "sao paulo", "rio de janeiro",
-        "poland", "warsaw", "krakow",
-        "spain", "barcelona", "madrid", "valencia",
-        "sweden", "stockholm", "gothenburg",
-        "switzerland", "zurich", "geneva",
-        "italy", "rome", "milan",
-        "austria", "vienna",
-        "belgium", "brussels",
-        "denmark", "copenhagen",
-        "norway", "oslo",
-        "finland", "helsinki",
-        "portugal", "lisbon",
-        "czech republic", "prague",
-        "romania", "bucharest",
-        "hungary", "budapest",
-        "new zealand", "auckland", "wellington",
-        "south korea", "seoul",
-        "taiwan", "taipei",
-        "thailand", "bangkok",
-        "vietnam", "ho chi minh",
-        "philippines", "manila",
-        "argentina", "buenos aires",
-        "chile", "santiago",
-        "colombia", "bogota"
+        "israel",
+        "tel aviv",
+        "jerusalem",
+        "netherlands",
+        "amsterdam",
+        "rotterdam",
+        "ireland",
+        "dublin",
+        "cork",
+        "japan",
+        "tokyo",
+        "osaka",
+        "china",
+        "beijing",
+        "shanghai",
+        "shenzhen",
+        "hong kong",
+        "mexico",
+        "mexico city",
+        "guadalajara",
+        "brazil",
+        "sao paulo",
+        "rio de janeiro",
+        "poland",
+        "warsaw",
+        "krakow",
+        "spain",
+        "barcelona",
+        "madrid",
+        "valencia",
+        "sweden",
+        "stockholm",
+        "gothenburg",
+        "switzerland",
+        "zurich",
+        "geneva",
+        "italy",
+        "rome",
+        "milan",
+        "austria",
+        "vienna",
+        "belgium",
+        "brussels",
+        "denmark",
+        "copenhagen",
+        "norway",
+        "oslo",
+        "finland",
+        "helsinki",
+        "portugal",
+        "lisbon",
+        "czech republic",
+        "prague",
+        "romania",
+        "bucharest",
+        "hungary",
+        "budapest",
+        "new zealand",
+        "auckland",
+        "wellington",
+        "south korea",
+        "seoul",
+        "taiwan",
+        "taipei",
+        "thailand",
+        "bangkok",
+        "vietnam",
+        "ho chi minh",
+        "philippines",
+        "manila",
+        "argentina",
+        "buenos aires",
+        "chile",
+        "santiago",
+        "colombia",
+        "bogota"
       ]
     }
   },
@@ -233,9 +410,7 @@
         "owner": "speedyapply",
         "repo": "2026-SWE-College-Jobs",
         "branch": "main",
-        "files": [
-          "NEW_GRAD_USA.md"
-        ],
+        "files": ["NEW_GRAD_USA.md"],
         "poll_interval_seconds": 3600
       }
     ],
@@ -683,6 +858,278 @@
         "name": "Bloomberg Philanthropies",
         "board_token": "bloombergorg",
         "company": "Bloomberg Philanthropies"
+      },
+      {
+        "company": "PDT Partners",
+        "board_token": "pdtpartners"
+      },
+      {
+        "company": "Dagster Labs",
+        "board_token": "dagsterlabs"
+      },
+      {
+        "company": "IMC Trading",
+        "board_token": "imc"
+      },
+      {
+        "company": "Schonfeld",
+        "board_token": "schonfeld"
+      },
+      {
+        "company": "SingleStore",
+        "board_token": "singlestore"
+      },
+      {
+        "company": "Twilio Students",
+        "board_token": "twiliostudents"
+      },
+      {
+        "company": "Raft",
+        "board_token": "raft"
+      },
+      {
+        "company": "Radiant",
+        "board_token": "radiant"
+      },
+      {
+        "company": "SeatGeek",
+        "board_token": "seatgeek"
+      },
+      {
+        "company": "ZipRecruiter",
+        "board_token": "ziprecruiter"
+      },
+      {
+        "company": "Neuralink",
+        "board_token": "neuralink"
+      },
+      {
+        "company": "DoorDash Canada",
+        "board_token": "doordashcanada"
+      },
+      {
+        "company": "Perpay",
+        "board_token": "perpay"
+      },
+      {
+        "company": "Tubi",
+        "board_token": "tubitv"
+      },
+      {
+        "company": "Sigma Computing",
+        "board_token": "sigmacomputing"
+      },
+      {
+        "company": "xAI",
+        "board_token": "xai"
+      },
+      {
+        "company": "Metronome",
+        "board_token": "metronome"
+      },
+      {
+        "company": "EarnIn",
+        "board_token": "earnin"
+      },
+      {
+        "company": "NPR",
+        "board_token": "nationalpublicradioinc"
+      },
+      {
+        "company": "GlossGenius",
+        "board_token": "glossgenius"
+      },
+      {
+        "company": "Zora",
+        "board_token": "zora"
+      },
+      {
+        "company": "Forage",
+        "board_token": "joinforage"
+      },
+      {
+        "company": "CoreWeave",
+        "board_token": "coreweave"
+      },
+      {
+        "company": "Rubrik",
+        "board_token": "rubrik"
+      },
+      {
+        "company": "Navan",
+        "board_token": "TripActions"
+      },
+      {
+        "company": "Verkada",
+        "board_token": "verkada"
+      },
+      {
+        "company": "N26",
+        "board_token": "n26"
+      },
+      {
+        "company": "Scale to Win",
+        "board_token": "scaletowinllc"
+      },
+      {
+        "company": "NinjaTrader",
+        "board_token": "ninjatrader"
+      },
+      {
+        "company": "Avela Education",
+        "board_token": "avelaeducation"
+      },
+      {
+        "company": "B12",
+        "board_token": "b12"
+      },
+      {
+        "company": "Glean",
+        "board_token": "gleanwork"
+      },
+      {
+        "company": "Loop",
+        "board_token": "loop"
+      },
+      {
+        "company": "Freeform",
+        "board_token": "freeformfuturecorp"
+      },
+      {
+        "company": "Aquatic Capital Management",
+        "board_token": "aquaticcapitalmanagement"
+      },
+      {
+        "company": "HP IQ",
+        "board_token": "hpiq"
+      },
+      {
+        "company": "Obsidian Security",
+        "board_token": "obsidiansecurity"
+      },
+      {
+        "company": "Harmonic",
+        "board_token": "harmonic"
+      },
+      {
+        "company": "Underdog Fantasy",
+        "board_token": "underdogfantasy"
+      },
+      {
+        "company": "Together AI",
+        "board_token": "togetherai"
+      },
+      {
+        "company": "Point72",
+        "board_token": "point72"
+      },
+      {
+        "company": "Wiz",
+        "board_token": "wizinc"
+      },
+      {
+        "company": "Squarespace",
+        "board_token": "squarespace"
+      },
+      {
+        "company": "Abnormal Security",
+        "board_token": "abnormalsecurity"
+      },
+      {
+        "company": "Carta",
+        "board_token": "carta"
+      },
+      {
+        "company": "Marqeta",
+        "board_token": "marqeta"
+      },
+      {
+        "company": "Mercury",
+        "board_token": "mercury"
+      },
+      {
+        "company": "Snyk",
+        "board_token": "snyk"
+      },
+      {
+        "company": "CLEAR",
+        "board_token": "clear"
+      },
+      {
+        "company": "Brave",
+        "board_token": "brave"
+      },
+      {
+        "company": "Five Rings",
+        "board_token": "fiveringsllc"
+      },
+      {
+        "company": "MEMX",
+        "board_token": "memx"
+      },
+      {
+        "company": "Roblox",
+        "board_token": "roblox"
+      },
+      {
+        "company": "Hudson River Trading",
+        "board_token": "wehrtyou"
+      },
+      {
+        "company": "Jane Street",
+        "board_token": "janestreet"
+      },
+      {
+        "company": "Cross River",
+        "board_token": "crossriverbank"
+      },
+      {
+        "company": "JFrog",
+        "board_token": "jfrog"
+      },
+      {
+        "company": "Gemini",
+        "board_token": "gemini"
+      },
+      {
+        "company": "Moveworks",
+        "board_token": "Moveworks"
+      },
+      {
+        "company": "Druva",
+        "board_token": "druva"
+      },
+      {
+        "company": "Jump Crypto",
+        "board_token": "jumpcrypto"
+      },
+      {
+        "company": "SentinelOne",
+        "board_token": "sentinellabs"
+      },
+      {
+        "company": "Celonis",
+        "board_token": "celonis"
+      },
+      {
+        "company": "Notion",
+        "board_token": "notion"
+      },
+      {
+        "company": "Virtu Financial",
+        "board_token": "virtu"
+      },
+      {
+        "company": "Corelight",
+        "board_token": "corelight"
+      },
+      {
+        "company": "Pave",
+        "board_token": "paveakatroveinformationtechnologies"
+      },
+      {
+        "company": "Instawork",
+        "board_token": "instawork"
       }
     ],
     "lever": [
@@ -810,6 +1257,106 @@
         "name": "Regrello",
         "slug": "regrello",
         "company": "Regrello"
+      },
+      {
+        "company": "Nominal",
+        "slug": "nominal"
+      },
+      {
+        "company": "Veeva Systems",
+        "slug": "veeva"
+      },
+      {
+        "company": "WeRide",
+        "slug": "weride"
+      },
+      {
+        "company": "NimbleRx",
+        "slug": "nimblerx"
+      },
+      {
+        "company": "Belvedere Trading",
+        "slug": "belvederetrading"
+      },
+      {
+        "company": "Alignable",
+        "slug": "Alignable"
+      },
+      {
+        "company": "Shield AI",
+        "slug": "shieldai"
+      },
+      {
+        "company": "Valkyrie Trading",
+        "slug": "valkyrietrading"
+      },
+      {
+        "company": "WebFX",
+        "slug": "webfx"
+      },
+      {
+        "company": "Ladders",
+        "slug": "ladders"
+      },
+      {
+        "company": "Voleon Group",
+        "slug": "voleon"
+      },
+      {
+        "company": "Pison Technology",
+        "slug": "pison"
+      },
+      {
+        "company": "Brilliant",
+        "slug": "brilliant"
+      },
+      {
+        "company": "Field AI",
+        "slug": "field-ai"
+      },
+      {
+        "company": "GoTo Group",
+        "slug": "GoToGroup"
+      },
+      {
+        "company": "Narmi",
+        "slug": "narmi"
+      },
+      {
+        "company": "Wpromote",
+        "slug": "wpromote"
+      },
+      {
+        "company": "Decentraland",
+        "slug": "Decentraland"
+      },
+      {
+        "company": "Anduril",
+        "slug": "anduril"
+      },
+      {
+        "company": "Aragon",
+        "slug": "aragon"
+      },
+      {
+        "company": "Rackspace",
+        "slug": "rackspace"
+      },
+      {
+        "company": "Peerspace",
+        "slug": "peerspace"
+      },
+      {
+        "company": "Loft Orbital",
+        "slug": "loftorbital"
+      },
+      {
+        "company": "CesiumAstro",
+        "slug": "CesiumAstro"
+      },
+      {
+        "company": "E-Space",
+        "slug": "espace"
       }
     ],
     "ashby": [
@@ -1057,6 +1604,38 @@
         "name": "Confluent",
         "clientname": "confluent",
         "company": "Confluent"
+      },
+      {
+        "company": "Acorns",
+        "clientname": "Acorns"
+      },
+      {
+        "company": "EliseAI",
+        "clientname": "eliseai"
+      },
+      {
+        "company": "Kikoff",
+        "clientname": "kikoff"
+      },
+      {
+        "company": "Solace",
+        "clientname": "solace"
+      },
+      {
+        "company": "Giga ML",
+        "clientname": "gigaml"
+      },
+      {
+        "company": "Valon",
+        "clientname": "Valon"
+      },
+      {
+        "company": "Replo",
+        "clientname": "replo"
+      },
+      {
+        "company": "Rightfoot",
+        "clientname": "rightfoot"
       }
     ],
     "workable": [
@@ -1648,7 +2227,13 @@
       {
         "name": "Shopify",
         "company": "Shopify",
-        "keywords": ["engineer", "software", "new grad", "intern", "early career"],
+        "keywords": [
+          "engineer",
+          "software",
+          "new grad",
+          "intern",
+          "early career"
+        ],
         "use_selenium": false,
         "auto_fallback_to_selenium": true,
         "request_delay": 2.0,
@@ -1662,7 +2247,13 @@
         "brand": "tiktok",
         "headless": true,
         "max_scrolls": 5,
-        "keywords": ["software", "engineer", "new grad", "graduate", "early career"]
+        "keywords": [
+          "software",
+          "engineer",
+          "new grad",
+          "graduate",
+          "early career"
+        ]
       },
       {
         "name": "ByteDance",
@@ -1670,7 +2261,13 @@
         "brand": "bytedance",
         "headless": true,
         "max_scrolls": 5,
-        "keywords": ["software", "engineer", "new grad", "graduate", "early career"]
+        "keywords": [
+          "software",
+          "engineer",
+          "new grad",
+          "graduate",
+          "early career"
+        ]
       }
     ],
     "goldmansachs": [
