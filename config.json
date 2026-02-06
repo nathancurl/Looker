@@ -361,6 +361,11 @@
         "company": "Faire"
       },
       {
+        "name": "FERMAT",
+        "board_token": "fermat",
+        "company": "FERMAT"
+      },
+      {
         "name": "Figma",
         "board_token": "figma",
         "company": "Figma"
