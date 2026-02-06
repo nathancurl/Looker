@@ -2394,14 +2394,14 @@
       "name": "Google",
       "company": "Google",
       "feed_url": "https://www.google.com/about/careers/applications/jobs/feed.xml",
-      "poll_interval_seconds": 900
+      "poll_interval_seconds": 120
     },
     "amazon": {
       "name": "Amazon",
       "company": "Amazon",
       "base_url": "https://www.amazon.jobs/en/search.json",
       "result_limit": 100,
-      "poll_interval_seconds": 1200
+      "poll_interval_seconds": 120
     },
     "microsoft": {
       "name": "Microsoft",
@@ -2410,23 +2410,23 @@
       "max_pages": 5,
       "results_per_page": 100,
       "headless": true,
-      "poll_interval_seconds": 900
+      "poll_interval_seconds": 300
     },
     "netflix": {
       "name": "Netflix",
       "company": "Netflix",
-      "poll_interval_seconds": 1200
+      "poll_interval_seconds": 120
     },
     "apple": {
       "name": "Apple",
       "company": "Apple",
-      "poll_interval_seconds": 1200
+      "poll_interval_seconds": 120
     },
     "meta": {
       "name": "Meta",
       "company": "Meta",
       "doc_id": "24779400495047796",
-      "poll_interval_seconds": 1800
+      "poll_interval_seconds": 120
     },
     "jobvite": [
       {
