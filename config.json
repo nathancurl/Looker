@@ -1,5 +1,5 @@
 {
-  "poll_interval_seconds": 300,
+  "poll_interval_seconds": 120,
   "filtering": {
     "include_keywords": [
       "software engineer",
@@ -2394,7 +2394,7 @@
       "name": "Google",
       "company": "Google",
       "feed_url": "https://www.google.com/about/careers/applications/jobs/feed.xml",
-      "poll_interval_seconds": 1800
+      "poll_interval_seconds": 900
     },
     "amazon": {
       "name": "Amazon",
@@ -2422,7 +2422,7 @@
       "name": "Meta",
       "company": "Meta",
       "doc_id": "24779400495047796",
-      "poll_interval_seconds": 3600
+      "poll_interval_seconds": 1800
     },
     "jobvite": [
       {
