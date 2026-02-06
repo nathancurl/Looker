@@ -2406,7 +2406,11 @@
     "microsoft": {
       "name": "Microsoft",
       "company": "Microsoft",
-      "poll_interval_seconds": 1200
+      "query": "software engineer",
+      "max_pages": 5,
+      "results_per_page": 100,
+      "headless": true,
+      "poll_interval_seconds": 900
     },
     "netflix": {
       "name": "Netflix",
