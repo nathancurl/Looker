@@ -291,6 +291,11 @@
         "company": "Brex"
       },
       {
+        "name": "Checkr",
+        "board_token": "checkr",
+        "company": "Checkr"
+      },
+      {
         "name": "Chime",
         "board_token": "chime",
         "company": "Chime"
