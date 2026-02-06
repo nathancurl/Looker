@@ -2169,10 +2169,6 @@
       {
         "name": "State of Texas",
         "base_url": "https://capps.taleo.net/careersection/ex/jobsearch.ftl"
-      },
-      {
-        "name": "aa080",
-        "base_url": "https://aa080.taleo.net/careersection/sdp_external_career_section/jobsearch.ftl"
       }
     ],
     "yc": {
