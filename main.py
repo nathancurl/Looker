@@ -5,6 +5,7 @@ import os
 import signal
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from config import AppConfig, is_dry_run, load_config
 from discord_notifier import notify
@@ -114,35 +115,57 @@ def poll_once(
     config: AppConfig,
     last_polled: dict[str, float],
 ) -> int:
-    """Run one poll cycle. Returns count of new notifications sent."""
+    """Run one poll cycle with parallel fetching. Returns count of new notifications sent."""
     now = time.time()
     new_count = 0
 
+    # Determine which fetchers are due to run
+    fetchers_to_run = []
     for fetcher, interval in fetchers:
         key = f"{fetcher.source_group}:{fetcher.source_name}"
         elapsed = now - last_polled.get(key, 0)
-        if elapsed < interval:
-            continue
+        if elapsed >= interval:
+            fetchers_to_run.append((fetcher, key))
+            last_polled[key] = now
 
-        last_polled[key] = now
-        jobs = fetcher.safe_fetch()
+    if not fetchers_to_run:
+        return 0
 
-        for job in jobs:
-            if state.is_seen(job.uid):
-                continue
+    # Fetch all sources in parallel
+    logger.info(f"Fetching {len(fetchers_to_run)} sources in parallel...")
 
-            passed, matched_kw = filter_job(job, config)
+    with ThreadPoolExecutor(max_workers=min(50, len(fetchers_to_run))) as executor:
+        # Submit all fetch tasks
+        future_to_fetcher = {
+            executor.submit(fetcher.safe_fetch): (fetcher, key)
+            for fetcher, key in fetchers_to_run
+        }
 
-            if not passed:
-                # Filtered out — mark seen to avoid re-evaluation
-                state.mark_seen(job.uid, job.source_group, job.url)
-                continue
+        # Process results as they complete
+        for future in as_completed(future_to_fetcher):
+            fetcher, key = future_to_fetcher[future]
+            try:
+                jobs = future.result()
 
-            success = notify(job, matched_kw, config)
-            if success:
-                state.mark_seen(job.uid, job.source_group, job.url)
-                new_count += 1
-            # If notify fails, don't mark seen — retry next cycle
+                for job in jobs:
+                    if state.is_seen(job.uid):
+                        continue
+
+                    passed, matched_kw = filter_job(job, config)
+
+                    if not passed:
+                        # Filtered out — mark seen to avoid re-evaluation
+                        state.mark_seen(job.uid, job.source_group, job.url)
+                        continue
+
+                    success = notify(job, matched_kw, config)
+                    if success:
+                        state.mark_seen(job.uid, job.source_group, job.url)
+                        new_count += 1
+                    # If notify fails, don't mark seen — retry next cycle
+
+            except Exception as e:
+                logger.error(f"Error processing results from {key}: {e}")
 
     return new_count
 
