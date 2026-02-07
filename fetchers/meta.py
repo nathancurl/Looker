@@ -44,7 +44,7 @@ def _rotate_tor_ip():
         from stem.control import Controller
 
         with Controller.from_port(port=TOR_CONTROL_PORT) as controller:
-            controller.authenticate(password=TOR_CONTROL_PASSWORD)
+            controller.authenticate()  # No password needed for localhost
             controller.signal(Signal.NEWNYM)
             logger.info("Meta: requested new Tor IP, waiting for circuit...")
             time.sleep(3)  # Wait for new circuit to establish
