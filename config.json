@@ -2431,7 +2431,7 @@
       "name": "Meta",
       "company": "Meta",
       "doc_id": "24779400495047796",
-      "poll_interval_seconds": 900
+      "poll_interval_seconds": 300
     },
     "jobvite": [
       {
