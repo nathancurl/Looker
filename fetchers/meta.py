@@ -28,6 +28,9 @@ logger = logging.getLogger(__name__)
 CAREERS_URL = "https://www.metacareers.com/jobs"
 GRAPHQL_URL = "https://www.metacareers.com/api/graphql/"
 
+# Use Tor SOCKS proxy to bypass IP bans (more reliable than free HTTP proxies)
+TOR_PROXY = "socks5://127.0.0.1:9050"
+
 
 class MetaFetcher(BaseFetcher):
     source_group = "maang"
@@ -37,37 +40,61 @@ class MetaFetcher(BaseFetcher):
         self._doc_id = source_config.get("doc_id", "")
 
     def fetch(self) -> list[Job]:
-        session = requests.Session()
-        session.headers.update({"User-Agent": USER_AGENT})
+        # Try Tor proxy first, then direct connection
+        for use_tor in [True, False]:
+            try:
+                session = requests.Session()
+                session.headers.update({"User-Agent": USER_AGENT})
 
-        # Load careers page to get tokens and possibly embedded data
-        page_data = self._load_careers_page(session)
-        if not page_data:
-            return []
+                if use_tor:
+                    session.proxies = {
+                        "http": TOR_PROXY,
+                        "https": TOR_PROXY
+                    }
+                    logger.info("Meta: trying via Tor proxy")
+                else:
+                    logger.info("Meta: trying direct connection")
 
-        lsd_token = page_data.get("lsd_token", "")
-        embedded_jobs = page_data.get("jobs", [])
+                # Load careers page to get tokens and possibly embedded data
+                page_data = self._load_careers_page(session)
+                if not page_data:
+                    continue
 
-        # If we got embedded jobs from the page, use those
-        if embedded_jobs:
-            return self._parse_jobs(embedded_jobs)
+                lsd_token = page_data.get("lsd_token", "")
+                embedded_jobs = page_data.get("jobs", [])
 
-        # Otherwise try GraphQL if we have doc_id and lsd_token
-        if self._doc_id and lsd_token:
-            jobs = self._fetch_via_graphql(session, lsd_token)
-            if jobs:
-                return jobs
+                # If we got embedded jobs from the page, use those
+                if embedded_jobs:
+                    logger.info(f"Meta: successfully fetched via {'Tor' if use_tor else 'direct'}")
+                    return self._parse_jobs(embedded_jobs)
 
-        logger.warning("Meta: could not fetch jobs via any method")
+                # Otherwise try GraphQL if we have doc_id and lsd_token
+                if self._doc_id and lsd_token:
+                    jobs = self._fetch_via_graphql(session, lsd_token)
+                    if jobs:
+                        logger.info(f"Meta: successfully fetched {len(jobs)} jobs via {'Tor' if use_tor else 'direct'}")
+                        return jobs
+
+                # This method didn't work, try next one
+                logger.debug(f"Meta: {'Tor' if use_tor else 'direct'} returned no data")
+                continue
+
+            except Exception as e:
+                logger.debug(f"Meta: error with {'Tor' if use_tor else 'direct'}: {e}")
+                continue
+
+        logger.warning("Meta: could not fetch jobs via Tor or direct connection")
         return []
 
     def _load_careers_page(self, session: requests.Session) -> dict:
         """Load careers page and extract tokens and any embedded job data."""
         try:
-            resp = session.get(CAREERS_URL, timeout=DEFAULT_TIMEOUT)
+            # Use longer timeout for proxies (30s instead of 15s)
+            timeout = 30 if session.proxies else DEFAULT_TIMEOUT
+            resp = session.get(CAREERS_URL, timeout=timeout)
             resp.raise_for_status()
         except Exception as e:
-            logger.warning("Meta: failed to load careers page: %s", e)
+            logger.debug("Meta: failed to load careers page: %s", e)
             return {}
 
         result = {}
