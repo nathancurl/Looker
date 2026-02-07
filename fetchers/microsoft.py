@@ -58,7 +58,8 @@ class MicrosoftFetcher(BaseFetcher):
         jobs = []
 
         try:
-            service = Service(ChromeDriverManager().install())
+            # Force ChromeDriver v144 to match system Chromium
+            service = Service(ChromeDriverManager(driver_version="144.0.7559.109").install())
             driver = webdriver.Chrome(service=service, options=options)
             driver.set_page_load_timeout(30)
 
