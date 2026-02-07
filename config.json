@@ -2080,6 +2080,11 @@
         "base_url": "https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/jobs/jobs"
       },
       {
+        "name": "Palo Alto Networks",
+        "company": "Palo Alto Networks",
+        "base_url": "https://paloaltonetworks.wd5.myworkdayjobs.com/wday/cxs/paloaltonetworks/panwexternalcareers/jobs"
+      },
+      {
         "name": "PwC",
         "company": "PwC",
         "base_url": "https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
