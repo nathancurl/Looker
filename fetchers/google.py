@@ -51,13 +51,13 @@ class GoogleFetcher(BaseFetcher):
         root = ET.fromstring(resp.content)
 
         jobs = []
-        for item in root.iter("item"):
+        for item in root.iter("job"):
             # Filter by location country
             countries = _get_countries(item)
             if not _has_allowed_country(countries, self._allowed_countries):
                 continue
 
-            job_id = _text(item, "id")
+            job_id = _text(item, "jobid")
             title = _text(item, "title")
             employer = _text(item, "employer")
             company = employer if employer else self._config.get("company", "Google")
