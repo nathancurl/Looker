@@ -17,6 +17,7 @@ To obtain a fresh doc_id (optional, improves reliability):
 import json
 import logging
 import re
+import time
 
 import requests
 
@@ -25,11 +26,32 @@ from models import Job
 
 logger = logging.getLogger(__name__)
 
+# Tor control port configuration
+TOR_CONTROL_PORT = 9051
+TOR_CONTROL_PASSWORD = "tor123"
+
 CAREERS_URL = "https://www.metacareers.com/jobs"
 GRAPHQL_URL = "https://www.metacareers.com/api/graphql/"
 
 # Use Tor SOCKS proxy to bypass IP bans (more reliable than free HTTP proxies)
 TOR_PROXY = "socks5://127.0.0.1:9050"
+
+
+def _rotate_tor_ip():
+    """Request a new Tor circuit (new exit IP) via control port."""
+    try:
+        from stem import Signal
+        from stem.control import Controller
+
+        with Controller.from_port(port=TOR_CONTROL_PORT) as controller:
+            controller.authenticate(password=TOR_CONTROL_PASSWORD)
+            controller.signal(Signal.NEWNYM)
+            logger.info("Meta: requested new Tor IP, waiting for circuit...")
+            time.sleep(3)  # Wait for new circuit to establish
+            return True
+    except Exception as e:
+        logger.warning(f"Meta: failed to rotate Tor IP: {e}")
+        return False
 
 
 class MetaFetcher(BaseFetcher):
@@ -40,6 +62,9 @@ class MetaFetcher(BaseFetcher):
         self._doc_id = source_config.get("doc_id", "")
 
     def fetch(self) -> list[Job]:
+        # Request fresh Tor IP before fetching (prevents IP-based blocking)
+        _rotate_tor_ip()
+
         # Try Tor proxy first, then direct connection
         for use_tor in [True, False]:
             try:
