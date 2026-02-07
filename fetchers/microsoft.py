@@ -41,6 +41,8 @@ class MicrosoftFetcher(BaseFetcher):
             return []
 
         options = Options()
+        # Use system Chromium if available (for VM compatibility)
+        options.binary_location = "/usr/bin/chromium"
         if self._headless:
             options.add_argument("--headless=new")
         options.add_argument("--no-sandbox")
