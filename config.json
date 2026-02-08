@@ -2431,13 +2431,6 @@
     ],
     "workday_selenium": [
       {
-        "name": "Visa",
-        "company": "Visa",
-        "base_url": "https://visa.wd5.myworkdayjobs.com/Visa_Careers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
         "name": "Verizon",
         "company": "Verizon",
         "base_url": "https://verizon.wd5.myworkdayjobs.com/verizon",
