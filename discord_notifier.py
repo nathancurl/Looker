@@ -103,6 +103,9 @@ def _sanitize_embed_url(url: str | None) -> str | None:
     """Validate and sanitize a URL for Discord embeds. Returns None if invalid."""
     if not url:
         return None
+    # Fix common upstream data issue: https:/.example.com -> https://apply.example.com
+    if url.startswith("https:/."):
+        url = url.replace("https:/.", "https://apply.", 1)
     if not _VALID_URL_RE.match(url):
         return None
     return url
