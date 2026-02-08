@@ -162,9 +162,11 @@ class TikTokFetcher(BaseFetcher):
         seen_ids = set()
 
         try:
-            # Find all job links - both TikTok and ByteDance use /search/{id} pattern
-            # ByteDance uses full URLs, TikTok uses relative paths
-            job_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/search/'], a[href*='joinbytedance.com/search/'], a[href*='lifeattiktok.com/search/']")
+            # Find all job links
+            # TikTok uses: /position/{id}/detail or /search/{id}
+            # ByteDance uses: /search/{id}
+            # Both can use full URLs or relative paths
+            job_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/search/'], a[href*='/position/'], a[href*='joinbytedance.com/search/'], a[href*='lifeattiktok.com']")
 
             logger.info("%s: found %d job links in DOM", self.source_name, len(job_links))
 
@@ -172,17 +174,19 @@ class TikTokFetcher(BaseFetcher):
                 try:
                     # Extract URL
                     url = link.get_attribute("href")
-                    if not url or "/search/" not in url:
+                    if not url or ("/search/" not in url and "/position/" not in url):
                         continue
 
-                    # Extract job ID from URL - both TikTok and ByteDance use 19-digit IDs
+                    # Extract job ID from URL
+                    # TikTok: /position/{id}/detail or /search/{id}
+                    # ByteDance: /search/{id}
                     import re
-                    job_id_match = re.search(r'/search/(\d{16,20})', url)  # Allow 16-20 digits for flexibility
+                    job_id_match = re.search(r'/(search|position)/(\d{16,20})', url)
                     if not job_id_match:
                         logger.debug("%s: no job ID found in URL: %s", self.source_name, url)
                         continue
 
-                    job_id = job_id_match.group(1)
+                    job_id = job_id_match.group(2)  # Group 2 because group 1 is 'search' or 'position'
                     if job_id in seen_ids:
                         continue
                     seen_ids.add(job_id)
