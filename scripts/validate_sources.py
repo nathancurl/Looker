@@ -174,22 +174,31 @@ def _is_safe_url(url: str) -> bool:
 
 
 def test_icims(company: dict) -> tuple[bool, str]:
-    """Test iCIMS API endpoint."""
+    """Test iCIMS portal by scraping the search page HTML."""
+    import re
+
     portal_url = company.get("portal_url", "").rstrip("/")
-    url = f"{portal_url}/jobs"
+    url = f"{portal_url}/jobs/search"
     if not _is_safe_url(url):
         return False, "Invalid or unsafe URL"
     try:
         resp = requests.get(
             url,
-            params={"page": 1, "pageSize": 1},
-            headers={**HEADERS, "Accept": "application/json"},
+            params={"ss": "1", "in_iframe": "1"},
+            headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+                "Accept": "text/html",
+            },
             timeout=TIMEOUT,
         )
         if resp.status_code == 200:
-            data = resp.json()
-            total = data.get("total", len(data.get("jobs", [])))
-            return True, f"OK ({total} jobs)"
+            # Count job links in the HTML
+            job_links = re.findall(r'href="[^"]*?/jobs/\d+/[^"]*?"', resp.text)
+            if job_links or "iCIMS_JobsTable" in resp.text:
+                return True, f"OK ({len(job_links)} job links)"
+            if "Please Enable Cookies" in resp.text:
+                return False, "Blocked: requires cookies"
+            return True, f"OK (portal accessible, 0 jobs)"
         return False, f"HTTP {resp.status_code}"
     except Exception as e:
         return False, str(e)[:50]

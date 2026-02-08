@@ -709,34 +709,9 @@
         "company": "Zscaler"
       },
       {
-        "name": "Slack",
-        "board_token": "salesforce",
-        "company": "Slack"
-      },
-      {
         "name": "Plaid",
         "board_token": "plaid",
         "company": "Plaid"
-      },
-      {
-        "name": "Rippling",
-        "board_token": "rippling",
-        "company": "Rippling"
-      },
-      {
-        "name": "Snowflake",
-        "board_token": "snowflake",
-        "company": "Snowflake"
-      },
-      {
-        "name": "Splunk",
-        "board_token": "splunk",
-        "company": "Splunk"
-      },
-      {
-        "name": "Square",
-        "board_token": "square",
-        "company": "Square"
       },
       {
         "name": "Thumbtack",
@@ -747,36 +722,6 @@
         "name": "Webflow",
         "board_token": "webflow",
         "company": "Webflow"
-      },
-      {
-        "name": "Canva",
-        "board_token": "canva",
-        "company": "Canva"
-      },
-      {
-        "name": "Delivery Hero",
-        "board_token": "deliveryhero",
-        "company": "Delivery Hero"
-      },
-      {
-        "name": "GitHubNext",
-        "board_token": "githubnext",
-        "company": "GitHub"
-      },
-      {
-        "name": "HashiCorp",
-        "board_token": "hashicorp",
-        "company": "HashiCorp"
-      },
-      {
-        "name": "Kong",
-        "board_token": "kong",
-        "company": "Kong"
-      },
-      {
-        "name": "Benchling",
-        "board_token": "benchling",
-        "company": "Benchling"
       },
       {
         "name": "StubHub",
@@ -1034,10 +979,6 @@
         "board_token": "mercury"
       },
       {
-        "company": "Snyk",
-        "board_token": "snyk"
-      },
-      {
         "company": "CLEAR",
         "board_token": "clear"
       },
@@ -1134,16 +1075,8 @@
         "board_token": "coupang"
       },
       {
-        "company": "Cruise",
-        "board_token": "cruise"
-      },
-      {
         "company": "Dremio",
         "board_token": "dremio"
-      },
-      {
-        "company": "G2",
-        "board_token": "g2"
       },
       {
         "company": "LaunchDarkly",
@@ -1154,45 +1087,12 @@
         "board_token": "liftoff"
       },
       {
-        "company": "LiveRamp",
-        "board_token": "liveramp"
-      },
-      {
-        "company": "Loom",
-        "board_token": "loom"
-      },
-      {
         "company": "Movable Ink",
         "board_token": "movableink"
       },
       {
-        "company": "Mux",
-        "board_token": "mux"
-      },
-      {
-        "company": "OneSignal",
-        "board_token": "onesignal"
-      },
-      {
-        "company": "Outreach",
-        "board_token": "outreach"
-      },
-      {
-        "company": "Remitly",
-        "board_token": "remitly"
-      },
-      {
-        "company": "SambaNova",
-        "board_token": "sambanova",
-        "source_group": "frontier_ai"
-      },
-      {
         "company": "Snorkel AI",
         "board_token": "snorkelai"
-      },
-      {
-        "company": "Wealthfront",
-        "board_token": "wealthfront"
       },
       {
         "company": "ZoomInfo",
@@ -1254,6 +1154,42 @@
       {
         "company": "Justworks",
         "board_token": "justworks"
+      },
+      {
+        "company": "Coalition",
+        "board_token": "coalition"
+      },
+      {
+        "company": "Nextdoor",
+        "board_token": "nextdoor"
+      },
+      {
+        "company": "Twitch",
+        "board_token": "twitch"
+      },
+      {
+        "company": "Lob",
+        "board_token": "lob"
+      },
+      {
+        "company": "Viam",
+        "board_token": "viamrobotics"
+      },
+      {
+        "company": "Pie Insurance",
+        "board_token": "pieinsurance"
+      },
+      {
+        "company": "Zeta Global",
+        "board_token": "zetaglobal"
+      },
+      {
+        "company": "Fivetran",
+        "board_token": "fivetran"
+      },
+      {
+        "company": "Sourcegraph",
+        "board_token": "sourcegraph91"
       }
     ],
     "lever": [
@@ -1281,26 +1217,6 @@
         "name": "Zoox",
         "slug": "zoox",
         "company": "Zoox"
-      },
-      {
-        "name": "DraftKings",
-        "slug": "draftkings",
-        "company": "DraftKings"
-      },
-      {
-        "name": "Snap",
-        "slug": "snap",
-        "company": "Snap"
-      },
-      {
-        "name": "Twitch",
-        "slug": "twitch",
-        "company": "Twitch"
-      },
-      {
-        "name": "Nextdoor",
-        "slug": "nextdoor",
-        "company": "Nextdoor"
       },
       {
         "name": "Peak Games",
@@ -1427,10 +1343,6 @@
         "slug": "narmi"
       },
       {
-        "company": "Wpromote",
-        "slug": "wpromote"
-      },
-      {
         "company": "Decentraland",
         "slug": "Decentraland"
       },
@@ -1459,64 +1371,12 @@
         "slug": "espace"
       },
       {
-        "company": "Astra",
-        "slug": "astra"
-      },
-      {
-        "company": "Coalition",
-        "slug": "coalition"
-      },
-      {
         "company": "Color Health",
         "slug": "color"
       },
       {
-        "company": "Drata",
-        "slug": "drata"
-      },
-      {
-        "company": "Gecko Robotics",
-        "slug": "geckorobotics"
-      },
-      {
-        "company": "Lob",
-        "slug": "lob"
-      },
-      {
-        "company": "Lucid Motors",
-        "slug": "lucidmotors"
-      },
-      {
-        "company": "Material Security",
-        "slug": "materialsecurity"
-      },
-      {
-        "company": "Persona",
-        "slug": "persona"
-      },
-      {
-        "company": "Pie Insurance",
-        "slug": "pieinsurance"
-      },
-      {
         "company": "Reliable Robotics",
         "slug": "reliable"
-      },
-      {
-        "company": "Skyflow",
-        "slug": "skyflow"
-      },
-      {
-        "company": "ThousandEyes",
-        "slug": "thousandeyes"
-      },
-      {
-        "company": "Viam",
-        "slug": "viam"
-      },
-      {
-        "company": "Zeta Global",
-        "slug": "zetaglobal"
       },
       {
         "company": "Artera",
@@ -1669,21 +1529,6 @@
         "company": "Temporal"
       },
       {
-        "name": "Weights & Biases",
-        "clientname": "wandb",
-        "company": "Weights & Biases"
-      },
-      {
-        "name": "Alchemy",
-        "clientname": "alchemy",
-        "company": "Alchemy"
-      },
-      {
-        "name": "dbt Labs",
-        "clientname": "dbtlabs",
-        "company": "dbt Labs"
-      },
-      {
         "name": "Hightouch",
         "clientname": "hightouch",
         "company": "Hightouch"
@@ -1791,10 +1636,6 @@
         "clientname": "rightfoot"
       },
       {
-        "company": "Codeium",
-        "clientname": "codeium"
-      },
-      {
         "company": "Continue",
         "clientname": "continue"
       },
@@ -1807,26 +1648,12 @@
         "clientname": "buildwithfern"
       },
       {
-        "company": "Fivetran",
-        "clientname": "fivetran"
-      },
-      {
         "company": "G2",
         "clientname": "g2"
       },
       {
-        "company": "Groq",
-        "clientname": "groq",
-        "source_group": "frontier_ai"
-      },
-      {
         "company": "Inngest",
         "clientname": "inngest"
-      },
-      {
-        "company": "Midjourney",
-        "clientname": "midjourney",
-        "source_group": "frontier_ai"
       },
       {
         "company": "Mintlify",
@@ -1835,10 +1662,6 @@
       {
         "company": "Paraform",
         "clientname": "paraform"
-      },
-      {
-        "company": "Sourcegraph",
-        "clientname": "sourcegraph"
       },
       {
         "company": "Stytch",
@@ -1850,7 +1673,7 @@
       },
       {
         "company": "The Browser Company",
-        "clientname": "thebrowsercompany"
+        "clientname": "The Browser Company"
       },
       {
         "company": "Unify",
@@ -1881,26 +1704,14 @@
         "source_group": "frontier_ai"
       },
       {
-        "name": "Adept AI",
-        "clientname": "adept.ai",
-        "company": "Adept AI",
-        "source_group": "frontier_ai"
-      },
-      {
         "name": "Cognition",
         "clientname": "cognition",
         "company": "Cognition",
         "source_group": "frontier_ai"
       },
       {
-        "name": "Anysphere",
-        "clientname": "anysphere",
-        "company": "Anysphere",
-        "source_group": "frontier_ai"
-      },
-      {
         "company": "Commure + Athelas",
-        "clientname": "Commure-Athelas"
+        "clientname": "commure"
       },
       {
         "company": "Meshy",
@@ -1909,6 +1720,38 @@
       {
         "company": "Mach Industries",
         "clientname": "mach"
+      },
+      {
+        "company": "Kong",
+        "clientname": "kong"
+      },
+      {
+        "company": "Gecko Robotics",
+        "clientname": "gecko-robotics"
+      },
+      {
+        "company": "Persona",
+        "clientname": "persona"
+      },
+      {
+        "company": "Drata",
+        "clientname": "drata"
+      },
+      {
+        "company": "Material Security",
+        "clientname": "materialsecurity"
+      },
+      {
+        "company": "Skyflow",
+        "clientname": "skyflow"
+      },
+      {
+        "company": "Raycast",
+        "clientname": "raycast"
+      },
+      {
+        "company": "Zed Industries",
+        "clientname": "zed"
       }
     ],
     "workable": [
@@ -1943,29 +1786,9 @@
         "company": "Slab"
       },
       {
-        "name": "Depot",
-        "subdomain": "depot",
-        "company": "Depot"
-      },
-      {
-        "name": "Gitpod",
-        "subdomain": "gitpod",
-        "company": "Gitpod"
-      },
-      {
-        "name": "Raycast",
-        "subdomain": "raycast",
-        "company": "Raycast"
-      },
-      {
-        "name": "Tinybird",
-        "subdomain": "tinybird",
-        "company": "Tinybird"
-      },
-      {
-        "name": "Zed Industries",
-        "subdomain": "zed",
-        "company": "Zed Industries"
+        "name": "Gitpod (ONA)",
+        "subdomain": "ona",
+        "company": "Gitpod (ONA)"
       },
       {
         "name": "Rokt",
@@ -2038,6 +1861,16 @@
         "name": "Visa",
         "company": "Visa",
         "company_id": "visa"
+      },
+      {
+        "name": "Canva",
+        "company": "Canva",
+        "company_id": "canva"
+      },
+      {
+        "name": "Delivery Hero",
+        "company": "Delivery Hero",
+        "company_id": "deliveryhero"
       }
     ],
     "workday": [
@@ -2142,11 +1975,6 @@
         "base_url": "https://bankofamerica.wd1.myworkdayjobs.com/wday/cxs/bankofamerica/Campus/jobs"
       },
       {
-        "name": "Chevron",
-        "company": "Chevron",
-        "base_url": "https://chevron.wd5.myworkdayjobs.com/wday/cxs/chevron/ExternalJobBoard/jobs"
-      },
-      {
         "name": "Comcast",
         "company": "Comcast",
         "base_url": "https://comcast.wd5.myworkdayjobs.com/wday/cxs/comcast/Comcast_Careers/jobs"
@@ -2157,11 +1985,6 @@
         "base_url": "https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/US_Careers/jobs"
       },
       {
-        "name": "LinkedIn",
-        "company": "LinkedIn",
-        "base_url": "https://linkedin.wd5.myworkdayjobs.com/wday/cxs/linkedin/careers/jobs"
-      },
-      {
         "name": "Puma",
         "company": "Puma",
         "base_url": "https://puma.wd3.myworkdayjobs.com/wday/cxs/puma/Careers/jobs"
@@ -2169,7 +1992,7 @@
       {
         "name": "Sanofi",
         "company": "Sanofi",
-        "base_url": "https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/Careers/jobs"
+        "base_url": "https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/SanofiCareers/jobs"
       },
       {
         "name": "Blue Origin",
@@ -2347,11 +2170,6 @@
         "base_url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/CrowdStrikeCareers/jobs"
       },
       {
-        "name": "Discover Financial",
-        "company": "Discover Financial",
-        "base_url": "https://discover.wd5.myworkdayjobs.com/wday/cxs/discover/Discover_Financial_Services/jobs"
-      },
-      {
         "name": "GE",
         "company": "GE",
         "base_url": "https://ge.wd5.myworkdayjobs.com/wday/cxs/ge/GE_External_Career_Site/jobs"
@@ -2359,7 +2177,7 @@
       {
         "name": "GDIT",
         "company": "GDIT",
-        "base_url": "https://gdit.wd5.myworkdayjobs.com/wday/cxs/gdit/GDIT/jobs"
+        "base_url": "https://gdit.wd5.myworkdayjobs.com/wday/cxs/gdit/External_Career_Site/jobs"
       },
       {
         "name": "Leidos",
@@ -2379,7 +2197,7 @@
       {
         "name": "Thomson Reuters",
         "company": "Thomson Reuters",
-        "base_url": "https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/TR_External_Career_Site/jobs"
+        "base_url": "https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
       }
     ],
     "workday_selenium": [
