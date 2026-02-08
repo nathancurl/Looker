@@ -1,6 +1,7 @@
 """Discord webhook notification with embeds and retry logic."""
 
 import logging
+import re
 import time
 from typing import Dict
 
@@ -32,12 +33,16 @@ def build_embed(job: Job, matched_keywords: list[str]) -> dict:
 
     embed = {
         "title": title,
-        "url": job.url,
         "color": DISCORD_BLURPLE,
         "fields": [
             {"name": "Source", "value": job.source_name, "inline": True},
         ],
     }
+
+    # Discord rejects embeds with malformed URLs (returns 400)
+    clean_url = _sanitize_embed_url(job.url)
+    if clean_url:
+        embed["url"] = clean_url
 
     if job.snippet:
         # Truncate description if needed (Discord limit: 2048 chars)
@@ -80,6 +85,29 @@ class DiscordServerError(Exception):
     pass
 
 
+class DiscordBadRequestError(Exception):
+    """Raised on 400 — permanent payload error, should not retry."""
+    pass
+
+
+class DiscordWebhookNotFoundError(Exception):
+    """Raised on 404 — webhook deleted or invalid."""
+    pass
+
+
+# Simple URL validation: must start with http:// or https:// and have a valid host
+_VALID_URL_RE = re.compile(r'^https?://[a-zA-Z0-9]')
+
+
+def _sanitize_embed_url(url: str | None) -> str | None:
+    """Validate and sanitize a URL for Discord embeds. Returns None if invalid."""
+    if not url:
+        return None
+    if not _VALID_URL_RE.match(url):
+        return None
+    return url
+
+
 def notify(job: Job, matched_keywords: list[str], config: AppConfig) -> bool:
     """Post a job embed to Discord. Returns True on success, False on failure (or rate-limited)."""
     if is_dry_run():
@@ -109,6 +137,18 @@ def notify(job: Job, matched_keywords: list[str], config: AppConfig) -> bool:
         _rate_limit_cooldowns[webhook_url] = now + e.retry_after
         logger.warning("Discord rate limited for %s, cooldown until %s", job.source_group, time.ctime(now + e.retry_after))
         return False
+    except DiscordWebhookNotFoundError:
+        logger.error(
+            "Webhook for '%s' returned 404 (deleted?). Skipping job %s to avoid infinite retries.",
+            job.source_group, job.uid,
+        )
+        return True  # Mark as seen so we don't retry forever
+    except DiscordBadRequestError:
+        logger.error(
+            "Discord rejected payload for %s (400 Bad Request). URL=%s. Marking as seen.",
+            job.uid, job.url,
+        )
+        return True  # Mark as seen — payload is permanently invalid
     except Exception:
         logger.exception("Failed to send Discord notification for %s", job.uid)
         return False
@@ -135,6 +175,12 @@ def _send_with_retry(webhook_url: str, payload: dict) -> None:
                 retry_after = 5
         # Don't log here, let the caller handle it
         raise DiscordRateLimitError(retry_after)
+
+    if resp.status_code == 400:
+        raise DiscordBadRequestError(f"400 Bad Request: {resp.text[:200]}")
+
+    if resp.status_code == 404:
+        raise DiscordWebhookNotFoundError(f"404 Not Found: webhook may be deleted")
 
     if resp.status_code >= 500:
         logger.warning("Discord server error %d", resp.status_code)
