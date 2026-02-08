@@ -375,6 +375,7 @@
     "icims": "DISCORD_WEBHOOK_ICIMS",
     "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
     "frontier_ai": "DISCORD_WEBHOOK_FRONTIER_AI",
+    "workday_selenium": "DISCORD_WEBHOOK_CUSTOM",
     "jpmorgan": "DISCORD_WEBHOOK_CUSTOM",
     "oracle": "DISCORD_WEBHOOK_CUSTOM",
     "qualcomm": "DISCORD_WEBHOOK_CUSTOM",
