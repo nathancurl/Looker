@@ -576,7 +576,7 @@
 - **Tinybird**: HTTP 404
 - **Zed Industries**: HTTP 404
 
-### WORKDAY (68 companies)
+### WORKDAY (67 companies)
 
 #### ✅ Working (51)
 
@@ -632,7 +632,7 @@
 - **Workday**: OK (399 total jobs)
 - **Zillow**: OK (196 total jobs)
 
-#### ❌ Failing (17)
+#### ❌ Failing (16)
 
 - **AT&T**: HTTP 422
 - **Accenture**: HTTP 422
@@ -646,7 +646,6 @@
 - **Discover Financial**: HTTP 404
 - **GDIT**: HTTP 404
 - **GE**: HTTP 422
-- **LinkedIn**: HTTP 401
 - **Puma**: HTTP 422
 - **Sanofi**: HTTP 404
 - **Thomson Reuters**: HTTP 404

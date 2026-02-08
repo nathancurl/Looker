@@ -375,7 +375,7 @@
     "icims": "DISCORD_WEBHOOK_ICIMS",
     "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
     "frontier_ai": "DISCORD_WEBHOOK_FRONTIER_AI",
-    "workday_selenium": "DISCORD_WEBHOOK_CUSTOM",
+    "workday_selenium": "DISCORD_WEBHOOK_WORKDAY",
     "jpmorgan": "DISCORD_WEBHOOK_CUSTOM",
     "oracle": "DISCORD_WEBHOOK_CUSTOM",
     "qualcomm": "DISCORD_WEBHOOK_CUSTOM",
@@ -384,7 +384,8 @@
     "shopify": "DISCORD_WEBHOOK_CUSTOM",
     "tiktok": "DISCORD_WEBHOOK_CUSTOM",
     "goldmansachs": "DISCORD_WEBHOOK_CUSTOM",
-    "intuit": "DISCORD_WEBHOOK_CUSTOM"
+    "intuit": "DISCORD_WEBHOOK_CUSTOM",
+    "amd": "DISCORD_WEBHOOK_CUSTOM"
   },
   "sources": {
     "newgrad_json": [
@@ -1970,24 +1971,9 @@
         "base_url": "https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
       },
       {
-        "name": "Bank of America",
-        "company": "Bank of America",
-        "base_url": "https://bankofamerica.wd1.myworkdayjobs.com/wday/cxs/bankofamerica/Campus/jobs"
-      },
-      {
         "name": "Comcast",
         "company": "Comcast",
         "base_url": "https://comcast.wd5.myworkdayjobs.com/wday/cxs/comcast/Comcast_Careers/jobs"
-      },
-      {
-        "name": "Deloitte",
-        "company": "Deloitte",
-        "base_url": "https://deloitte.wd1.myworkdayjobs.com/wday/cxs/deloitte/US_Careers/jobs"
-      },
-      {
-        "name": "Puma",
-        "company": "Puma",
-        "base_url": "https://puma.wd3.myworkdayjobs.com/wday/cxs/puma/Careers/jobs"
       },
       {
         "name": "Sanofi",
@@ -2115,11 +2101,6 @@
         "base_url": "https://zillow.wd5.myworkdayjobs.com/wday/cxs/zillow/Zillow_Group_External/jobs"
       },
       {
-        "name": "X (Twitter)",
-        "company": "X",
-        "base_url": "https://twitter.wd5.myworkdayjobs.com/wday/cxs/twitter/X/jobs"
-      },
-      {
         "name": "Broadcom",
         "company": "Broadcom",
         "base_url": "https://broadcom.wd1.myworkdayjobs.com/wday/cxs/broadcom/External_Career/jobs"
@@ -2135,44 +2116,9 @@
         "base_url": "https://etsy.wd5.myworkdayjobs.com/wday/cxs/etsy/Etsy_Careers/jobs"
       },
       {
-        "name": "Accenture",
-        "company": "Accenture",
-        "base_url": "https://accenture.wd3.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs"
-      },
-      {
-        "name": "American Express",
-        "company": "American Express",
-        "base_url": "https://aexp.wd5.myworkdayjobs.com/wday/cxs/aexp/AEXP/jobs"
-      },
-      {
-        "name": "AT&T",
-        "company": "AT&T",
-        "base_url": "https://att.wd5.myworkdayjobs.com/wday/cxs/att/ATT/jobs"
-      },
-      {
-        "name": "Booking",
-        "company": "Booking",
-        "base_url": "https://booking.wd5.myworkdayjobs.com/wday/cxs/booking/Booking/jobs"
-      },
-      {
-        "name": "Caterpillar",
-        "company": "Caterpillar",
-        "base_url": "https://caterpillar.wd5.myworkdayjobs.com/wday/cxs/caterpillar/Caterpillar/jobs"
-      },
-      {
-        "name": "Charles Schwab",
-        "company": "Charles Schwab",
-        "base_url": "https://schwab.wd1.myworkdayjobs.com/wday/cxs/schwab/Schwab_External_Careers/jobs"
-      },
-      {
         "name": "CrowdStrike",
         "company": "CrowdStrike",
         "base_url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/CrowdStrikeCareers/jobs"
-      },
-      {
-        "name": "GE",
-        "company": "GE",
-        "base_url": "https://ge.wd5.myworkdayjobs.com/wday/cxs/ge/GE_External_Career_Site/jobs"
       },
       {
         "name": "GDIT",
@@ -2247,6 +2193,83 @@
         "name": "John Deere",
         "company": "John Deere",
         "base_url": "https://johndeere.wd5.myworkdayjobs.com/JohnDeere",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "AT&T",
+        "company": "AT&T",
+        "base_url": "https://att.wd5.myworkdayjobs.com/ATT",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Accenture",
+        "company": "Accenture",
+        "base_url": "https://accenture.wd3.myworkdayjobs.com/AccentureCareers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "American Express",
+        "company": "American Express",
+        "base_url": "https://aexp.wd5.myworkdayjobs.com/AEXP",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Bank of America",
+        "company": "Bank of America",
+        "base_url": "https://bankofamerica.wd1.myworkdayjobs.com/Campus",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Booking",
+        "company": "Booking",
+        "base_url": "https://booking.wd5.myworkdayjobs.com/Booking",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Caterpillar",
+        "company": "Caterpillar",
+        "base_url": "https://caterpillar.wd5.myworkdayjobs.com/Caterpillar",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Charles Schwab",
+        "company": "Charles Schwab",
+        "base_url": "https://schwab.wd1.myworkdayjobs.com/Schwab_External_Careers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Deloitte",
+        "company": "Deloitte",
+        "base_url": "https://deloitte.wd1.myworkdayjobs.com/US_Careers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "GE",
+        "company": "GE",
+        "base_url": "https://ge.wd5.myworkdayjobs.com/GE_External_Career_Site",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Puma",
+        "company": "Puma",
+        "base_url": "https://puma.wd3.myworkdayjobs.com/Careers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "X (Twitter)",
+        "company": "X",
+        "base_url": "https://twitter.wd5.myworkdayjobs.com/X",
         "max_pages": 10,
         "headless": true
       }
@@ -2364,11 +2387,6 @@
         "name": "iCIMS",
         "company": "iCIMS",
         "portal_url": "https://careers.icims.com"
-      },
-      {
-        "name": "AMD",
-        "company": "AMD",
-        "portal_url": "https://careers-amd.icims.com"
       },
       {
         "name": "Uber",
@@ -2522,6 +2540,14 @@
         "max_pages": 10,
         "results_per_page": 15,
         "headless": true
+      }
+    ],
+    "amd": [
+      {
+        "name": "AMD",
+        "company": "AMD",
+        "categories": ["Engineering"],
+        "max_pages": 200
       }
     ]
   }
