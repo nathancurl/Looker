@@ -383,7 +383,8 @@
     "yelp": "DISCORD_WEBHOOK_CUSTOM",
     "shopify": "DISCORD_WEBHOOK_CUSTOM",
     "tiktok": "DISCORD_WEBHOOK_CUSTOM",
-    "goldmansachs": "DISCORD_WEBHOOK_CUSTOM"
+    "goldmansachs": "DISCORD_WEBHOOK_CUSTOM",
+    "intuit": "DISCORD_WEBHOOK_CUSTOM"
   },
   "sources": {
     "newgrad_json": [
@@ -2636,6 +2637,16 @@
           "developer"
         ],
         "page_size": 50
+      }
+    ],
+    "intuit": [
+      {
+        "name": "Intuit",
+        "company": "Intuit",
+        "query": "software engineer",
+        "max_pages": 10,
+        "results_per_page": 15,
+        "headless": true
       }
     ]
   }
