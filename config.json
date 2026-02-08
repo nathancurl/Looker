@@ -1598,7 +1598,8 @@
       {
         "name": "Cursor",
         "clientname": "cursor",
-        "company": "Cursor"
+        "company": "Cursor",
+        "source_group": "frontier_ai"
       },
       {
         "name": "Deepgram",
