@@ -1233,6 +1233,27 @@
         "company": "Allen Institute for AI",
         "board_token": "thealleninstitute",
         "source_group": "frontier_ai"
+      },
+      {
+        "company": "NewsBreak",
+        "board_token": "newsbreak"
+      },
+      {
+        "company": "C3 AI",
+        "board_token": "c3ascend"
+      },
+      {
+        "company": "DeepMind",
+        "board_token": "deepmind",
+        "source_group": "frontier_ai"
+      },
+      {
+        "company": "Pendo",
+        "board_token": "pendo"
+      },
+      {
+        "company": "Justworks",
+        "board_token": "justworks"
       }
     ],
     "lever": [
@@ -1496,6 +1517,10 @@
       {
         "company": "Zeta Global",
         "slug": "zetaglobal"
+      },
+      {
+        "company": "Artera",
+        "slug": "artera"
       }
     ],
     "ashby": [
@@ -1872,6 +1897,18 @@
         "clientname": "anysphere",
         "company": "Anysphere",
         "source_group": "frontier_ai"
+      },
+      {
+        "company": "Commure + Athelas",
+        "clientname": "Commure-Athelas"
+      },
+      {
+        "company": "Meshy",
+        "clientname": "meshy"
+      },
+      {
+        "company": "Mach Industries",
+        "clientname": "mach"
       }
     ],
     "workable": [
@@ -1929,6 +1966,26 @@
         "name": "Zed Industries",
         "subdomain": "zed",
         "company": "Zed Industries"
+      },
+      {
+        "name": "Rokt",
+        "subdomain": "rokt",
+        "company": "Rokt"
+      },
+      {
+        "name": "DataVisor",
+        "subdomain": "datavisor",
+        "company": "DataVisor"
+      },
+      {
+        "name": "Darkhive",
+        "subdomain": "darkhive",
+        "company": "Darkhive"
+      },
+      {
+        "name": "MLabs",
+        "subdomain": "mlabs",
+        "company": "MLabs"
       }
     ],
     "smartrecruiters": [

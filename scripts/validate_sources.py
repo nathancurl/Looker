@@ -2,13 +2,13 @@
 """Validate all configured job sources by testing their API endpoints.
 
 Usage:
-    python scripts/validate_sources.py [--fix]
+    python scripts/validate_sources.py [--json]
 
 This script tests every company in config.json to verify:
 1. The API endpoint responds with 2xx status
 2. The response contains valid job data structure
 
-Use --fix to automatically remove failing entries from config.json
+Use --json to output results in JSON format
 """
 
 import json
@@ -31,6 +31,7 @@ results = {
     "passed": [],
     "failed": [],
     "skipped": [],
+    "warnings": [],
 }
 
 
@@ -231,6 +232,156 @@ def test_smartrecruiters(company: dict) -> tuple[bool, str]:
         return False, str(e)[:50]
 
 
+def test_maang(company: dict) -> tuple[bool, str]:
+    """Test MAANG singleton sources by importing and running their fetchers."""
+    source_type = company.get("_source_type", "")
+
+    try:
+        if source_type == "google":
+            from fetchers.google import GoogleFetcher
+            fetcher = GoogleFetcher(company)
+        elif source_type == "amazon":
+            url = company.get("base_url", company.get("api_url", ""))
+            resp = requests.get(url, params={"result_limit": 1}, headers=HEADERS, timeout=TIMEOUT)
+            if resp.status_code == 200:
+                data = resp.json()
+                total = data.get("totalHits", 0)
+                return True, f"OK ({total} jobs)"
+            return False, f"HTTP {resp.status_code}"
+        elif source_type == "microsoft":
+            from fetchers.microsoft import MicrosoftFetcher
+            fetcher = MicrosoftFetcher(company)
+        elif source_type == "netflix":
+            from fetchers.netflix import NetflixFetcher
+            fetcher = NetflixFetcher(company)
+        elif source_type == "apple":
+            from fetchers.apple import AppleFetcher
+            fetcher = AppleFetcher(company)
+        elif source_type == "meta":
+            from fetchers.meta import MetaFetcher
+            fetcher = MetaFetcher(company)
+        else:
+            return False, f"Unknown MAANG source: {source_type}"
+
+        # For non-Amazon sources, try to fetch
+        if source_type != "amazon":
+            jobs = fetcher.fetch()
+            return True, f"OK ({len(jobs)} jobs)"
+
+    except Exception as e:
+        return False, str(e)[:80]
+
+
+def test_custom(company: dict) -> tuple[bool, str]:
+    """Test custom fetchers by importing and running fetch()."""
+    source_type = company.get("_source_type", "")
+
+    try:
+        if source_type == "jpmorgan":
+            from fetchers.jpmorgan import JPMorganFetcher
+            fetcher = JPMorganFetcher(company)
+        elif source_type == "oracle":
+            from fetchers.oracle import OracleFetcher
+            fetcher = OracleFetcher(company)
+        elif source_type == "qualcomm":
+            from fetchers.qualcomm import QualcommFetcher
+            fetcher = QualcommFetcher(company)
+        elif source_type == "rivian":
+            from fetchers.rivian import RivianFetcher
+            fetcher = RivianFetcher(company)
+        elif source_type == "yelp":
+            from fetchers.yelp import YelpFetcher
+            fetcher = YelpFetcher(company)
+        elif source_type == "shopify":
+            from fetchers.shopify import ShopifyFetcher
+            fetcher = ShopifyFetcher(company)
+        elif source_type == "tiktok":
+            from fetchers.tiktok import TikTokFetcher
+            fetcher = TikTokFetcher(company)
+        elif source_type == "goldmansachs":
+            from fetchers.goldmansachs import GoldmanSachsFetcher
+            fetcher = GoldmanSachsFetcher(company)
+        elif source_type == "intuit":
+            from fetchers.intuit import IntuitFetcher
+            fetcher = IntuitFetcher(company)
+        else:
+            return False, f"Unknown custom source: {source_type}"
+
+        jobs = fetcher.fetch()
+        return True, f"OK ({len(jobs)} jobs)"
+
+    except Exception as e:
+        return False, str(e)[:80]
+
+
+def test_selenium_sources(company: dict) -> tuple[bool, str]:
+    """Test Selenium-based sources with headless mode."""
+    source_type = company.get("_source_type", "")
+
+    try:
+        # Check if selenium is installed
+        try:
+            import selenium
+        except ImportError:
+            return False, "SKIP: selenium not installed"
+
+        if source_type == "workday_selenium":
+            from fetchers.workday_selenium import WorkdaySeleniumFetcher
+            # Use minimal config for validation
+            test_config = {**company, "max_scrolls": 1, "headless": True}
+            fetcher = WorkdaySeleniumFetcher(test_config)
+        elif source_type == "wellfound":
+            from fetchers.wellfound import WellfoundFetcher
+            test_config = {**company, "max_scrolls": 1, "headless": True}
+            fetcher = WellfoundFetcher(test_config)
+        elif source_type == "ripplematch":
+            from fetchers.ripplematch import RipplematchFetcher
+            test_config = {**company, "max_scrolls": 1, "headless": True}
+            fetcher = RipplematchFetcher(test_config)
+        elif source_type == "yc":
+            from fetchers.yc import YCFetcher
+            test_config = {**company, "headless": True}
+            fetcher = YCFetcher(test_config)
+        else:
+            return False, f"Unknown selenium source: {source_type}"
+
+        jobs = fetcher.fetch()
+        return True, f"OK ({len(jobs)} jobs)"
+
+    except Exception as e:
+        error_msg = str(e)
+        if "chromedriver" in error_msg.lower() or "chrome" in error_msg.lower():
+            return False, "SKIP: ChromeDriver not available"
+        return False, str(e)[:80]
+
+
+def test_newgrad(company: dict) -> tuple[bool, str]:
+    """Test NewGrad and RSS sources."""
+    source_type = company.get("_source_type", "")
+
+    try:
+        if source_type == "newgrad_json":
+            from fetchers.newgrad_json import NewGradJSONFetcher
+            fetcher = NewGradJSONFetcher(company)
+        elif source_type == "newgrad_markdown":
+            from fetchers.newgrad_markdown import NewGradMarkdownFetcher
+            fetcher = NewGradMarkdownFetcher(company)
+        elif source_type == "hn_hiring":
+            from fetchers.hnhiring import HNHiringFetcher
+            fetcher = HNHiringFetcher(company)
+        else:
+            return False, f"Unknown newgrad source: {source_type}"
+
+        jobs = fetcher.fetch()
+        return True, f"OK ({len(jobs)} jobs)"
+
+    except Exception as e:
+        error_msg = str(e)
+        if "rate limit" in error_msg.lower():
+            return False, "TEMP_FAIL: Rate limited"
+        return False, str(e)[:80]
+
+
 # Map source types to test functions
 TESTERS = {
     "greenhouse": test_greenhouse,
@@ -242,22 +393,51 @@ TESTERS = {
     "icims": test_icims,
     "taleo": test_taleo,
     "smartrecruiters": test_smartrecruiters,
+    "google": test_maang,
+    "amazon": test_maang,
+    "microsoft": test_maang,
+    "netflix": test_maang,
+    "apple": test_maang,
+    "meta": test_maang,
+    "jpmorgan": test_custom,
+    "oracle": test_custom,
+    "qualcomm": test_custom,
+    "rivian": test_custom,
+    "yelp": test_custom,
+    "shopify": test_custom,
+    "tiktok": test_custom,
+    "goldmansachs": test_custom,
+    "intuit": test_custom,
+    "workday_selenium": test_selenium_sources,
+    "wellfound": test_selenium_sources,
+    "ripplematch": test_selenium_sources,
+    "yc": test_selenium_sources,
+    "newgrad_json": test_newgrad,
+    "newgrad_markdown": test_newgrad,
+    "hn_hiring": test_newgrad,
 }
-
-# Source types that are singletons (not lists)
-SINGLETON_SOURCES = {"google", "amazon", "microsoft", "netflix", "apple", "meta"}
 
 
 def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Validate all job sources")
+    parser.add_argument("--json", action="store_true", help="Output results as JSON")
+    args = parser.parse_args()
+
     config_path = Path(__file__).parent.parent / "config.json"
     with open(config_path) as f:
         config = json.load(f)
 
     sources = config.get("sources", {})
 
-    print("=" * 70)
-    print("VALIDATING ALL JOB SOURCES")
-    print("=" * 70)
+    if not args.json:
+        print("=" * 70)
+        print("VALIDATING ALL JOB SOURCES")
+        print("=" * 70)
+
+    # Track detailed results for JSON output
+    detailed_results = []
 
     for source_type, tester in TESTERS.items():
         source_conf = sources.get(source_type)
@@ -268,45 +448,98 @@ def main():
         if not companies:
             continue
 
-        print(f"\n## {source_type.upper()} ({len(companies)} companies)")
-        print("-" * 50)
+        if not args.json:
+            print(f"\n## {source_type.upper()} ({len(companies)} companies)")
+            print("-" * 50)
 
         for company in companies:
-            name = company.get("name", company.get("company", "Unknown"))
+            # Add source_type to company dict for test functions
+            company["_source_type"] = source_type
+            name = company.get("name", company.get("company", source_type.upper()))
             passed, message = tester(company)
 
-            status = "✓" if passed else "✗"
-            print(f"  {status} {name}: {message}")
-
-            if passed:
-                results["passed"].append((source_type, name))
+            # Categorize results
+            if "SKIP" in message:
+                category = "skipped"
+                results["skipped"].append((source_type, name, message))
+            elif "TEMP_FAIL" in message or "WARN" in message:
+                category = "warning"
+                results["warnings"].append((source_type, name, message))
+                passed = True  # Don't fail on warnings
+            elif passed:
+                category = "passed"
+                results["passed"].append((source_type, name, message))
             else:
+                category = "failed"
                 results["failed"].append((source_type, name, message))
+
+            # Store detailed result for JSON
+            detailed_results.append({
+                "source_type": source_type,
+                "name": name,
+                "status": category,
+                "message": message,
+                "config": {k: v for k, v in company.items() if not k.startswith("_")},
+            })
+
+            if not args.json:
+                status = "✓" if passed else "✗"
+                if category == "skipped":
+                    status = "⊘"
+                elif category == "warning":
+                    status = "⚠"
+                print(f"  {status} {name}: {message}")
 
             # Be nice to APIs
             time.sleep(0.3)
 
-    # Skip singleton MAANG sources for now (they need special handling)
-    print(f"\n## SINGLETON SOURCES (skipped)")
-    print("-" * 50)
-    for source_type in SINGLETON_SOURCES:
-        if source_type in sources:
-            print(f"  - {source_type}: Requires manual testing")
-            results["skipped"].append((source_type, source_type))
+    if args.json:
+        # Output JSON results
+        output = {
+            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "summary": {
+                "passed": len(results["passed"]),
+                "failed": len(results["failed"]),
+                "warnings": len(results["warnings"]),
+                "skipped": len(results["skipped"]),
+                "total": len(detailed_results),
+                "success_rate": round(
+                    len(results["passed"])
+                    / (len(results["passed"]) + len(results["failed"]))
+                    * 100,
+                    1,
+                )
+                if (len(results["passed"]) + len(results["failed"])) > 0
+                else 0,
+            },
+            "results": detailed_results,
+        }
+        print(json.dumps(output, indent=2))
+    else:
+        # Summary
+        print("\n" + "=" * 70)
+        print("SUMMARY")
+        print("=" * 70)
+        print(f"  Passed:   {len(results['passed'])}")
+        print(f"  Failed:   {len(results['failed'])}")
+        print(f"  Warnings: {len(results['warnings'])}")
+        print(f"  Skipped:  {len(results['skipped'])}")
+        total_tested = len(results["passed"]) + len(results["failed"])
+        if total_tested > 0:
+            success_rate = len(results["passed"]) / total_tested * 100
+            print(f"  Success:  {success_rate:.1f}%")
 
-    # Summary
-    print("\n" + "=" * 70)
-    print("SUMMARY")
-    print("=" * 70)
-    print(f"  Passed:  {len(results['passed'])}")
-    print(f"  Failed:  {len(results['failed'])}")
-    print(f"  Skipped: {len(results['skipped'])}")
+        if results["failed"]:
+            print(f"\n## FAILED SOURCES ({len(results['failed'])})")
+            print("-" * 50)
+            for source_type, name, message in results["failed"]:
+                print(f"  [{source_type}] {name}: {message}")
 
-    if results["failed"]:
-        print(f"\n## FAILED SOURCES ({len(results['failed'])})")
-        print("-" * 50)
-        for source_type, name, message in results["failed"]:
-            print(f"  [{source_type}] {name}: {message}")
+        if results["warnings"]:
+            print(f"\n## WARNINGS ({len(results['warnings'])})")
+            print("-" * 50)
+            for source_type, name, message in results["warnings"]:
+                print(f"  [{source_type}] {name}: {message}")
 
     # Return exit code based on failures
     return 1 if results["failed"] else 0
