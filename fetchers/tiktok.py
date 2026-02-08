@@ -33,6 +33,10 @@ BYTEDANCE_SEARCH_URL = "https://joinbytedance.com/search"
 TIKTOK_BASE_URL = "https://lifeattiktok.com"
 BYTEDANCE_BASE_URL = "https://joinbytedance.com"
 
+# Tor proxy for bypassing bot detection (same as Meta fetcher)
+TOR_SOCKS_PROXY = "socks5://127.0.0.1:9050"
+TOR_CONTROL_PORT = 9051
+
 
 class TikTokFetcher(BaseFetcher):
     """Fetcher for TikTok careers at lifeattiktok.com."""
@@ -62,8 +66,22 @@ class TikTokFetcher(BaseFetcher):
         """
         return self._fetch_with_selenium()
 
+    def _rotate_tor_ip(self):
+        """Request a new Tor circuit (new exit IP) via control port."""
+        try:
+            from stem import Signal
+            from stem.control import Controller
+
+            with Controller.from_port(port=TOR_CONTROL_PORT) as controller:
+                controller.authenticate()
+                controller.signal(Signal.NEWNYM)
+                logger.info("%s: requested new Tor IP, waiting for circuit...", self.source_name)
+                time.sleep(3)
+        except Exception as e:
+            logger.debug("%s: failed to rotate Tor IP: %s", self.source_name, e)
+
     def _fetch_with_selenium(self) -> list[Job]:
-        """Fetch jobs using Selenium with anti-detection measures."""
+        """Fetch jobs using Selenium with Tor proxy and anti-detection measures."""
         try:
             from selenium import webdriver
             from selenium.webdriver.chrome.options import Options
@@ -74,6 +92,9 @@ class TikTokFetcher(BaseFetcher):
         except ImportError:
             logger.error("%s: selenium not installed. Install with: pip install selenium webdriver-manager", self.source_name)
             return []
+
+        # Rotate Tor IP before each fetch to avoid bot detection
+        self._rotate_tor_ip()
 
         # Configure Chrome with anti-detection measures
         options = Options()
@@ -87,6 +108,8 @@ class TikTokFetcher(BaseFetcher):
             "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
+        # Route through Tor to bypass bot detection
+        options.add_argument(f"--proxy-server={TOR_SOCKS_PROXY}")
         # Additional anti-detection measures
         options.add_argument("--disable-blink-features=AutomationControlled")
         options.add_experimental_option("excludeSwitches", ["enable-automation"])
@@ -108,7 +131,7 @@ class TikTokFetcher(BaseFetcher):
                 """
             })
 
-            driver.set_page_load_timeout(30)
+            driver.set_page_load_timeout(45)  # Longer timeout for Tor proxy
 
             # Build URL with keyword filters
             url = self._search_url
