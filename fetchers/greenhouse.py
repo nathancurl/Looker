@@ -14,6 +14,9 @@ class GreenhouseFetcher(BaseFetcher):
 
     def __init__(self, source_config: dict):
         super().__init__(source_config)
+        # Allow config to override source_group
+        if "source_group" in source_config:
+            self.source_group = source_config["source_group"]
         self._board_token = source_config["board_token"]
 
     def fetch(self) -> list[Job]:

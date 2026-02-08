@@ -14,6 +14,9 @@ class AshbyFetcher(BaseFetcher):
 
     def __init__(self, source_config: dict):
         super().__init__(source_config)
+        # Allow config to override source_group
+        if "source_group" in source_config:
+            self.source_group = source_config["source_group"]
         self._clientname = source_config["clientname"]
 
     def fetch(self) -> list[Job]:
