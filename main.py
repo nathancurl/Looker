@@ -29,7 +29,6 @@ from fetchers.workable import WorkableFetcher
 from fetchers.workday import WorkdayFetcher
 from fetchers.workday_selenium import WorkdaySeleniumFetcher
 from fetchers.wellfound import WellfoundFetcher
-from fetchers.ripplematch import RipplematchFetcher
 from fetchers.yc import YCFetcher
 from fetchers.rivian import RivianFetcher
 from fetchers.yelp import YelpFetcher
@@ -63,7 +62,6 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "icims": ICIMSFetcher,
     "jpmorgan": JPMorganFetcher,
     "wellfound": WellfoundFetcher,
-    "ripplematch": RipplematchFetcher,
     "yc": YCFetcher,
     "rivian": RivianFetcher,
     "yelp": YelpFetcher,

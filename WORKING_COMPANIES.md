@@ -32,7 +32,6 @@
 | newgrad_markdown | 1 | 1 | 0 | 100.0% |
 | oracle | 1 | 1 | 0 | 100.0% |
 | qualcomm | 1 | 1 | 0 | 100.0% |
-| ripplematch | 1 | 1 | 0 | 100.0% |
 | rivian | 1 | 1 | 0 | 100.0% |
 | shopify | 1 | 1 | 0 | 100.0% |
 | smartrecruiters | 10 | 10 | 0 | 100.0% |
@@ -506,12 +505,6 @@
 #### ✅ Working (1)
 
 - **Qualcomm**: OK (2 jobs)
-
-### RIPPLEMATCH (1 companies)
-
-#### ✅ Working (1)
-
-- **Ripplematch**: OK (38 jobs)
 
 ### RIVIAN (1 companies)
 

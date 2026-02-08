@@ -58,7 +58,7 @@ class TikTokFetcher(BaseFetcher):
         """Fetch jobs from TikTok/ByteDance careers using Selenium.
 
         The site has aggressive bot detection, so we use Selenium with
-        anti-detection measures similar to wellfound.py and ripplematch.py.
+        anti-detection measures similar to wellfound.py.
         """
         return self._fetch_with_selenium()
 
@@ -140,6 +140,12 @@ class TikTokFetcher(BaseFetcher):
             # Extract jobs from the DOM using Selenium
             jobs = self._extract_jobs_from_dom(driver)
 
+            # If DOM extraction found no jobs, try HTML fallback
+            # (bot detection may block JS rendering but page source may have data)
+            if not jobs:
+                html = driver.page_source
+                jobs = self._parse_jobs_from_html(html)
+
             logger.info("%s: found %d jobs", self.source_name, len(jobs))
 
         except Exception as e:
@@ -159,11 +165,10 @@ class TikTokFetcher(BaseFetcher):
         seen_ids = set()
 
         try:
-            # Find all job links
-            # TikTok uses: /position/{id}/detail or /search/{id}
-            # ByteDance uses: /search/{id}
-            # Both can use full URLs or relative paths
-            job_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/search/'], a[href*='/position/'], a[href*='joinbytedance.com/search/'], a[href*='lifeattiktok.com']")
+            # Find job links by URL pattern
+            # TikTok: /search/{id} or /position/{id}
+            # ByteDance: /search/{id}
+            job_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/search/'], a[href*='/position/']")
 
             logger.info("%s: found %d job links in DOM", self.source_name, len(job_links))
 
@@ -290,7 +295,7 @@ class TikTokFetcher(BaseFetcher):
 
         # Pattern 1: Look for job links with /search/ or /position/ patterns
         # These often appear in href attributes
-        job_link_pattern = r'href="(/(?:search|position)/(\d{19}))"'
+        job_link_pattern = r'href="(/(?:search|position)/(\d{16,20}))"'
         link_matches = re.finditer(job_link_pattern, html)
 
         for match in link_matches:
@@ -383,28 +388,11 @@ class TikTokFetcher(BaseFetcher):
         return ""
 
     def _is_relevant_position(self, title: str) -> bool:
-        """Check if position is relevant (software engineering, new grad, etc.)."""
+        """Filter out positions with senior/lead/etc. level keywords."""
         title_lower = title.lower()
 
-        # Must contain software/engineering keywords
-        eng_keywords = [
-            "software", "engineer", "developer", "swe", "backend", "frontend",
-            "full stack", "fullstack", "machine learning", "ml", "ai", "data"
-        ]
-        has_eng = any(kw in title_lower for kw in eng_keywords)
-
-        # Should be entry level / new grad
-        level_keywords = [
-            "new grad", "graduate", "entry", "junior", "early career",
-            "university", "recent grad", "2024", "2025", "intern"
-        ]
-        has_level = any(kw in title_lower for kw in level_keywords)
-
-        # Exclude certain types
         exclude_keywords = ["senior", "staff", "principal", "lead", "manager", "director"]
-        is_excluded = any(kw in title_lower for kw in exclude_keywords)
-
-        return has_eng and (has_level or not is_excluded)
+        return not any(kw in title_lower for kw in exclude_keywords)
 
     def _extract_jobs_from_json(self, data: dict, path: list = None) -> list[dict]:
         """Recursively search JSON for job listings.
@@ -543,8 +531,8 @@ class TikTokFetcher(BaseFetcher):
         """
         jobs = []
 
-        # Pattern: /search/{19-digit-id} or /position/{19-digit-id}
-        pattern = r'/(search|position)/(\d{19})'
+        # Pattern: /search/{16-20 digit id} or /position/{16-20 digit id}
+        pattern = r'/(search|position)/(\d{16,20})'
         matches = re.findall(pattern, html)
 
         for endpoint, job_id in matches:

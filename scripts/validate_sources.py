@@ -343,10 +343,6 @@ def test_selenium_sources(company: dict) -> tuple[bool, str]:
             from fetchers.wellfound import WellfoundFetcher
             test_config = {**company, "max_scrolls": 1, "headless": True}
             fetcher = WellfoundFetcher(test_config)
-        elif source_type == "ripplematch":
-            from fetchers.ripplematch import RipplematchFetcher
-            test_config = {**company, "max_scrolls": 1, "headless": True}
-            fetcher = RipplematchFetcher(test_config)
         elif source_type == "yc":
             from fetchers.yc import YCFetcher
             test_config = {**company, "headless": True}
@@ -419,7 +415,6 @@ TESTERS = {
     "intuit": test_custom,
     "workday_selenium": test_selenium_sources,
     "wellfound": test_selenium_sources,
-    "ripplematch": test_selenium_sources,
     "yc": test_selenium_sources,
     "newgrad_json": test_newgrad,
     "newgrad_markdown": test_newgrad,
