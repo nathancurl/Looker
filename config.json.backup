@@ -383,8 +383,7 @@
     "yelp": "DISCORD_WEBHOOK_CUSTOM",
     "shopify": "DISCORD_WEBHOOK_CUSTOM",
     "tiktok": "DISCORD_WEBHOOK_CUSTOM",
-    "goldmansachs": "DISCORD_WEBHOOK_CUSTOM",
-    "intuit": "DISCORD_WEBHOOK_CUSTOM"
+    "goldmansachs": "DISCORD_WEBHOOK_CUSTOM"
   },
   "sources": {
     "newgrad_json": [
@@ -411,9 +410,7 @@
         "owner": "speedyapply",
         "repo": "2026-SWE-College-Jobs",
         "branch": "main",
-        "files": [
-          "NEW_GRAD_USA.md"
-        ],
+        "files": ["NEW_GRAD_USA.md"],
         "poll_interval_seconds": 3600
       }
     ],
@@ -749,6 +746,11 @@
         "company": "Webflow"
       },
       {
+        "name": "Atlassian",
+        "board_token": "atlassian",
+        "company": "Atlassian"
+      },
+      {
         "name": "Canva",
         "board_token": "canva",
         "company": "Canva"
@@ -914,6 +916,10 @@
         "board_token": "sigmacomputing"
       },
       {
+        "company": "xAI",
+        "board_token": "xai"
+      },
+      {
         "company": "Metronome",
         "board_token": "metronome"
       },
@@ -1004,6 +1010,10 @@
       {
         "company": "Underdog Fantasy",
         "board_token": "underdogfantasy"
+      },
+      {
+        "company": "Together AI",
+        "board_token": "togetherai"
       },
       {
         "company": "Point72",
@@ -1098,6 +1108,10 @@
         "board_token": "celonis"
       },
       {
+        "company": "Notion",
+        "board_token": "notion"
+      },
+      {
         "company": "Virtu Financial",
         "board_token": "virtu"
       },
@@ -1134,12 +1148,20 @@
         "board_token": "coupang"
       },
       {
+        "company": "CrowdStrike",
+        "board_token": "crowdstrike"
+      },
+      {
         "company": "Cruise",
         "board_token": "cruise"
       },
       {
         "company": "Dremio",
         "board_token": "dremio"
+      },
+      {
+        "company": "Fly.io",
+        "board_token": "flyio"
       },
       {
         "company": "G2",
@@ -1178,6 +1200,14 @@
         "board_token": "outreach"
       },
       {
+        "company": "Palo Alto Networks",
+        "board_token": "paloaltonetworks"
+      },
+      {
+        "company": "Persona",
+        "board_token": "persona"
+      },
+      {
         "company": "Remitly",
         "board_token": "remitly"
       },
@@ -1191,8 +1221,20 @@
         "board_token": "snorkelai"
       },
       {
+        "company": "Stytch",
+        "board_token": "stytch"
+      },
+      {
+        "company": "Vanta",
+        "board_token": "vanta"
+      },
+      {
         "company": "Wealthfront",
         "board_token": "wealthfront"
+      },
+      {
+        "company": "Whatnot",
+        "board_token": "whatnot"
       },
       {
         "company": "ZoomInfo",
@@ -1262,6 +1304,11 @@
         "company": "Zoox"
       },
       {
+        "name": "Grammarly",
+        "slug": "grammarly",
+        "company": "Grammarly"
+      },
+      {
         "name": "DraftKings",
         "slug": "draftkings",
         "company": "DraftKings"
@@ -1277,9 +1324,19 @@
         "company": "Twitch"
       },
       {
+        "name": "Robinhood",
+        "slug": "robinhood",
+        "company": "Robinhood"
+      },
+      {
         "name": "Nextdoor",
         "slug": "nextdoor",
         "company": "Nextdoor"
+      },
+      {
+        "name": "Chime",
+        "slug": "chime",
+        "company": "Chime"
       },
       {
         "name": "Peak Games",
@@ -1414,6 +1471,10 @@
         "slug": "Decentraland"
       },
       {
+        "company": "Anduril",
+        "slug": "anduril"
+      },
+      {
         "company": "Aragon",
         "slug": "aragon"
       },
@@ -1468,6 +1529,10 @@
       {
         "company": "Material Security",
         "slug": "materialsecurity"
+      },
+      {
+        "company": "Navan",
+        "slug": "navan"
       },
       {
         "company": "Persona",
@@ -1540,6 +1605,11 @@
         "name": "Deepgram",
         "clientname": "deepgram",
         "company": "Deepgram"
+      },
+      {
+        "name": "ElevenLabs",
+        "clientname": "elevenlabs",
+        "company": "ElevenLabs"
       },
       {
         "name": "Harvey",
@@ -1644,6 +1714,16 @@
         "company": "Temporal"
       },
       {
+        "name": "Vercel",
+        "clientname": "vercel",
+        "company": "Vercel"
+      },
+      {
+        "name": "Scale AI",
+        "clientname": "scaleai",
+        "company": "Scale AI"
+      },
+      {
         "name": "Weights & Biases",
         "clientname": "wandb",
         "company": "Weights & Biases"
@@ -1672,6 +1752,11 @@
         "name": "Zip",
         "clientname": "zip",
         "company": "Zip"
+      },
+      {
+        "name": "Replit",
+        "clientname": "replit",
+        "company": "Replit"
       },
       {
         "name": "Whatnot",
@@ -1784,6 +1869,10 @@
       {
         "company": "Fivetran",
         "clientname": "fivetran"
+      },
+      {
+        "company": "Fly.io",
+        "clientname": "flyio"
       },
       {
         "company": "G2",
@@ -1901,6 +1990,11 @@
         "company": "PostHog"
       },
       {
+        "name": "Remote",
+        "subdomain": "remote",
+        "company": "Remote"
+      },
+      {
         "name": "Slab",
         "subdomain": "slab",
         "company": "Slab"
@@ -1951,6 +2045,11 @@
         "name": "ServiceNow",
         "company": "ServiceNow",
         "company_id": "ServiceNow"
+      },
+      {
+        "name": "Intuit",
+        "company": "Intuit",
+        "company_id": "Intuit2"
       },
       {
         "name": "Klick",
@@ -2033,6 +2132,11 @@
         "name": "Intel",
         "company": "Intel",
         "base_url": "https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
+      },
+      {
+        "name": "MasterCard",
+        "company": "MasterCard",
+        "base_url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
       },
       {
         "name": "NVIDIA",
@@ -2506,6 +2610,11 @@
         "portal_url": "https://campus-globalcareers-atlassian.icims.com"
       },
       {
+        "name": "Intuit",
+        "company": "Intuit",
+        "portal_url": "https://uscareers-intuit.icims.com"
+      },
+      {
         "name": "Pure Storage",
         "company": "Pure Storage",
         "portal_url": "https://intcareers-purestorage.icims.com"
@@ -2588,7 +2697,7 @@
         "use_selenium": false,
         "auto_fallback_to_selenium": true,
         "request_delay": 2.0,
-        "poll_interval_seconds": 300
+        "poll_interval_seconds": 3600
       }
     ],
     "tiktok": [
@@ -2625,28 +2734,10 @@
       {
         "name": "Goldman Sachs",
         "company": "Goldman Sachs",
-        "experiences": [
-          "EARLY_CAREER",
-          "PROFESSIONAL"
-        ],
+        "experiences": ["EARLY_CAREER", "PROFESSIONAL"],
         "search_term": "software engineer",
-        "keywords": [
-          "software",
-          "engineering",
-          "technology",
-          "developer"
-        ],
+        "keywords": ["software", "engineering", "technology", "developer"],
         "page_size": 50
-      }
-    ],
-    "intuit": [
-      {
-        "name": "Intuit",
-        "company": "Intuit",
-        "query": "software engineer",
-        "max_pages": 10,
-        "results_per_page": 15,
-        "headless": true
       }
     ]
   }

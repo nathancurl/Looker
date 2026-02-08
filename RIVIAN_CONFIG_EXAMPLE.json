@@ -1,0 +1,45 @@
+{
+  "comment": "Add this to your config.json file",
+  "sources": {
+    "rivian": [
+      {
+        "name": "Rivian-SoftwareEngineering-US",
+        "categories": ["Software Engineering"],
+        "poll_interval_seconds": 3600
+      }
+    ]
+  },
+  "routing": {
+    "rivian": "DISCORD_WEBHOOK_RIVIAN"
+  },
+  "filtering": {
+    "comment": "These filters work well for new grad/early career Rivian positions",
+    "include_keywords": [
+      "software engineer",
+      "software developer",
+      "engineer"
+    ],
+    "exclude_keywords": [
+      "senior", "sr.", "sr ", "sr,",
+      "staff", "principal", "lead",
+      "architect", "manager", "director",
+      "vp", "vice president", "head of", "chief",
+      "ii", "iii", "iv",
+      "5+ years", "6+ years", "7+ years", "8+ years", "9+ years", "10+ years"
+    ],
+    "location": {
+      "enabled": true,
+      "allowed_keywords": [
+        "united states", "usa", "u.s.", "remote",
+        "california", "palo alto", "irvine", "tustin",
+        "illinois", "normal"
+      ],
+      "excluded_keywords": [
+        "serbia", "belgrade",
+        "canada", "vancouver", "toronto", "british columbia", "ontario",
+        "germany", "berlin",
+        "sweden", "lund"
+      ]
+    }
+  }
+}

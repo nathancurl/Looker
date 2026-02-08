@@ -1,0 +1,14 @@
+{
+  "poll_interval_seconds": 300,
+  "routing": {
+    "jpmorgan": "DISCORD_WEBHOOK_JPMORGAN"
+  },
+  "sources": {
+    "jpmorgan": {
+      "fetcher": "jpmorgan",
+      "name": "JPMorgan-SoftwareEngineers",
+      "search_keyword": "software engineer",
+      "limit": 100
+    }
+  }
+}
