@@ -17,7 +17,6 @@ from fetchers.google import GoogleFetcher
 from fetchers.greenhouse import GreenhouseFetcher
 from fetchers.hnhiring import HNHiringFetcher
 from fetchers.icims import ICIMSFetcher
-from fetchers.jobvite import JobviteFetcher
 from fetchers.jpmorgan import JPMorganFetcher
 from fetchers.lever import LeverFetcher
 from fetchers.meta import MetaFetcher
@@ -26,9 +25,9 @@ from fetchers.netflix import NetflixFetcher
 from fetchers.newgrad_json import NewGradJSONFetcher
 from fetchers.newgrad_markdown import NewGradMarkdownFetcher
 from fetchers.smartrecruiters import SmartRecruitersFetcher
-from fetchers.taleo import TaleoFetcher
 from fetchers.workable import WorkableFetcher
 from fetchers.workday import WorkdayFetcher
+from fetchers.workday_selenium import WorkdaySeleniumFetcher
 from fetchers.wellfound import WellfoundFetcher
 from fetchers.ripplematch import RipplematchFetcher
 from fetchers.yc import YCFetcher
@@ -53,6 +52,7 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "workable": WorkableFetcher,
     "smartrecruiters": SmartRecruitersFetcher,
     "workday": WorkdayFetcher,
+    "workday_selenium": WorkdaySeleniumFetcher,
     "hn_hiring": HNHiringFetcher,
     "google": GoogleFetcher,
     "amazon": AmazonFetcher,
@@ -60,10 +60,8 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "netflix": NetflixFetcher,
     "apple": AppleFetcher,
     "meta": MetaFetcher,
-    "jobvite": JobviteFetcher,
     "icims": ICIMSFetcher,
     "jpmorgan": JPMorganFetcher,
-    "taleo": TaleoFetcher,
     "wellfound": WellfoundFetcher,
     "ripplematch": RipplematchFetcher,
     "yc": YCFetcher,

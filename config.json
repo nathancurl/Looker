@@ -372,10 +372,9 @@
     "workable": "DISCORD_WEBHOOK_WORKABLE",
     "workday": "DISCORD_WEBHOOK_WORKDAY",
     "maang": "DISCORD_WEBHOOK_MAANG",
-    "jobvite": "DISCORD_WEBHOOK_JOBVITE",
     "icims": "DISCORD_WEBHOOK_ICIMS",
-    "taleo": "DISCORD_WEBHOOK_TALEO",
     "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
+    "frontier_ai": "DISCORD_WEBHOOK_FRONTIER_AI",
     "jpmorgan": "DISCORD_WEBHOOK_CUSTOM",
     "oracle": "DISCORD_WEBHOOK_CUSTOM",
     "qualcomm": "DISCORD_WEBHOOK_CUSTOM",
@@ -447,7 +446,8 @@
       {
         "name": "Anthropic",
         "board_token": "anthropic",
-        "company": "Anthropic"
+        "company": "Anthropic",
+        "source_group": "frontier_ai"
       },
       {
         "name": "Asana",
@@ -1212,7 +1212,8 @@
       },
       {
         "company": "SambaNova",
-        "board_token": "sambanova"
+        "board_token": "sambanova",
+        "source_group": "frontier_ai"
       },
       {
         "company": "Snorkel AI",
@@ -1237,6 +1238,42 @@
       {
         "company": "ZoomInfo",
         "board_token": "zoominfo"
+      },
+      {
+        "name": "xAI",
+        "company": "xAI",
+        "board_token": "xai",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Cerebras",
+        "company": "Cerebras",
+        "board_token": "cerebrassystems",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Runway",
+        "company": "Runway",
+        "board_token": "runwayml",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Together AI",
+        "company": "Together AI",
+        "board_token": "TogetherAI",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Inflection AI",
+        "company": "Inflection AI",
+        "board_token": "inflectionai",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "AI2",
+        "company": "Allen Institute for AI",
+        "board_token": "thealleninstitute",
+        "source_group": "frontier_ai"
       }
     ],
     "lever": [
@@ -1554,7 +1591,8 @@
       {
         "name": "Cohere",
         "clientname": "cohere",
-        "company": "Cohere"
+        "company": "Cohere",
+        "source_group": "frontier_ai"
       },
       {
         "name": "Cursor",
@@ -1609,12 +1647,14 @@
       {
         "name": "OpenAI",
         "clientname": "openai",
-        "company": "OpenAI"
+        "company": "OpenAI",
+        "source_group": "frontier_ai"
       },
       {
         "name": "Perplexity",
         "clientname": "perplexity",
-        "company": "Perplexity"
+        "company": "Perplexity",
+        "source_group": "frontier_ai"
       },
       {
         "name": "Pinecone",
@@ -1838,7 +1878,8 @@
       },
       {
         "company": "Groq",
-        "clientname": "groq"
+        "clientname": "groq",
+        "source_group": "frontier_ai"
       },
       {
         "company": "Inngest",
@@ -1846,7 +1887,8 @@
       },
       {
         "company": "Midjourney",
-        "clientname": "midjourney"
+        "clientname": "midjourney",
+        "source_group": "frontier_ai"
       },
       {
         "company": "Mintlify",
@@ -1887,6 +1929,36 @@
       {
         "company": "Writer",
         "clientname": "writer"
+      },
+      {
+        "name": "ElevenLabs",
+        "clientname": "elevenlabs",
+        "company": "ElevenLabs",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Reka AI",
+        "clientname": "Reka",
+        "company": "Reka AI",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Adept AI",
+        "clientname": "adept.ai",
+        "company": "Adept AI",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Cognition",
+        "clientname": "cognition",
+        "company": "Cognition",
+        "source_group": "frontier_ai"
+      },
+      {
+        "name": "Anysphere",
+        "clientname": "anysphere",
+        "company": "Anysphere",
+        "source_group": "frontier_ai"
       }
     ],
     "workable": [
@@ -2325,11 +2397,6 @@
         "base_url": "https://discover.wd5.myworkdayjobs.com/wday/cxs/discover/Discover_Financial_Services/jobs"
       },
       {
-        "name": "Fidelity",
-        "company": "Fidelity",
-        "base_url": "https://fidelity.wd5.myworkdayjobs.com/wday/cxs/fidelity/Fidelity_Careers/jobs"
-      },
-      {
         "name": "GE",
         "company": "GE",
         "base_url": "https://ge.wd5.myworkdayjobs.com/wday/cxs/ge/GE_External_Career_Site/jobs"
@@ -2340,39 +2407,14 @@
         "base_url": "https://gdit.wd5.myworkdayjobs.com/wday/cxs/gdit/GDIT/jobs"
       },
       {
-        "name": "Honeywell",
-        "company": "Honeywell",
-        "base_url": "https://honeywell.wd5.myworkdayjobs.com/wday/cxs/honeywell/Honeywell_Careers/jobs"
-      },
-      {
-        "name": "IBM",
-        "company": "IBM",
-        "base_url": "https://ibm.wd5.myworkdayjobs.com/wday/cxs/ibm/IBM_Careers/jobs"
-      },
-      {
-        "name": "John Deere",
-        "company": "John Deere",
-        "base_url": "https://johndeere.wd5.myworkdayjobs.com/wday/cxs/johndeere/JohnDeere/jobs"
-      },
-      {
         "name": "Leidos",
         "company": "Leidos",
         "base_url": "https://leidos.wd5.myworkdayjobs.com/wday/cxs/leidos/External/jobs"
       },
       {
-        "name": "Lockheed Martin",
-        "company": "Lockheed Martin",
-        "base_url": "https://lockheedmartin.wd5.myworkdayjobs.com/wday/cxs/lockheedmartin/LMCareers/jobs"
-      },
-      {
         "name": "MITRE",
         "company": "MITRE",
         "base_url": "https://mitre.wd5.myworkdayjobs.com/wday/cxs/mitre/MITRE/jobs"
-      },
-      {
-        "name": "Northrop Grumman",
-        "company": "Northrop Grumman",
-        "base_url": "https://northropgrumman.wd5.myworkdayjobs.com/wday/cxs/northropgrumman/NG_External/jobs"
       },
       {
         "name": "Snap Inc",
@@ -2383,16 +2425,64 @@
         "name": "Thomson Reuters",
         "company": "Thomson Reuters",
         "base_url": "https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/TR_External_Career_Site/jobs"
+      }
+    ],
+    "workday_selenium": [
+      {
+        "name": "Visa",
+        "company": "Visa",
+        "base_url": "https://visa.wd5.myworkdayjobs.com/Visa_Careers",
+        "max_pages": 10,
+        "headless": true
       },
       {
         "name": "Verizon",
         "company": "Verizon",
-        "base_url": "https://verizon.wd5.myworkdayjobs.com/wday/cxs/verizon/verizon/jobs"
+        "base_url": "https://verizon.wd5.myworkdayjobs.com/verizon",
+        "max_pages": 10,
+        "headless": true
       },
       {
-        "name": "Visa",
-        "company": "Visa",
-        "base_url": "https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa_Careers/jobs"
+        "name": "Fidelity",
+        "company": "Fidelity",
+        "base_url": "https://fidelity.wd5.myworkdayjobs.com/Fidelity_Careers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "IBM",
+        "company": "IBM",
+        "base_url": "https://ibm.wd5.myworkdayjobs.com/IBM_Careers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Honeywell",
+        "company": "Honeywell",
+        "base_url": "https://honeywell.wd5.myworkdayjobs.com/Honeywell_Careers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Lockheed Martin",
+        "company": "Lockheed Martin",
+        "base_url": "https://lockheedmartin.wd5.myworkdayjobs.com/LMCareers",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "Northrop Grumman",
+        "company": "Northrop Grumman",
+        "base_url": "https://northropgrumman.wd5.myworkdayjobs.com/NG_External",
+        "max_pages": 10,
+        "headless": true
+      },
+      {
+        "name": "John Deere",
+        "company": "John Deere",
+        "base_url": "https://johndeere.wd5.myworkdayjobs.com/JohnDeere",
+        "max_pages": 10,
+        "headless": true
       }
     ],
     "google": {
@@ -2433,40 +2523,6 @@
       "doc_id": "24779400495047796",
       "poll_interval_seconds": 300
     },
-    "jobvite": [
-      {
-        "name": "WebMD",
-        "company_id": "webmd"
-      },
-      {
-        "name": "Anthology",
-        "company_id": "anthology"
-      },
-      {
-        "name": "Altamira Technologies",
-        "company_id": "altamiracorps"
-      },
-      {
-        "name": "Barracuda Networks",
-        "company_id": "barracuda-networks-inc"
-      },
-      {
-        "name": "NinjaOne",
-        "company_id": "ninjaone"
-      },
-      {
-        "name": "iboss",
-        "company_id": "iboss"
-      },
-      {
-        "name": "Sitecore",
-        "company_id": "sitecore"
-      },
-      {
-        "name": "CivicPlus",
-        "company_id": "civicplus"
-      }
-    ],
     "icims": [
       {
         "name": "Council of Industry",
@@ -2552,48 +2608,36 @@
         "name": "Uber",
         "company": "Uber",
         "portal_url": "https://university-uber.icims.com"
-      }
-    ],
-    "taleo": [
-      {
-        "name": "Temple University",
-        "base_url": "https://temple.taleo.net/careersection/tu_ex_staff/jobsearch.ftl"
       },
       {
-        "name": "University of Pittsburgh",
-        "base_url": "https://cfopitt.taleo.net/careersection/pitt_staff_external/jobsearch.ftl"
+        "name": "Atlassian",
+        "company": "Atlassian",
+        "portal_url": "https://campus-globalcareers-atlassian.icims.com"
       },
       {
-        "name": "NATO",
-        "base_url": "https://nato.taleo.net/careersection/2/jobsearch.ftl"
+        "name": "Intuit",
+        "company": "Intuit",
+        "portal_url": "https://uscareers-intuit.icims.com"
       },
       {
-        "name": "City of Chicago",
-        "base_url": "https://chicago.taleo.net/careersection/100/jobsearch.ftl"
+        "name": "Pure Storage",
+        "company": "Pure Storage",
+        "portal_url": "https://intcareers-purestorage.icims.com"
       },
       {
-        "name": "Cook County",
-        "base_url": "https://cookcountyil.taleo.net/careersection/500/jobsearch.ftl"
+        "name": "SAS",
+        "company": "SAS",
+        "portal_url": "https://careers-sas.icims.com"
       },
       {
-        "name": "The College of New Jersey",
-        "base_url": "https://tcnj.taleo.net/careersection/00_ex_staff/jobsearch.ftl"
+        "name": "Chick-fil-A",
+        "company": "Chick-fil-A",
+        "portal_url": "https://careers-chickfila.icims.com"
       },
       {
-        "name": "Idaho National Laboratory",
-        "base_url": "https://inl.taleo.net/careersection/inl_external/jobsearch.ftl"
-      },
-      {
-        "name": "Food and Agriculture Organization",
-        "base_url": "https://fao.taleo.net/careersection/fao_external/jobsearch.ftl"
-      },
-      {
-        "name": "Vulcan Materials",
-        "base_url": "https://vulcanmat.taleo.net/careersection/2/jobsearch.ftl"
-      },
-      {
-        "name": "State of Texas",
-        "base_url": "https://capps.taleo.net/careersection/ex/jobsearch.ftl"
+        "name": "Enterprise Mobility",
+        "company": "Enterprise Mobility",
+        "portal_url": "https://us-erac.icims.com"
       }
     ],
     "yc": {
