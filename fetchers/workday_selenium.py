@@ -10,14 +10,22 @@ will detect and log that situation clearly.
 """
 
 import logging
+import os
 import re
 import time
 from datetime import datetime, timedelta
 
 from fetchers.base import BaseFetcher
+from fetchers.proxy_utils import LocalProxyForwarder
 from models import Job
 
 logger = logging.getLogger(__name__)
+
+# Oxylabs residential proxy credentials (for US country targeting)
+_PROXY_HOST = os.environ.get("OXYLABS_PROXY_HOST", "pr.oxylabs.io")
+_PROXY_PORT = int(os.environ.get("OXYLABS_PROXY_PORT", "7777"))
+_PROXY_USER = os.environ.get("OXYLABS_PROXY_USER", "")
+_PROXY_PASS = os.environ.get("OXYLABS_PROXY_PASS", "")
 
 
 class WorkdaySeleniumFetcher(BaseFetcher):
@@ -57,13 +65,24 @@ class WorkdaySeleniumFetcher(BaseFetcher):
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
 
+        use_proxy = _PROXY_USER and _PROXY_PASS
+        proxy_ctx = (
+            LocalProxyForwarder(_PROXY_HOST, _PROXY_PORT, _PROXY_USER, _PROXY_PASS)
+            if use_proxy else None
+        )
+
         driver = None
         jobs = []
 
         try:
+            local_proxy_url = proxy_ctx.__enter__() if proxy_ctx else None
+            if local_proxy_url:
+                options.add_argument(f"--proxy-server={local_proxy_url}")
+                logger.info(f"{self.source_name}: using residential proxy via {_PROXY_HOST}")
+
             service = get_chrome_service()
             driver = webdriver.Chrome(service=service, options=options)
-            driver.set_page_load_timeout(30)
+            driver.set_page_load_timeout(45)
 
             logger.info(f"{self.source_name}: navigating to {self._base_url}")
             driver.get(self._base_url)
@@ -225,6 +244,8 @@ class WorkdaySeleniumFetcher(BaseFetcher):
         finally:
             if driver:
                 driver.quit()
+            if proxy_ctx:
+                proxy_ctx.__exit__(None, None, None)
 
         logger.info(f"{self.source_name}: fetched {len(jobs)} total jobs")
         return jobs

@@ -374,7 +374,6 @@
     "icims": "DISCORD_WEBHOOK_ICIMS",
     "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
     "frontier_ai": "DISCORD_WEBHOOK_FRONTIER_AI",
-    "workday_selenium": "DISCORD_WEBHOOK_WORKDAY",
     "jpmorgan": "DISCORD_WEBHOOK_CUSTOM",
     "oracle": "DISCORD_WEBHOOK_CUSTOM",
     "qualcomm": "DISCORD_WEBHOOK_CUSTOM",
@@ -384,7 +383,9 @@
     "tiktok": "DISCORD_WEBHOOK_CUSTOM",
     "goldmansachs": "DISCORD_WEBHOOK_CUSTOM",
     "intuit": "DISCORD_WEBHOOK_CUSTOM",
-    "amd": "DISCORD_WEBHOOK_CUSTOM"
+    "amd": "DISCORD_WEBHOOK_CUSTOM",
+    "jibe": "DISCORD_WEBHOOK_CUSTOM",
+    "linkedin": "DISCORD_WEBHOOK_LINKEDIN"
   },
   "sources": {
     "newgrad_json": [
@@ -2145,134 +2146,6 @@
         "base_url": "https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
       }
     ],
-    "workday_selenium": [
-      {
-        "name": "Verizon",
-        "company": "Verizon",
-        "base_url": "https://verizon.wd5.myworkdayjobs.com/verizon",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Fidelity",
-        "company": "Fidelity",
-        "base_url": "https://fidelity.wd5.myworkdayjobs.com/Fidelity_Careers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "IBM",
-        "company": "IBM",
-        "base_url": "https://ibm.wd5.myworkdayjobs.com/IBM_Careers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Honeywell",
-        "company": "Honeywell",
-        "base_url": "https://honeywell.wd5.myworkdayjobs.com/Honeywell_Careers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Lockheed Martin",
-        "company": "Lockheed Martin",
-        "base_url": "https://lockheedmartin.wd5.myworkdayjobs.com/LMCareers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Northrop Grumman",
-        "company": "Northrop Grumman",
-        "base_url": "https://northropgrumman.wd5.myworkdayjobs.com/NG_External",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "John Deere",
-        "company": "John Deere",
-        "base_url": "https://johndeere.wd5.myworkdayjobs.com/JohnDeere",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "AT&T",
-        "company": "AT&T",
-        "base_url": "https://att.wd5.myworkdayjobs.com/ATT",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Accenture",
-        "company": "Accenture",
-        "base_url": "https://accenture.wd3.myworkdayjobs.com/AccentureCareers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "American Express",
-        "company": "American Express",
-        "base_url": "https://aexp.wd5.myworkdayjobs.com/AEXP",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Bank of America",
-        "company": "Bank of America",
-        "base_url": "https://bankofamerica.wd1.myworkdayjobs.com/Campus",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Booking",
-        "company": "Booking",
-        "base_url": "https://booking.wd5.myworkdayjobs.com/Booking",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Caterpillar",
-        "company": "Caterpillar",
-        "base_url": "https://caterpillar.wd5.myworkdayjobs.com/Caterpillar",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Charles Schwab",
-        "company": "Charles Schwab",
-        "base_url": "https://schwab.wd1.myworkdayjobs.com/Schwab_External_Careers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Deloitte",
-        "company": "Deloitte",
-        "base_url": "https://deloitte.wd1.myworkdayjobs.com/US_Careers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "GE",
-        "company": "GE",
-        "base_url": "https://ge.wd5.myworkdayjobs.com/GE_External_Career_Site",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "Puma",
-        "company": "Puma",
-        "base_url": "https://puma.wd3.myworkdayjobs.com/Careers",
-        "max_pages": 10,
-        "headless": true
-      },
-      {
-        "name": "X (Twitter)",
-        "company": "X",
-        "base_url": "https://twitter.wd5.myworkdayjobs.com/X",
-        "max_pages": 10,
-        "headless": true
-      }
-    ],
     "google": {
       "name": "Google",
       "company": "Google",
@@ -2383,11 +2256,6 @@
         "portal_url": "https://careers-wellbeseniormedical.icims.com"
       },
       {
-        "name": "iCIMS",
-        "company": "iCIMS",
-        "portal_url": "https://careers.icims.com"
-      },
-      {
         "name": "Uber",
         "company": "Uber",
         "portal_url": "https://university-uber.icims.com"
@@ -2396,11 +2264,6 @@
         "name": "Atlassian",
         "company": "Atlassian",
         "portal_url": "https://campus-globalcareers-atlassian.icims.com"
-      },
-      {
-        "name": "Pure Storage",
-        "company": "Pure Storage",
-        "portal_url": "https://intcareers-purestorage.icims.com"
       },
       {
         "name": "SAS",
@@ -2539,9 +2402,45 @@
       {
         "name": "AMD",
         "company": "AMD",
+        "base_url": "https://careers.amd.com",
         "categories": ["Engineering"],
         "max_pages": 200
       }
-    ]
+    ],
+    "jibe": [
+      {
+        "name": "iCIMS",
+        "company": "iCIMS",
+        "base_url": "https://careers.icims.com",
+        "max_pages": 50
+      }
+    ],
+    "linkedin": {
+      "name": "LinkedIn Jobs",
+      "poll_interval_seconds": 300,
+      "request_delay": [3, 5],
+      "companies": [
+        {"name": "Accenture", "linkedin_id": "1033"},
+        {"name": "Deloitte", "linkedin_id": "1038"},
+        {"name": "Fidelity", "linkedin_id": "1307"},
+        {"name": "IBM", "linkedin_id": "1009"},
+        {"name": "Honeywell", "linkedin_id": "1344"},
+        {"name": "Lockheed Martin", "linkedin_id": "1319"},
+        {"name": "Northrop Grumman", "linkedin_id": "1412"},
+        {"name": "John Deere", "linkedin_id": "3789"},
+        {"name": "AT&T", "linkedin_id": "1052"},
+        {"name": "American Express", "linkedin_id": "1277"},
+        {"name": "Bank of America", "linkedin_id": "1123"},
+        {"name": "Booking", "linkedin_id": "11348"},
+        {"name": "Caterpillar", "linkedin_id": "2622"},
+        {"name": "Charles Schwab", "linkedin_id": "1855"},
+        {"name": "GE Aerospace", "linkedin_id": "570550"},
+        {"name": "GE Vernova", "linkedin_id": "82315716"},
+        {"name": "GE HealthCare", "linkedin_id": "1016"},
+        {"name": "Puma", "linkedin_id": "165597"},
+        {"name": "Verizon", "linkedin_id": "1103"},
+        {"name": "X", "linkedin_id": "96622"}
+      ]
+    }
   }
 }

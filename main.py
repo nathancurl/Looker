@@ -27,7 +27,6 @@ from fetchers.newgrad_markdown import NewGradMarkdownFetcher
 from fetchers.smartrecruiters import SmartRecruitersFetcher
 from fetchers.workable import WorkableFetcher
 from fetchers.workday import WorkdayFetcher
-from fetchers.workday_selenium import WorkdaySeleniumFetcher
 from fetchers.wellfound import WellfoundFetcher
 from fetchers.yc import YCFetcher
 from fetchers.rivian import RivianFetcher
@@ -37,6 +36,8 @@ from fetchers.shopify import ShopifyFetcher
 from fetchers.tiktok import TikTokFetcher
 from fetchers.qualcomm import QualcommFetcher
 from fetchers.goldmansachs import GoldmanSachsFetcher
+from fetchers.jibe import JibeFetcher
+from fetchers.linkedin import LinkedInFetcher
 from filtering import filter_job
 from state import StateStore
 
@@ -51,7 +52,6 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "workable": WorkableFetcher,
     "smartrecruiters": SmartRecruitersFetcher,
     "workday": WorkdayFetcher,
-    "workday_selenium": WorkdaySeleniumFetcher,
     "hn_hiring": HNHiringFetcher,
     "google": GoogleFetcher,
     "amazon": AmazonFetcher,
@@ -70,6 +70,8 @@ FETCHER_REGISTRY: dict[str, type[BaseFetcher]] = {
     "tiktok": TikTokFetcher,
     "qualcomm": QualcommFetcher,
     "goldmansachs": GoldmanSachsFetcher,
+    "jibe": JibeFetcher,
+    "linkedin": LinkedInFetcher,
 }
 
 _shutdown = False
