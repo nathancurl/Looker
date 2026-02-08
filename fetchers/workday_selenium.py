@@ -1,8 +1,12 @@
 """Fetcher for Workday career sites using Selenium (for companies that blocked API access).
 
-Some major companies (Visa, Verizon, Fidelity, IBM, Honeywell, Lockheed Martin,
-Northrop Grumman, John Deere) now return 401/422 errors from Workday's API.
+Some major companies (Verizon, Fidelity, IBM, Honeywell, Lockheed Martin,
+Northrop Grumman, John Deere) return 422 errors from Workday's API.
 This scraper navigates the web UI directly using Selenium.
+
+Note: Many of these companies also block datacenter IPs from accessing the
+web UI (redirecting to community.workday.com/maintenance-page). This fetcher
+will detect and log that situation clearly.
 """
 
 import logging
@@ -31,11 +35,10 @@ class WorkdaySeleniumFetcher(BaseFetcher):
         try:
             from selenium import webdriver
             from selenium.webdriver.chrome.options import Options
-            from selenium.webdriver.chrome.service import Service
             from selenium.webdriver.common.by import By
             from selenium.webdriver.support.ui import WebDriverWait
             from selenium.webdriver.support import expected_conditions as EC
-            from webdriver_manager.chrome import ChromeDriverManager
+            from fetchers.selenium_utils import get_chrome_service
         except ImportError:
             logger.error(f"{self.source_name}: selenium not installed")
             return []
@@ -58,14 +61,29 @@ class WorkdaySeleniumFetcher(BaseFetcher):
         jobs = []
 
         try:
-            # Force ChromeDriver v144 to match system Chromium
-            service = Service(ChromeDriverManager(driver_version="144.0.7559.109").install())
+            service = get_chrome_service()
             driver = webdriver.Chrome(service=service, options=options)
             driver.set_page_load_timeout(30)
 
             logger.info(f"{self.source_name}: navigating to {self._base_url}")
             driver.get(self._base_url)
             time.sleep(5)  # Wait for initial page load and JavaScript
+
+            # Detect IP block / maintenance redirect
+            current_url = driver.current_url
+            title = driver.title or ""
+            if "maintenance" in current_url or "community.workday.com" in current_url:
+                logger.warning(
+                    f"{self.source_name}: blocked by Workday (redirected to maintenance page). "
+                    f"This company blocks datacenter IPs."
+                )
+                return []
+            if title.lower() in ("error", "") and len(driver.page_source) < 2000:
+                logger.warning(
+                    f"{self.source_name}: Workday returned error page (likely IP block). "
+                    f"Title='{title}', URL={current_url}"
+                )
+                return []
 
             # Try to accept cookies if modal appears
             try:
@@ -84,109 +102,68 @@ class WorkdaySeleniumFetcher(BaseFetcher):
             while page < self._max_pages:
                 logger.info(f"{self.source_name}: scraping page {page + 1}")
 
-                # Wait for job listings to load
+                # Wait for job title links to load (the reliable selector)
                 wait = WebDriverWait(driver, 15)
                 try:
                     wait.until(
                         EC.presence_of_element_located(
-                            (By.CSS_SELECTOR, "li[data-automation-id='listItem']")
+                            (By.CSS_SELECTOR, "a[data-automation-id='jobTitle']")
                         )
                     )
                 except Exception as e:
                     logger.warning(
-                        f"{self.source_name}: no job listings found on page {page + 1}: {e}"
+                        f"{self.source_name}: no job listings found on page {page + 1}"
                     )
                     break
 
-                # Find all job listing items
-                job_elements = driver.find_elements(
-                    By.CSS_SELECTOR, "li[data-automation-id='listItem']"
+                # Find all job title links
+                title_links = driver.find_elements(
+                    By.CSS_SELECTOR, "a[data-automation-id='jobTitle']"
                 )
                 logger.info(
-                    f"{self.source_name}: found {len(job_elements)} job listings on page {page + 1}"
+                    f"{self.source_name}: found {len(title_links)} job listings on page {page + 1}"
                 )
 
-                if not job_elements:
+                if not title_links:
                     break
 
                 page_jobs = []
-                for job_elem in job_elements:
+                for title_link in title_links:
                     try:
-                        # Extract title
-                        title = ""
-                        try:
-                            title_elem = job_elem.find_element(
-                                By.CSS_SELECTOR, "a[data-automation-id='jobTitle']"
-                            )
-                            title = title_elem.text.strip()
-                        except:
-                            # Fallback: try to find any link with job title
-                            try:
-                                title_elem = job_elem.find_element(By.CSS_SELECTOR, "a")
-                                title = title_elem.text.strip().split('\n')[0]
-                            except:
-                                logger.warning(f"{self.source_name}: could not extract title")
-                                continue
+                        title = title_link.text.strip()
+                        url = title_link.get_attribute("href")
+                        if not title or not url:
+                            continue
 
-                        # Extract URL
-                        url = ""
+                        # Navigate up to the job item container (li element)
                         try:
-                            link_elem = job_elem.find_element(
-                                By.CSS_SELECTOR, "a[data-automation-id='jobTitle']"
-                            )
-                            url = link_elem.get_attribute("href")
+                            job_item = title_link.find_element(By.XPATH, "ancestor::li")
                         except:
-                            # Fallback: get first link
-                            try:
-                                link_elem = job_elem.find_element(By.CSS_SELECTOR, "a")
-                                url = link_elem.get_attribute("href")
-                            except:
-                                logger.warning(f"{self.source_name}: could not extract URL")
-                                continue
+                            job_item = None
 
-                        # Extract location
+                        # Extract location from the container
                         location = "Multiple Locations"
-                        try:
-                            # Try multiple possible location selectors
-                            location_selectors = [
-                                "dd[data-automation-id='location']",
-                                "div[data-automation-id='location']",
-                                "span[data-automation-id='location']",
-                            ]
-                            for selector in location_selectors:
-                                try:
-                                    location_elem = job_elem.find_element(By.CSS_SELECTOR, selector)
-                                    location = location_elem.text.strip()
-                                    if location:
-                                        break
-                                except:
-                                    continue
-                        except:
-                            pass
+                        if job_item:
+                            try:
+                                loc_elem = job_item.find_element(
+                                    By.CSS_SELECTOR, "[data-automation-id='locations'] dd"
+                                )
+                                location = loc_elem.text.strip() or location
+                            except:
+                                pass
 
-                        # Extract posted date (optional)
+                        # Extract posted date from the container
                         posted_at = None
-                        try:
-                            date_selectors = [
-                                "dd[data-automation-id='postedOn']",
-                                "time[data-automation-id='postedOn']",
-                            ]
-                            for selector in date_selectors:
-                                try:
-                                    date_elem = job_elem.find_element(By.CSS_SELECTOR, selector)
-                                    date_text = date_elem.text.strip()
-                                    posted_at = self._parse_workday_date(date_text)
-                                    if posted_at:
-                                        break
-                                except:
-                                    continue
-                        except:
-                            pass
+                        if job_item:
+                            try:
+                                date_elem = job_item.find_element(
+                                    By.CSS_SELECTOR, "[data-automation-id='postedOn'] dd"
+                                )
+                                posted_at = self._parse_workday_date(date_elem.text.strip())
+                            except:
+                                pass
 
-                        # Generate UID from URL
                         uid = Job.generate_uid(self.source_group, url=url)
-
-                        # Create snippet
                         snippet = f"{title} at {self._company} - {location}"
 
                         page_jobs.append(
@@ -212,35 +189,32 @@ class WorkdaySeleniumFetcher(BaseFetcher):
                     f"{self.source_name}: extracted {len(page_jobs)} jobs from page {page + 1}"
                 )
 
-                # Try to click "Load More" or "Next" button
+                # Try to navigate to the next page
                 try:
-                    # Look for various pagination button patterns
-                    pagination_selectors = [
-                        "button[data-automation-id='showMoreJobs']",
+                    next_button = None
+                    for selector in [
                         "button[aria-label='next']",
-                        "button.css-1hwfws3",  # Common Workday pagination button class
-                    ]
-
-                    clicked = False
-                    for selector in pagination_selectors:
+                        "button[data-automation-id='paginationNext']",
+                    ]:
                         try:
-                            next_button = driver.find_element(By.CSS_SELECTOR, selector)
-                            if next_button.is_displayed() and next_button.is_enabled():
-                                driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
-                                time.sleep(1)
-                                next_button.click()
-                                time.sleep(3)  # Wait for new jobs to load
-                                clicked = True
+                            btn = driver.find_element(By.CSS_SELECTOR, selector)
+                            if btn.is_displayed() and btn.is_enabled():
+                                next_button = btn
                                 break
                         except:
                             continue
 
-                    if not clicked:
+                    if not next_button:
                         logger.info(f"{self.source_name}: no more pages to load")
                         break
 
+                    driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
+                    time.sleep(1)
+                    next_button.click()
+                    time.sleep(3)  # Wait for new jobs to load
+
                 except Exception as e:
-                    logger.info(f"{self.source_name}: reached last page or pagination failed: {e}")
+                    logger.info(f"{self.source_name}: reached last page: {e}")
                     break
 
                 page += 1

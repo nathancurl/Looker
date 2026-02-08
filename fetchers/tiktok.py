@@ -67,11 +67,10 @@ class TikTokFetcher(BaseFetcher):
         try:
             from selenium import webdriver
             from selenium.webdriver.chrome.options import Options
-            from selenium.webdriver.chrome.service import Service
             from selenium.webdriver.common.by import By
             from selenium.webdriver.support.ui import WebDriverWait
             from selenium.webdriver.support import expected_conditions as EC
-            from webdriver_manager.chrome import ChromeDriverManager
+            from fetchers.selenium_utils import get_chrome_service
         except ImportError:
             logger.error("%s: selenium not installed. Install with: pip install selenium webdriver-manager", self.source_name)
             return []
@@ -97,9 +96,7 @@ class TikTokFetcher(BaseFetcher):
         jobs = []
 
         try:
-            # Use webdriver-manager to handle ChromeDriver
-            # Force ChromeDriver v144 to match system Chromium
-            service = Service(ChromeDriverManager(driver_version="144.0.7559.109").install())
+            service = get_chrome_service()
             driver = webdriver.Chrome(service=service, options=options)
 
             # Additional anti-detection: override navigator.webdriver

@@ -105,7 +105,7 @@ class GoldmanSachsFetcher(BaseFetcher):
     - keywords: Keywords to filter job titles (e.g., ["Software Engineer", "Developer"])
     """
 
-    source_group = "finance"
+    source_group = "goldmansachs"
 
     def __init__(self, source_config: dict):
         super().__init__(source_config)

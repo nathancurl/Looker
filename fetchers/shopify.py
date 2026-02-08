@@ -234,11 +234,10 @@ class ShopifyFetcher(BaseFetcher):
         try:
             from selenium import webdriver
             from selenium.webdriver.chrome.options import Options
-            from selenium.webdriver.chrome.service import Service
             from selenium.webdriver.common.by import By
             from selenium.webdriver.support import expected_conditions as EC
             from selenium.webdriver.support.ui import WebDriverWait
-            from webdriver_manager.chrome import ChromeDriverManager
+            from fetchers.selenium_utils import get_chrome_service
         except ImportError:
             logger.error(
                 "Shopify: selenium or webdriver-manager not installed. "
@@ -265,8 +264,7 @@ class ShopifyFetcher(BaseFetcher):
         jobs = []
 
         try:
-            # Use webdriver-manager to handle ChromeDriver
-            service = Service(ChromeDriverManager().install())
+            service = get_chrome_service()
             driver = webdriver.Chrome(service=service, options=chrome_options)
             driver.set_page_load_timeout(30)
 

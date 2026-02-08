@@ -31,11 +31,10 @@ class MicrosoftFetcher(BaseFetcher):
         try:
             from selenium import webdriver
             from selenium.webdriver.chrome.options import Options
-            from selenium.webdriver.chrome.service import Service
             from selenium.webdriver.common.by import By
             from selenium.webdriver.support.ui import WebDriverWait
             from selenium.webdriver.support import expected_conditions as EC
-            from webdriver_manager.chrome import ChromeDriverManager
+            from fetchers.selenium_utils import get_chrome_service
         except ImportError:
             logger.error("Microsoft: selenium not installed")
             return []
@@ -58,8 +57,7 @@ class MicrosoftFetcher(BaseFetcher):
         jobs = []
 
         try:
-            # Force ChromeDriver v144 to match system Chromium
-            service = Service(ChromeDriverManager(driver_version="144.0.7559.109").install())
+            service = get_chrome_service()
             driver = webdriver.Chrome(service=service, options=options)
             driver.set_page_load_timeout(30)
 
