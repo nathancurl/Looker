@@ -162,8 +162,9 @@ class TikTokFetcher(BaseFetcher):
         seen_ids = set()
 
         try:
-            # Find all job links - TikTok uses /search/{id} pattern
-            job_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/search/']")
+            # Find all job links - both TikTok and ByteDance use /search/{id} pattern
+            # ByteDance uses full URLs, TikTok uses relative paths
+            job_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/search/'], a[href*='joinbytedance.com/search/'], a[href*='lifeattiktok.com/search/']")
 
             logger.info("%s: found %d job links in DOM", self.source_name, len(job_links))
 
@@ -174,10 +175,11 @@ class TikTokFetcher(BaseFetcher):
                     if not url or "/search/" not in url:
                         continue
 
-                    # Extract job ID from URL
+                    # Extract job ID from URL - both TikTok and ByteDance use 19-digit IDs
                     import re
-                    job_id_match = re.search(r'/search/(\d{19})', url)
+                    job_id_match = re.search(r'/search/(\d{16,20})', url)  # Allow 16-20 digits for flexibility
                     if not job_id_match:
+                        logger.debug("%s: no job ID found in URL: %s", self.source_name, url)
                         continue
 
                     job_id = job_id_match.group(1)
