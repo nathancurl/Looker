@@ -44,7 +44,7 @@ from models import Job
 
 logger = logging.getLogger(__name__)
 
-CAREERS_URL = "https://www.shopify.com/careers"
+CAREERS_URL = "https://www.shopify.com/careers/disciplines/engineering-data"
 BASE_URL = "https://www.shopify.com"
 
 # Rate limiting configuration

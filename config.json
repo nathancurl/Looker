@@ -1,2446 +1,2500 @@
 {
-  "poll_interval_seconds": 120,
-  "filtering": {
-    "include_keywords": [
-      "software engineer",
-      "software developer",
-      "software development engineer",
-      "backend engineer",
-      "backend developer",
-      "back-end engineer",
-      "back-end developer",
-      "frontend engineer",
-      "frontend developer",
-      "front-end engineer",
-      "front-end developer",
-      "full stack engineer",
-      "full-stack engineer",
-      "fullstack engineer",
-      "full stack developer",
-      "full-stack developer",
-      "fullstack developer",
-      "web developer",
-      "web engineer",
-      "application developer",
-      "application engineer",
-      "platform engineer",
-      "systems engineer",
-      "infrastructure engineer",
-      "mobile engineer",
-      "mobile developer",
-      "ios engineer",
-      "ios developer",
-      "android engineer",
-      "android developer",
-      "devops engineer",
-      "site reliability engineer",
-      "sre",
-      "cloud engineer",
-      "data engineer",
-      "ml engineer",
-      "machine learning engineer",
-      "ai engineer"
-    ],
-    "exclude_keywords": [
-      "senior",
-      "sr.",
-      "sr ",
-      "sr,",
-      "senior,",
-      "staff",
-      "principal",
-      "lead",
-      "architect",
-      "manager",
-      "director",
-      "vp",
-      "vice president",
-      "head of",
-      "chief",
-      "ii",
-      "iii",
-      "iv",
-      "10+ years",
-      "9+ years",
-      "8+ years",
-      "7+ years",
-      "6+ years",
-      "5+ years",
-      "4+ years",
-      "3+ years",
-      "phd required",
-      "doctoral",
-      "clearance required",
-      "secret clearance",
-      "ts/sci",
-      "security clearance",
-      "intern",
-      "internship",
-      "co-op",
-      "contractor",
-      "contract position"
-    ],
-    "level_keywords": {
-      "enabled": false,
-      "terms": [
-        "new grad",
-        "newgrad",
-        "new graduate",
-        "recent graduate",
-        "entry level",
-        "entry-level",
-        "junior",
-        "jr.",
-        "jr ",
-        "early career",
-        "associate",
-        "i",
-        "1",
-        "level 1",
-        "l1",
-        "university grad",
-        "college grad",
-        "0-2 years",
-        "0-1 years",
-        "1-2 years",
-        "2025",
-        "2026"
-      ]
+    "poll_interval_seconds": 120,
+    "filtering": {
+        "include_keywords": [
+            "software engineer",
+            "software developer",
+            "software development engineer",
+            "backend engineer",
+            "backend developer",
+            "back-end engineer",
+            "back-end developer",
+            "frontend engineer",
+            "frontend developer",
+            "front-end engineer",
+            "front-end developer",
+            "full stack engineer",
+            "full-stack engineer",
+            "fullstack engineer",
+            "full stack developer",
+            "full-stack developer",
+            "fullstack developer",
+            "web developer",
+            "web engineer",
+            "application developer",
+            "application engineer",
+            "platform engineer",
+            "systems engineer",
+            "infrastructure engineer",
+            "mobile engineer",
+            "mobile developer",
+            "ios engineer",
+            "ios developer",
+            "android engineer",
+            "android developer",
+            "devops engineer",
+            "site reliability engineer",
+            "sre",
+            "cloud engineer",
+            "data engineer",
+            "ml engineer",
+            "machine learning engineer",
+            "ai engineer"
+        ],
+        "exclude_keywords": [
+            "senior",
+            "sr.",
+            "sr ",
+            "sr,",
+            "senior,",
+            "staff",
+            "principal",
+            "lead",
+            "architect",
+            "manager",
+            "director",
+            "vp",
+            "vice president",
+            "head of",
+            "chief",
+            "ii",
+            "iii",
+            "iv",
+            "10+ years",
+            "9+ years",
+            "8+ years",
+            "7+ years",
+            "6+ years",
+            "5+ years",
+            "4+ years",
+            "3+ years",
+            "phd required",
+            "doctoral",
+            "clearance required",
+            "secret clearance",
+            "ts/sci",
+            "security clearance",
+            "intern",
+            "internship",
+            "co-op",
+            "contractor",
+            "contract position"
+        ],
+        "level_keywords": {
+            "enabled": false,
+            "terms": [
+                "new grad",
+                "newgrad",
+                "new graduate",
+                "recent graduate",
+                "entry level",
+                "entry-level",
+                "junior",
+                "jr.",
+                "jr ",
+                "early career",
+                "associate",
+                "i",
+                "1",
+                "level 1",
+                "l1",
+                "university grad",
+                "college grad",
+                "0-2 years",
+                "0-1 years",
+                "1-2 years",
+                "2025",
+                "2026"
+            ]
+        },
+        "location": {
+            "enabled": true,
+            "allowed_keywords": [
+                "united states",
+                "usa",
+                "u.s.",
+                "remote",
+                "alabama",
+                "alaska",
+                "arizona",
+                "arkansas",
+                "california",
+                "colorado",
+                "connecticut",
+                "delaware",
+                "florida",
+                "georgia",
+                "hawaii",
+                "idaho",
+                "illinois",
+                "indiana",
+                "iowa",
+                "kansas",
+                "kentucky",
+                "louisiana",
+                "maine",
+                "maryland",
+                "massachusetts",
+                "michigan",
+                "minnesota",
+                "mississippi",
+                "missouri",
+                "montana",
+                "nebraska",
+                "nevada",
+                "new hampshire",
+                "new jersey",
+                "new mexico",
+                "new york",
+                "north carolina",
+                "north dakota",
+                "ohio",
+                "oklahoma",
+                "oregon",
+                "pennsylvania",
+                "rhode island",
+                "south carolina",
+                "south dakota",
+                "tennessee",
+                "texas",
+                "utah",
+                "vermont",
+                "virginia",
+                "washington",
+                "west virginia",
+                "wisconsin",
+                "wyoming",
+                "al",
+                "ak",
+                "az",
+                "ar",
+                "ca",
+                "co",
+                "ct",
+                "de",
+                "fl",
+                "ga",
+                "hi",
+                "id",
+                "il",
+                "in",
+                "ia",
+                "ks",
+                "ky",
+                "la",
+                "me",
+                "md",
+                "ma",
+                "mi",
+                "mn",
+                "ms",
+                "mo",
+                "mt",
+                "ne",
+                "nv",
+                "nh",
+                "nj",
+                "nm",
+                "ny",
+                "nc",
+                "nd",
+                "oh",
+                "ok",
+                "or",
+                "pa",
+                "ri",
+                "sc",
+                "sd",
+                "tn",
+                "tx",
+                "ut",
+                "vt",
+                "va",
+                "wa",
+                "wv",
+                "wi",
+                "wy",
+                "new york, ny",
+                "san francisco",
+                "seattle",
+                "austin",
+                "boston",
+                "chicago",
+                "los angeles",
+                "denver",
+                "atlanta",
+                "miami",
+                "dallas",
+                "portland",
+                "washington, dc",
+                "d.c.",
+                "silicon valley",
+                "bay area"
+            ],
+            "excluded_keywords": [
+                "europe",
+                "european",
+                "emea",
+                "eu",
+                "apac",
+                "asia pacific",
+                "international",
+                "latin america",
+                "latam",
+                "south america",
+                "middle east",
+                "africa",
+                "canada",
+                "toronto",
+                "vancouver",
+                "montreal",
+                "ottawa",
+                "calgary",
+                "united kingdom",
+                "uk",
+                "u.k.",
+                "london",
+                "manchester",
+                "edinburgh",
+                "glasgow",
+                "germany",
+                "berlin",
+                "munich",
+                "frankfurt",
+                "hamburg",
+                "france",
+                "paris",
+                "lyon",
+                "marseille",
+                "india",
+                "bangalore",
+                "mumbai",
+                "hyderabad",
+                "pune",
+                "delhi",
+                "australia",
+                "sydney",
+                "melbourne",
+                "brisbane",
+                "perth",
+                "singapore",
+                "israel",
+                "tel aviv",
+                "jerusalem",
+                "netherlands",
+                "amsterdam",
+                "rotterdam",
+                "ireland",
+                "dublin",
+                "cork",
+                "japan",
+                "tokyo",
+                "osaka",
+                "china",
+                "beijing",
+                "shanghai",
+                "shenzhen",
+                "hong kong",
+                "mexico",
+                "mexico city",
+                "guadalajara",
+                "brazil",
+                "sao paulo",
+                "rio de janeiro",
+                "poland",
+                "warsaw",
+                "krakow",
+                "spain",
+                "barcelona",
+                "madrid",
+                "valencia",
+                "sweden",
+                "stockholm",
+                "gothenburg",
+                "switzerland",
+                "zurich",
+                "geneva",
+                "italy",
+                "rome",
+                "milan",
+                "austria",
+                "vienna",
+                "belgium",
+                "brussels",
+                "denmark",
+                "copenhagen",
+                "norway",
+                "oslo",
+                "finland",
+                "helsinki",
+                "portugal",
+                "lisbon",
+                "czech republic",
+                "prague",
+                "romania",
+                "bucharest",
+                "hungary",
+                "budapest",
+                "new zealand",
+                "auckland",
+                "wellington",
+                "south korea",
+                "seoul",
+                "taiwan",
+                "taipei",
+                "thailand",
+                "bangkok",
+                "vietnam",
+                "ho chi minh",
+                "philippines",
+                "manila",
+                "argentina",
+                "buenos aires",
+                "chile",
+                "santiago",
+                "colombia",
+                "bogota"
+            ]
+        }
     },
-    "location": {
-      "enabled": true,
-      "allowed_keywords": [
-        "united states",
-        "usa",
-        "u.s.",
-        "remote",
-        "alabama",
-        "alaska",
-        "arizona",
-        "arkansas",
-        "california",
-        "colorado",
-        "connecticut",
-        "delaware",
-        "florida",
-        "georgia",
-        "hawaii",
-        "idaho",
-        "illinois",
-        "indiana",
-        "iowa",
-        "kansas",
-        "kentucky",
-        "louisiana",
-        "maine",
-        "maryland",
-        "massachusetts",
-        "michigan",
-        "minnesota",
-        "mississippi",
-        "missouri",
-        "montana",
-        "nebraska",
-        "nevada",
-        "new hampshire",
-        "new jersey",
-        "new mexico",
-        "new york",
-        "north carolina",
-        "north dakota",
-        "ohio",
-        "oklahoma",
-        "oregon",
-        "pennsylvania",
-        "rhode island",
-        "south carolina",
-        "south dakota",
-        "tennessee",
-        "texas",
-        "utah",
-        "vermont",
-        "virginia",
-        "washington",
-        "west virginia",
-        "wisconsin",
-        "wyoming",
-        "al",
-        "ak",
-        "az",
-        "ar",
-        "ca",
-        "co",
-        "ct",
-        "de",
-        "fl",
-        "ga",
-        "hi",
-        "id",
-        "il",
-        "in",
-        "ia",
-        "ks",
-        "ky",
-        "la",
-        "me",
-        "md",
-        "ma",
-        "mi",
-        "mn",
-        "ms",
-        "mo",
-        "mt",
-        "ne",
-        "nv",
-        "nh",
-        "nj",
-        "nm",
-        "ny",
-        "nc",
-        "nd",
-        "oh",
-        "ok",
-        "or",
-        "pa",
-        "ri",
-        "sc",
-        "sd",
-        "tn",
-        "tx",
-        "ut",
-        "vt",
-        "va",
-        "wa",
-        "wv",
-        "wi",
-        "wy",
-        "new york, ny",
-        "san francisco",
-        "seattle",
-        "austin",
-        "boston",
-        "chicago",
-        "los angeles",
-        "denver",
-        "atlanta",
-        "miami",
-        "dallas",
-        "portland",
-        "washington, dc",
-        "d.c.",
-        "silicon valley",
-        "bay area"
-      ],
-      "excluded_keywords": [
-        "europe",
-        "european",
-        "emea",
-        "eu",
-        "apac",
-        "asia pacific",
-        "international",
-        "latin america",
-        "latam",
-        "south america",
-        "middle east",
-        "africa",
-        "canada",
-        "toronto",
-        "vancouver",
-        "montreal",
-        "ottawa",
-        "calgary",
-        "united kingdom",
-        "uk",
-        "u.k.",
-        "london",
-        "manchester",
-        "edinburgh",
-        "glasgow",
-        "germany",
-        "berlin",
-        "munich",
-        "frankfurt",
-        "hamburg",
-        "france",
-        "paris",
-        "lyon",
-        "marseille",
-        "india",
-        "bangalore",
-        "mumbai",
-        "hyderabad",
-        "pune",
-        "delhi",
-        "australia",
-        "sydney",
-        "melbourne",
-        "brisbane",
-        "perth",
-        "singapore",
-        "israel",
-        "tel aviv",
-        "jerusalem",
-        "netherlands",
-        "amsterdam",
-        "rotterdam",
-        "ireland",
-        "dublin",
-        "cork",
-        "japan",
-        "tokyo",
-        "osaka",
-        "china",
-        "beijing",
-        "shanghai",
-        "shenzhen",
-        "hong kong",
-        "mexico",
-        "mexico city",
-        "guadalajara",
-        "brazil",
-        "sao paulo",
-        "rio de janeiro",
-        "poland",
-        "warsaw",
-        "krakow",
-        "spain",
-        "barcelona",
-        "madrid",
-        "valencia",
-        "sweden",
-        "stockholm",
-        "gothenburg",
-        "switzerland",
-        "zurich",
-        "geneva",
-        "italy",
-        "rome",
-        "milan",
-        "austria",
-        "vienna",
-        "belgium",
-        "brussels",
-        "denmark",
-        "copenhagen",
-        "norway",
-        "oslo",
-        "finland",
-        "helsinki",
-        "portugal",
-        "lisbon",
-        "czech republic",
-        "prague",
-        "romania",
-        "bucharest",
-        "hungary",
-        "budapest",
-        "new zealand",
-        "auckland",
-        "wellington",
-        "south korea",
-        "seoul",
-        "taiwan",
-        "taipei",
-        "thailand",
-        "bangkok",
-        "vietnam",
-        "ho chi minh",
-        "philippines",
-        "manila",
-        "argentina",
-        "buenos aires",
-        "chile",
-        "santiago",
-        "colombia",
-        "bogota"
-      ]
+    "routing": {
+        "yc": "DISCORD_WEBHOOK_YC",
+        "wellfound": "DISCORD_WEBHOOK_WELLFOUND",
+        "hn": "DISCORD_WEBHOOK_HN",
+        "github": "DISCORD_WEBHOOK_GITHUB",
+        "newgrad": "DISCORD_WEBHOOK_GITHUB",
+        "newgrad_json": "DISCORD_WEBHOOK_GITHUB",
+        "newgrad_markdown": "DISCORD_WEBHOOK_GITHUB",
+        "greenhouse": "DISCORD_WEBHOOK_GREENHOUSE",
+        "lever": "DISCORD_WEBHOOK_LEVER",
+        "ashby": "DISCORD_WEBHOOK_ASHBY",
+        "workable": "DISCORD_WEBHOOK_WORKABLE",
+        "workday": "DISCORD_WEBHOOK_WORKDAY",
+        "maang": "DISCORD_WEBHOOK_MAANG",
+        "icims": "DISCORD_WEBHOOK_ICIMS",
+        "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
+        "frontier_ai": "DISCORD_WEBHOOK_FRONTIER_AI",
+        "jpmorgan": "DISCORD_WEBHOOK_CUSTOM",
+        "oracle": "DISCORD_WEBHOOK_CUSTOM",
+        "qualcomm": "DISCORD_WEBHOOK_CUSTOM",
+        "rivian": "DISCORD_WEBHOOK_CUSTOM",
+        "yelp": "DISCORD_WEBHOOK_CUSTOM",
+        "shopify": "DISCORD_WEBHOOK_CUSTOM",
+        "tiktok": "DISCORD_WEBHOOK_CUSTOM",
+        "goldmansachs": "DISCORD_WEBHOOK_CUSTOM",
+        "intuit": "DISCORD_WEBHOOK_CUSTOM",
+        "amd": "DISCORD_WEBHOOK_CUSTOM",
+        "jibe": "DISCORD_WEBHOOK_CUSTOM",
+        "linkedin": "DISCORD_WEBHOOK_LINKEDIN"
+    },
+    "sources": {
+        "newgrad_json": [
+            {
+                "name": "vanshb03-New-Grad-2026",
+                "owner": "vanshb03",
+                "repo": "New-Grad-2026",
+                "branch": "dev",
+                "json_path": ".github/scripts/listings.json",
+                "poll_interval_seconds": 1800
+            },
+            {
+                "name": "SimplifyJobs-New-Grad",
+                "owner": "SimplifyJobs",
+                "repo": "New-Grad-Positions",
+                "branch": "dev",
+                "json_path": ".github/scripts/listings.json",
+                "poll_interval_seconds": 1800
+            }
+        ],
+        "newgrad_markdown": [
+            {
+                "name": "speedyapply-2026",
+                "owner": "speedyapply",
+                "repo": "2026-SWE-College-Jobs",
+                "branch": "main",
+                "files": [
+                    "NEW_GRAD_USA.md"
+                ],
+                "poll_interval_seconds": 3600
+            }
+        ],
+        "hn_hiring": {
+            "feed_url": "https://hnrss.org/whoishiring/jobs",
+            "poll_interval_seconds": 600
+        },
+        "greenhouse": [
+            {
+                "name": "Airbnb",
+                "board_token": "airbnb",
+                "company": "Airbnb"
+            },
+            {
+                "name": "Affirm",
+                "board_token": "affirm",
+                "company": "Affirm"
+            },
+            {
+                "name": "Airtable",
+                "board_token": "airtable",
+                "company": "Airtable"
+            },
+            {
+                "name": "Amplitude",
+                "board_token": "amplitude",
+                "company": "Amplitude"
+            },
+            {
+                "name": "Anduril",
+                "board_token": "andurilindustries",
+                "company": "Anduril"
+            },
+            {
+                "name": "Anthropic",
+                "board_token": "anthropic",
+                "company": "Anthropic",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Asana",
+                "board_token": "asana",
+                "company": "Asana"
+            },
+            {
+                "name": "Ava Labs",
+                "board_token": "avalabs",
+                "company": "Ava Labs"
+            },
+            {
+                "name": "Block",
+                "board_token": "block",
+                "company": "Block"
+            },
+            {
+                "name": "Brex",
+                "board_token": "brex",
+                "company": "Brex"
+            },
+            {
+                "name": "Checkr",
+                "board_token": "checkr",
+                "company": "Checkr"
+            },
+            {
+                "name": "Chime",
+                "board_token": "chime",
+                "company": "Chime"
+            },
+            {
+                "name": "Cloudflare",
+                "board_token": "cloudflare",
+                "company": "Cloudflare"
+            },
+            {
+                "name": "Cockroach Labs",
+                "board_token": "cockroachlabs",
+                "company": "Cockroach Labs"
+            },
+            {
+                "name": "Coinbase",
+                "board_token": "coinbase",
+                "company": "Coinbase"
+            },
+            {
+                "name": "Databricks",
+                "board_token": "databricks",
+                "company": "Databricks"
+            },
+            {
+                "name": "Datadog",
+                "board_token": "datadog",
+                "company": "Datadog"
+            },
+            {
+                "name": "Discord",
+                "board_token": "discord",
+                "company": "Discord"
+            },
+            {
+                "name": "DoorDash",
+                "board_token": "doordashusa",
+                "company": "DoorDash"
+            },
+            {
+                "name": "Dropbox",
+                "board_token": "dropbox",
+                "company": "Dropbox"
+            },
+            {
+                "name": "Duolingo",
+                "board_token": "duolingo",
+                "company": "Duolingo"
+            },
+            {
+                "name": "Elastic",
+                "board_token": "elastic",
+                "company": "Elastic"
+            },
+            {
+                "name": "Epic Games",
+                "board_token": "epicgames",
+                "company": "Epic Games"
+            },
+            {
+                "name": "Faire",
+                "board_token": "faire",
+                "company": "Faire"
+            },
+            {
+                "name": "FERMAT",
+                "board_token": "fermat",
+                "company": "FERMAT"
+            },
+            {
+                "name": "Figma",
+                "board_token": "figma",
+                "company": "Figma"
+            },
+            {
+                "name": "Flexport",
+                "board_token": "flexport",
+                "company": "Flexport"
+            },
+            {
+                "name": "GitLab",
+                "board_token": "gitlab",
+                "company": "GitLab"
+            },
+            {
+                "name": "Grammarly",
+                "board_token": "grammarly",
+                "company": "Grammarly"
+            },
+            {
+                "name": "Gusto",
+                "board_token": "gusto",
+                "company": "Gusto"
+            },
+            {
+                "name": "HubSpot",
+                "board_token": "hubspotjobs",
+                "company": "HubSpot"
+            },
+            {
+                "name": "Instacart",
+                "board_token": "instacart",
+                "company": "Instacart"
+            },
+            {
+                "name": "Lyft",
+                "board_token": "lyft",
+                "company": "Lyft"
+            },
+            {
+                "name": "MongoDB",
+                "board_token": "mongodb",
+                "company": "MongoDB"
+            },
+            {
+                "name": "Nuro",
+                "board_token": "nuro",
+                "company": "Nuro"
+            },
+            {
+                "name": "Okta",
+                "board_token": "okta",
+                "company": "Okta"
+            },
+            {
+                "name": "Oklo",
+                "board_token": "oklo",
+                "company": "Oklo"
+            },
+            {
+                "name": "Oscar Health",
+                "board_token": "oscar",
+                "company": "Oscar Health"
+            },
+            {
+                "name": "PagerDuty",
+                "board_token": "pagerduty",
+                "company": "PagerDuty"
+            },
+            {
+                "name": "Pinterest",
+                "board_token": "pinterest",
+                "company": "Pinterest"
+            },
+            {
+                "name": "Postman",
+                "board_token": "postman",
+                "company": "Postman"
+            },
+            {
+                "name": "Reddit",
+                "board_token": "reddit",
+                "company": "Reddit"
+            },
+            {
+                "name": "Robinhood",
+                "board_token": "robinhood",
+                "company": "Robinhood"
+            },
+            {
+                "name": "Roku",
+                "board_token": "roku",
+                "company": "Roku"
+            },
+            {
+                "name": "Scale AI",
+                "board_token": "scaleai",
+                "company": "Scale AI"
+            },
+            {
+                "name": "SoFi",
+                "board_token": "sofi",
+                "company": "SoFi"
+            },
+            {
+                "name": "Samsara",
+                "board_token": "samsara",
+                "company": "Samsara"
+            },
+            {
+                "name": "SpaceX",
+                "board_token": "spacex",
+                "company": "SpaceX"
+            },
+            {
+                "name": "Stripe",
+                "board_token": "stripe",
+                "company": "Stripe"
+            },
+            {
+                "name": "The Trade Desk",
+                "board_token": "thetradedesk",
+                "company": "The Trade Desk"
+            },
+            {
+                "name": "Toast",
+                "board_token": "toast",
+                "company": "Toast"
+            },
+            {
+                "name": "Twilio",
+                "board_token": "twilio",
+                "company": "Twilio"
+            },
+            {
+                "name": "Unity",
+                "board_token": "unity3d",
+                "company": "Unity"
+            },
+            {
+                "name": "Upstart",
+                "board_token": "upstart",
+                "company": "Upstart"
+            },
+            {
+                "name": "Vercel",
+                "board_token": "vercel",
+                "company": "Vercel"
+            },
+            {
+                "name": "Waymo",
+                "board_token": "waymo",
+                "company": "Waymo"
+            },
+            {
+                "name": "Zscaler",
+                "board_token": "zscaler",
+                "company": "Zscaler"
+            },
+            {
+                "name": "Thumbtack",
+                "board_token": "thumbtack",
+                "company": "Thumbtack"
+            },
+            {
+                "name": "Webflow",
+                "board_token": "webflow",
+                "company": "Webflow"
+            },
+            {
+                "name": "StubHub",
+                "board_token": "stubhubinc",
+                "company": "StubHub"
+            },
+            {
+                "name": "Flex",
+                "board_token": "flex",
+                "company": "Flex"
+            },
+            {
+                "name": "Applied Intuition",
+                "board_token": "appliedintuition",
+                "company": "Applied Intuition"
+            },
+            {
+                "name": "Cribl",
+                "board_token": "cribl",
+                "company": "Cribl"
+            },
+            {
+                "name": "IXL Learning",
+                "board_token": "ixllearning",
+                "company": "IXL Learning"
+            },
+            {
+                "name": "Jump Trading",
+                "board_token": "jumptrading",
+                "company": "Jump Trading"
+            },
+            {
+                "name": "Remote",
+                "board_token": "remotecom",
+                "company": "Remote"
+            },
+            {
+                "name": "Penn Interactive",
+                "board_token": "penninteractive",
+                "company": "Penn Interactive"
+            },
+            {
+                "name": "Nerdy",
+                "board_token": "nerdy",
+                "company": "Nerdy"
+            },
+            {
+                "name": "Two Six Technologies",
+                "board_token": "twosixtechnologies",
+                "company": "Two Six Technologies"
+            },
+            {
+                "name": "Relativity Space",
+                "board_token": "relativity",
+                "company": "Relativity Space"
+            },
+            {
+                "name": "Philadelphia Eagles",
+                "board_token": "philadelphiaeagles",
+                "company": "Philadelphia Eagles"
+            },
+            {
+                "name": "Alma",
+                "board_token": "alma",
+                "company": "Alma"
+            },
+            {
+                "name": "The New York Times",
+                "board_token": "thenewyorktimes",
+                "company": "The New York Times"
+            },
+            {
+                "name": "Bloomberg Philanthropies",
+                "board_token": "bloombergorg",
+                "company": "Bloomberg Philanthropies"
+            },
+            {
+                "company": "PDT Partners",
+                "board_token": "pdtpartners"
+            },
+            {
+                "company": "Dagster Labs",
+                "board_token": "dagsterlabs"
+            },
+            {
+                "company": "IMC Trading",
+                "board_token": "imc"
+            },
+            {
+                "company": "Schonfeld",
+                "board_token": "schonfeld"
+            },
+            {
+                "company": "SingleStore",
+                "board_token": "singlestore"
+            },
+            {
+                "company": "Twilio Students",
+                "board_token": "twiliostudents"
+            },
+            {
+                "company": "Raft",
+                "board_token": "raft"
+            },
+            {
+                "company": "Radiant",
+                "board_token": "radiant"
+            },
+            {
+                "company": "SeatGeek",
+                "board_token": "seatgeek"
+            },
+            {
+                "company": "ZipRecruiter",
+                "board_token": "ziprecruiter"
+            },
+            {
+                "company": "Neuralink",
+                "board_token": "neuralink"
+            },
+            {
+                "company": "DoorDash Canada",
+                "board_token": "doordashcanada"
+            },
+            {
+                "company": "Perpay",
+                "board_token": "perpay"
+            },
+            {
+                "company": "Tubi",
+                "board_token": "tubitv"
+            },
+            {
+                "company": "Sigma Computing",
+                "board_token": "sigmacomputing"
+            },
+            {
+                "company": "Metronome",
+                "board_token": "metronome"
+            },
+            {
+                "company": "EarnIn",
+                "board_token": "earnin"
+            },
+            {
+                "company": "NPR",
+                "board_token": "nationalpublicradioinc"
+            },
+            {
+                "company": "GlossGenius",
+                "board_token": "glossgenius"
+            },
+            {
+                "company": "Zora",
+                "board_token": "zora"
+            },
+            {
+                "company": "Forage",
+                "board_token": "joinforage"
+            },
+            {
+                "company": "CoreWeave",
+                "board_token": "coreweave"
+            },
+            {
+                "company": "Rubrik",
+                "board_token": "rubrik"
+            },
+            {
+                "company": "Navan",
+                "board_token": "TripActions"
+            },
+            {
+                "company": "Verkada",
+                "board_token": "verkada"
+            },
+            {
+                "company": "N26",
+                "board_token": "n26"
+            },
+            {
+                "company": "Scale to Win",
+                "board_token": "scaletowinllc"
+            },
+            {
+                "company": "NinjaTrader",
+                "board_token": "ninjatrader"
+            },
+            {
+                "company": "Avela Education",
+                "board_token": "avelaeducation"
+            },
+            {
+                "company": "B12",
+                "board_token": "b12"
+            },
+            {
+                "company": "Glean",
+                "board_token": "gleanwork"
+            },
+            {
+                "company": "Loop",
+                "board_token": "loop"
+            },
+            {
+                "company": "Freeform",
+                "board_token": "freeformfuturecorp"
+            },
+            {
+                "company": "Aquatic Capital Management",
+                "board_token": "aquaticcapitalmanagement"
+            },
+            {
+                "company": "HP IQ",
+                "board_token": "hpiq"
+            },
+            {
+                "company": "Obsidian Security",
+                "board_token": "obsidiansecurity"
+            },
+            {
+                "company": "Harmonic",
+                "board_token": "harmonic"
+            },
+            {
+                "company": "Underdog Fantasy",
+                "board_token": "underdogfantasy"
+            },
+            {
+                "company": "Point72",
+                "board_token": "point72"
+            },
+            {
+                "company": "Wiz",
+                "board_token": "wizinc"
+            },
+            {
+                "company": "Squarespace",
+                "board_token": "squarespace"
+            },
+            {
+                "company": "Abnormal Security",
+                "board_token": "abnormalsecurity"
+            },
+            {
+                "company": "Carta",
+                "board_token": "carta"
+            },
+            {
+                "company": "Marqeta",
+                "board_token": "marqeta"
+            },
+            {
+                "company": "Mercury",
+                "board_token": "mercury"
+            },
+            {
+                "company": "CLEAR",
+                "board_token": "clear"
+            },
+            {
+                "company": "Brave",
+                "board_token": "brave"
+            },
+            {
+                "company": "Five Rings",
+                "board_token": "fiveringsllc"
+            },
+            {
+                "company": "MEMX",
+                "board_token": "memx"
+            },
+            {
+                "company": "Roblox",
+                "board_token": "roblox"
+            },
+            {
+                "company": "Hudson River Trading",
+                "board_token": "wehrtyou"
+            },
+            {
+                "company": "Jane Street",
+                "board_token": "janestreet"
+            },
+            {
+                "company": "Cross River",
+                "board_token": "crossriverbank"
+            },
+            {
+                "company": "JFrog",
+                "board_token": "jfrog"
+            },
+            {
+                "company": "Gemini",
+                "board_token": "gemini"
+            },
+            {
+                "company": "Moveworks",
+                "board_token": "Moveworks"
+            },
+            {
+                "company": "Druva",
+                "board_token": "druva"
+            },
+            {
+                "company": "Jump Crypto",
+                "board_token": "jumpcrypto"
+            },
+            {
+                "company": "SentinelOne",
+                "board_token": "sentinellabs"
+            },
+            {
+                "company": "Celonis",
+                "board_token": "celonis"
+            },
+            {
+                "company": "Virtu Financial",
+                "board_token": "virtu"
+            },
+            {
+                "company": "Corelight",
+                "board_token": "corelight"
+            },
+            {
+                "company": "Pave",
+                "board_token": "paveakatroveinformationtechnologies"
+            },
+            {
+                "company": "Instawork",
+                "board_token": "instawork"
+            },
+            {
+                "company": "AppLovin",
+                "board_token": "applovin"
+            },
+            {
+                "company": "Aurora Innovation",
+                "board_token": "aurorainnovation"
+            },
+            {
+                "company": "Braze",
+                "board_token": "braze"
+            },
+            {
+                "company": "Contentful",
+                "board_token": "contentful"
+            },
+            {
+                "company": "Coupang",
+                "board_token": "coupang"
+            },
+            {
+                "company": "Dremio",
+                "board_token": "dremio"
+            },
+            {
+                "company": "LaunchDarkly",
+                "board_token": "launchdarkly"
+            },
+            {
+                "company": "Liftoff",
+                "board_token": "liftoff"
+            },
+            {
+                "company": "Movable Ink",
+                "board_token": "movableink"
+            },
+            {
+                "company": "Snorkel AI",
+                "board_token": "snorkelai"
+            },
+            {
+                "company": "ZoomInfo",
+                "board_token": "zoominfo"
+            },
+            {
+                "name": "xAI",
+                "company": "xAI",
+                "board_token": "xai",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Cerebras",
+                "company": "Cerebras",
+                "board_token": "cerebrassystems",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Runway",
+                "company": "Runway",
+                "board_token": "runwayml",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Together AI",
+                "company": "Together AI",
+                "board_token": "TogetherAI",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Inflection AI",
+                "company": "Inflection AI",
+                "board_token": "inflectionai",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "AI2",
+                "company": "Allen Institute for AI",
+                "board_token": "thealleninstitute",
+                "source_group": "frontier_ai"
+            },
+            {
+                "company": "NewsBreak",
+                "board_token": "newsbreak"
+            },
+            {
+                "company": "C3 AI",
+                "board_token": "c3ascend"
+            },
+            {
+                "company": "DeepMind",
+                "board_token": "deepmind",
+                "source_group": "frontier_ai"
+            },
+            {
+                "company": "Pendo",
+                "board_token": "pendo"
+            },
+            {
+                "company": "Justworks",
+                "board_token": "justworks"
+            },
+            {
+                "company": "Coalition",
+                "board_token": "coalition"
+            },
+            {
+                "company": "Nextdoor",
+                "board_token": "nextdoor"
+            },
+            {
+                "company": "Twitch",
+                "board_token": "twitch"
+            },
+            {
+                "company": "Lob",
+                "board_token": "lob"
+            },
+            {
+                "company": "Viam",
+                "board_token": "viamrobotics"
+            },
+            {
+                "company": "Pie Insurance",
+                "board_token": "pieinsurance"
+            },
+            {
+                "company": "Zeta Global",
+                "board_token": "zetaglobal"
+            },
+            {
+                "company": "Fivetran",
+                "board_token": "fivetran"
+            },
+            {
+                "company": "Sourcegraph",
+                "board_token": "sourcegraph91"
+            }
+        ],
+        "lever": [
+            {
+                "name": "Kraken",
+                "slug": "kraken",
+                "company": "Kraken"
+            },
+            {
+                "name": "Olo",
+                "slug": "olo",
+                "company": "Olo"
+            },
+            {
+                "name": "Palantir",
+                "slug": "palantir",
+                "company": "Palantir"
+            },
+            {
+                "name": "Spotify",
+                "slug": "spotify",
+                "company": "Spotify"
+            },
+            {
+                "name": "Zoox",
+                "slug": "zoox",
+                "company": "Zoox"
+            },
+            {
+                "name": "Peak Games",
+                "slug": "peakgames",
+                "company": "Peak Games"
+            },
+            {
+                "name": "WHOOP",
+                "slug": "whoop",
+                "company": "WHOOP"
+            },
+            {
+                "name": "Dream Games",
+                "slug": "dreamgames",
+                "company": "Dream Games"
+            },
+            {
+                "name": "Mistral AI",
+                "slug": "mistral",
+                "company": "Mistral AI"
+            },
+            {
+                "name": "Midas",
+                "slug": "getmidas",
+                "company": "Midas"
+            },
+            {
+                "name": "SpruceID",
+                "slug": "sprucesystems",
+                "company": "SpruceID"
+            },
+            {
+                "name": "Metabase",
+                "slug": "metabase",
+                "company": "Metabase"
+            },
+            {
+                "name": "HighLevel",
+                "slug": "gohighlevel",
+                "company": "HighLevel"
+            },
+            {
+                "name": "Basis",
+                "slug": "basis",
+                "company": "Basis"
+            },
+            {
+                "name": "Match Group",
+                "slug": "matchgroup",
+                "company": "Match Group"
+            },
+            {
+                "name": "Ro",
+                "slug": "ro",
+                "company": "Ro"
+            },
+            {
+                "name": "Regrello",
+                "slug": "regrello",
+                "company": "Regrello"
+            },
+            {
+                "company": "Nominal",
+                "slug": "nominal"
+            },
+            {
+                "company": "Veeva Systems",
+                "slug": "veeva"
+            },
+            {
+                "company": "WeRide",
+                "slug": "weride"
+            },
+            {
+                "company": "NimbleRx",
+                "slug": "nimblerx"
+            },
+            {
+                "company": "Belvedere Trading",
+                "slug": "belvederetrading"
+            },
+            {
+                "company": "Alignable",
+                "slug": "Alignable"
+            },
+            {
+                "company": "Shield AI",
+                "slug": "shieldai"
+            },
+            {
+                "company": "Valkyrie Trading",
+                "slug": "valkyrietrading"
+            },
+            {
+                "company": "WebFX",
+                "slug": "webfx"
+            },
+            {
+                "company": "Ladders",
+                "slug": "ladders"
+            },
+            {
+                "company": "Voleon Group",
+                "slug": "voleon"
+            },
+            {
+                "company": "Pison Technology",
+                "slug": "pison"
+            },
+            {
+                "company": "Brilliant",
+                "slug": "brilliant"
+            },
+            {
+                "company": "Field AI",
+                "slug": "field-ai"
+            },
+            {
+                "company": "GoTo Group",
+                "slug": "GoToGroup"
+            },
+            {
+                "company": "Narmi",
+                "slug": "narmi"
+            },
+            {
+                "company": "Decentraland",
+                "slug": "Decentraland"
+            },
+            {
+                "company": "Aragon",
+                "slug": "aragon"
+            },
+            {
+                "company": "Rackspace",
+                "slug": "rackspace"
+            },
+            {
+                "company": "Peerspace",
+                "slug": "peerspace"
+            },
+            {
+                "company": "Loft Orbital",
+                "slug": "loftorbital"
+            },
+            {
+                "company": "CesiumAstro",
+                "slug": "CesiumAstro"
+            },
+            {
+                "company": "E-Space",
+                "slug": "espace"
+            },
+            {
+                "company": "Color Health",
+                "slug": "color"
+            },
+            {
+                "company": "Reliable Robotics",
+                "slug": "reliable"
+            },
+            {
+                "company": "Artera",
+                "slug": "artera"
+            },
+            {
+                "name": "Plaid",
+                "slug": "plaid",
+                "company": "Plaid"
+            }
+        ],
+        "ashby": [
+            {
+                "name": "Abridge",
+                "clientname": "abridge",
+                "company": "Abridge"
+            },
+            {
+                "name": "Anyscale",
+                "clientname": "anyscale",
+                "company": "Anyscale"
+            },
+            {
+                "name": "Benchling",
+                "clientname": "benchling",
+                "company": "Benchling"
+            },
+            {
+                "name": "Braintrust",
+                "clientname": "braintrust",
+                "company": "Braintrust"
+            },
+            {
+                "name": "Clerk",
+                "clientname": "clerk",
+                "company": "Clerk"
+            },
+            {
+                "name": "Cohere",
+                "clientname": "cohere",
+                "company": "Cohere",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Cursor",
+                "clientname": "cursor",
+                "company": "Cursor",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Deepgram",
+                "clientname": "deepgram",
+                "company": "Deepgram"
+            },
+            {
+                "name": "Harvey",
+                "clientname": "harvey",
+                "company": "Harvey"
+            },
+            {
+                "name": "Jerry",
+                "clientname": "jerry.ai",
+                "company": "Jerry"
+            },
+            {
+                "name": "LangChain",
+                "clientname": "langchain",
+                "company": "LangChain"
+            },
+            {
+                "name": "Linear",
+                "clientname": "linear",
+                "company": "Linear"
+            },
+            {
+                "name": "Modal",
+                "clientname": "modal",
+                "company": "Modal"
+            },
+            {
+                "name": "Neon",
+                "clientname": "neon",
+                "company": "Neon"
+            },
+            {
+                "name": "Notion",
+                "clientname": "notion",
+                "company": "Notion"
+            },
+            {
+                "name": "OpenAI",
+                "clientname": "openai",
+                "company": "OpenAI",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Perplexity",
+                "clientname": "perplexity",
+                "company": "Perplexity",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Pinecone",
+                "clientname": "pinecone",
+                "company": "Pinecone"
+            },
+            {
+                "name": "Pylon",
+                "clientname": "pylon",
+                "company": "Pylon"
+            },
+            {
+                "name": "Railway",
+                "clientname": "railway",
+                "company": "Railway"
+            },
+            {
+                "name": "Ramp",
+                "clientname": "ramp",
+                "company": "Ramp"
+            },
+            {
+                "name": "Render",
+                "clientname": "render",
+                "company": "Render"
+            },
+            {
+                "name": "Replit",
+                "clientname": "replit",
+                "company": "Replit"
+            },
+            {
+                "name": "Resend",
+                "clientname": "resend",
+                "company": "Resend"
+            },
+            {
+                "name": "Retool",
+                "clientname": "retool",
+                "company": "Retool"
+            },
+            {
+                "name": "Sentry",
+                "clientname": "sentry",
+                "company": "Sentry"
+            },
+            {
+                "name": "Supabase",
+                "clientname": "supabase",
+                "company": "Supabase"
+            },
+            {
+                "name": "Temporal",
+                "clientname": "temporal",
+                "company": "Temporal"
+            },
+            {
+                "name": "Hightouch",
+                "clientname": "hightouch",
+                "company": "Hightouch"
+            },
+            {
+                "name": "Watershed",
+                "clientname": "watershed",
+                "company": "Watershed"
+            },
+            {
+                "name": "Zip",
+                "clientname": "zip",
+                "company": "Zip"
+            },
+            {
+                "name": "Whatnot",
+                "clientname": "whatnot",
+                "company": "Whatnot"
+            },
+            {
+                "name": "N1",
+                "clientname": "n1",
+                "company": "N1"
+            },
+            {
+                "name": "Kernel",
+                "clientname": "usekernel",
+                "company": "Kernel"
+            },
+            {
+                "name": "Magical",
+                "clientname": "magical",
+                "company": "Magical"
+            },
+            {
+                "name": "Anima",
+                "clientname": "anima",
+                "company": "Anima"
+            },
+            {
+                "name": "Point One",
+                "clientname": "PointOne",
+                "company": "Point One"
+            },
+            {
+                "name": "Ashby",
+                "clientname": "ashby",
+                "company": "Ashby"
+            },
+            {
+                "name": "Deel",
+                "clientname": "deel",
+                "company": "Deel"
+            },
+            {
+                "name": "Notable",
+                "clientname": "notable",
+                "company": "Notable"
+            },
+            {
+                "name": "Sola",
+                "clientname": "sola",
+                "company": "Sola"
+            },
+            {
+                "name": "Clipboard",
+                "clientname": "clipboard",
+                "company": "Clipboard"
+            },
+            {
+                "name": "Confluent",
+                "clientname": "confluent",
+                "company": "Confluent"
+            },
+            {
+                "company": "Acorns",
+                "clientname": "Acorns"
+            },
+            {
+                "company": "EliseAI",
+                "clientname": "eliseai"
+            },
+            {
+                "company": "Kikoff",
+                "clientname": "kikoff"
+            },
+            {
+                "company": "Solace",
+                "clientname": "solace"
+            },
+            {
+                "company": "Giga ML",
+                "clientname": "gigaml"
+            },
+            {
+                "company": "Valon",
+                "clientname": "Valon"
+            },
+            {
+                "company": "Replo",
+                "clientname": "replo"
+            },
+            {
+                "company": "Rightfoot",
+                "clientname": "rightfoot"
+            },
+            {
+                "company": "Continue",
+                "clientname": "continue"
+            },
+            {
+                "company": "Decagon",
+                "clientname": "decagon"
+            },
+            {
+                "company": "Fern",
+                "clientname": "buildwithfern"
+            },
+            {
+                "company": "G2",
+                "clientname": "g2"
+            },
+            {
+                "company": "Inngest",
+                "clientname": "inngest"
+            },
+            {
+                "company": "Mintlify",
+                "clientname": "mintlify"
+            },
+            {
+                "company": "Paraform",
+                "clientname": "paraform"
+            },
+            {
+                "company": "Stytch",
+                "clientname": "stytch"
+            },
+            {
+                "company": "Suno",
+                "clientname": "suno"
+            },
+            {
+                "company": "The Browser Company",
+                "clientname": "The Browser Company"
+            },
+            {
+                "company": "Unify",
+                "clientname": "unify"
+            },
+            {
+                "company": "Vanta",
+                "clientname": "vanta"
+            },
+            {
+                "company": "Warp",
+                "clientname": "warp"
+            },
+            {
+                "company": "Writer",
+                "clientname": "writer"
+            },
+            {
+                "name": "ElevenLabs",
+                "clientname": "elevenlabs",
+                "company": "ElevenLabs",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Reka AI",
+                "clientname": "Reka",
+                "company": "Reka AI",
+                "source_group": "frontier_ai"
+            },
+            {
+                "name": "Cognition",
+                "clientname": "cognition",
+                "company": "Cognition",
+                "source_group": "frontier_ai"
+            },
+            {
+                "company": "Commure + Athelas",
+                "clientname": "commure"
+            },
+            {
+                "company": "Meshy",
+                "clientname": "meshy"
+            },
+            {
+                "company": "Mach Industries",
+                "clientname": "mach"
+            },
+            {
+                "company": "Kong",
+                "clientname": "kong"
+            },
+            {
+                "company": "Gecko Robotics",
+                "clientname": "gecko-robotics"
+            },
+            {
+                "company": "Persona",
+                "clientname": "persona"
+            },
+            {
+                "company": "Drata",
+                "clientname": "drata"
+            },
+            {
+                "company": "Material Security",
+                "clientname": "materialsecurity"
+            },
+            {
+                "company": "Skyflow",
+                "clientname": "skyflow"
+            },
+            {
+                "company": "Raycast",
+                "clientname": "raycast"
+            },
+            {
+                "company": "Zed Industries",
+                "clientname": "zed"
+            }
+        ],
+        "workable": [
+            {
+                "name": "Bolt.eu",
+                "subdomain": "bolt",
+                "company": "Bolt.eu"
+            },
+            {
+                "name": "Cal.com",
+                "subdomain": "cal",
+                "company": "Cal.com"
+            },
+            {
+                "name": "Hugging Face",
+                "subdomain": "huggingface",
+                "company": "Hugging Face"
+            },
+            {
+                "name": "N8n",
+                "subdomain": "n8n",
+                "company": "N8n"
+            },
+            {
+                "name": "PostHog",
+                "subdomain": "posthog",
+                "company": "PostHog"
+            },
+            {
+                "name": "Slab",
+                "subdomain": "slab",
+                "company": "Slab"
+            },
+            {
+                "name": "Gitpod (ONA)",
+                "subdomain": "ona",
+                "company": "Gitpod (ONA)"
+            },
+            {
+                "name": "Rokt",
+                "subdomain": "rokt",
+                "company": "Rokt"
+            },
+            {
+                "name": "DataVisor",
+                "subdomain": "datavisor",
+                "company": "DataVisor"
+            },
+            {
+                "name": "Darkhive",
+                "subdomain": "darkhive",
+                "company": "Darkhive"
+            },
+            {
+                "name": "MLabs",
+                "subdomain": "mlabs",
+                "company": "MLabs"
+            }
+        ],
+        "smartrecruiters": [
+            {
+                "name": "NBCUniversal",
+                "company": "NBCUniversal",
+                "company_id": "NBCUniversal3"
+            },
+            {
+                "name": "Turnitin",
+                "company": "Turnitin",
+                "company_id": "TurnitinLLC"
+            },
+            {
+                "name": "Walmart",
+                "company": "Walmart",
+                "company_id": "Walmart30"
+            },
+            {
+                "name": "ServiceNow",
+                "company": "ServiceNow",
+                "company_id": "ServiceNow"
+            },
+            {
+                "name": "Klick",
+                "company": "Klick",
+                "company_id": "Klick1"
+            },
+            {
+                "name": "Oteemo",
+                "company": "Oteemo",
+                "company_id": "OteemoInc"
+            },
+            {
+                "name": "Bosch",
+                "company": "Bosch",
+                "company_id": "bosch"
+            },
+            {
+                "name": "Equinix",
+                "company": "Equinix",
+                "company_id": "equinix"
+            },
+            {
+                "name": "IKEA",
+                "company": "IKEA",
+                "company_id": "ikea"
+            },
+            {
+                "name": "Visa",
+                "company": "Visa",
+                "company_id": "visa"
+            },
+            {
+                "name": "Canva",
+                "company": "Canva",
+                "company_id": "canva"
+            },
+            {
+                "name": "Delivery Hero",
+                "company": "Delivery Hero",
+                "company_id": "deliveryhero"
+            }
+        ],
+        "workday": [
+            {
+                "name": "Adobe",
+                "company": "Adobe",
+                "base_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs"
+            },
+            {
+                "name": "Boeing",
+                "company": "Boeing",
+                "base_url": "https://boeing.wd1.myworkdayjobs.com/wday/cxs/boeing/EXTERNAL_CAREERS/jobs"
+            },
+            {
+                "name": "Capital One",
+                "company": "Capital One",
+                "base_url": "https://capitalone.wd12.myworkdayjobs.com/wday/cxs/capitalone/Capital_One/jobs"
+            },
+            {
+                "name": "Cisco",
+                "company": "Cisco",
+                "base_url": "https://cisco.wd5.myworkdayjobs.com/wday/cxs/cisco/Cisco_Careers/jobs"
+            },
+            {
+                "name": "Citi",
+                "company": "Citi",
+                "base_url": "https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
+            },
+            {
+                "name": "Dell",
+                "company": "Dell",
+                "base_url": "https://dell.wd1.myworkdayjobs.com/wday/cxs/dell/External/jobs"
+            },
+            {
+                "name": "General Motors",
+                "company": "General Motors",
+                "base_url": "https://generalmotors.wd5.myworkdayjobs.com/wday/cxs/generalmotors/Careers_GM/jobs"
+            },
+            {
+                "name": "HP",
+                "company": "HP",
+                "base_url": "https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
+            },
+            {
+                "name": "HPE",
+                "company": "HPE",
+                "base_url": "https://hpe.wd5.myworkdayjobs.com/wday/cxs/hpe/Jobsathpe/jobs"
+            },
+            {
+                "name": "Intel",
+                "company": "Intel",
+                "base_url": "https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
+            },
+            {
+                "name": "NVIDIA",
+                "company": "NVIDIA",
+                "base_url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
+            },
+            {
+                "name": "PayPal",
+                "company": "PayPal",
+                "base_url": "https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/jobs/jobs"
+            },
+            {
+                "name": "Palo Alto Networks",
+                "company": "Palo Alto Networks",
+                "base_url": "https://paloaltonetworks.wd5.myworkdayjobs.com/wday/cxs/paloaltonetworks/panwexternalcareers/jobs"
+            },
+            {
+                "name": "PwC",
+                "company": "PwC",
+                "base_url": "https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
+            },
+            {
+                "name": "Salesforce",
+                "company": "Salesforce",
+                "base_url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
+            },
+            {
+                "name": "T-Mobile",
+                "company": "T-Mobile",
+                "base_url": "https://tmobile.wd1.myworkdayjobs.com/wday/cxs/tmobile/External/jobs"
+            },
+            {
+                "name": "Target",
+                "company": "Target",
+                "base_url": "https://target.wd5.myworkdayjobs.com/wday/cxs/target/targetcareers/jobs"
+            },
+            {
+                "name": "Walmart",
+                "company": "Walmart",
+                "base_url": "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs"
+            },
+            {
+                "name": "Workday",
+                "company": "Workday",
+                "base_url": "https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
+            },
+            {
+                "name": "Comcast",
+                "company": "Comcast",
+                "base_url": "https://comcast.wd5.myworkdayjobs.com/wday/cxs/comcast/Comcast_Careers/jobs"
+            },
+            {
+                "name": "Sanofi",
+                "company": "Sanofi",
+                "base_url": "https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/SanofiCareers/jobs"
+            },
+            {
+                "name": "Blue Origin",
+                "company": "Blue Origin",
+                "base_url": "https://blueorigin.wd5.myworkdayjobs.com/wday/cxs/blueorigin/BlueOrigin/jobs"
+            },
+            {
+                "name": "Pima County",
+                "company": "Pima County",
+                "base_url": "https://pimacounty.wd5.myworkdayjobs.com/wday/cxs/pimacounty/pimacareers/jobs"
+            },
+            {
+                "name": "Travelers",
+                "company": "Travelers",
+                "base_url": "https://travelers.wd5.myworkdayjobs.com/wday/cxs/travelers/External/jobs"
+            },
+            {
+                "name": "KBR",
+                "company": "KBR",
+                "base_url": "https://kbr.wd5.myworkdayjobs.com/wday/cxs/kbr/KBR_Careers/jobs"
+            },
+            {
+                "name": "Mimecast",
+                "company": "Mimecast",
+                "base_url": "https://mimecast.wd5.myworkdayjobs.com/wday/cxs/mimecast/Mimecast-Careers/jobs"
+            },
+            {
+                "name": "RTX",
+                "company": "RTX",
+                "base_url": "https://globalhr.wd5.myworkdayjobs.com/wday/cxs/globalhr/REC_RTX_Ext_Gateway/jobs"
+            },
+            {
+                "name": "Cadence",
+                "company": "Cadence",
+                "base_url": "https://cadence.wd1.myworkdayjobs.com/wday/cxs/cadence/External_Careers/jobs"
+            },
+            {
+                "name": "Nelnet",
+                "company": "Nelnet",
+                "base_url": "https://nelnet.wd1.myworkdayjobs.com/wday/cxs/nelnet/MyNelnet/jobs"
+            },
+            {
+                "name": "USAA",
+                "company": "USAA",
+                "base_url": "https://usaa.wd1.myworkdayjobs.com/wday/cxs/usaa/USAAJOBSWD/jobs"
+            },
+            {
+                "name": "Danaher",
+                "company": "Danaher",
+                "base_url": "https://danaher.wd1.myworkdayjobs.com/wday/cxs/danaher/DanaherJobs/jobs"
+            },
+            {
+                "name": "Mastercard",
+                "company": "Mastercard",
+                "base_url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
+            },
+            {
+                "name": "Medtronic",
+                "company": "Medtronic",
+                "base_url": "https://medtronic.wd1.myworkdayjobs.com/wday/cxs/medtronic/MedtronicCareers/jobs"
+            },
+            {
+                "name": "Solera",
+                "company": "Solera",
+                "base_url": "https://solera.wd5.myworkdayjobs.com/wday/cxs/solera/Global_Career_Site/jobs"
+            },
+            {
+                "name": "Sonos",
+                "company": "Sonos",
+                "base_url": "https://sonos.wd1.myworkdayjobs.com/wday/cxs/sonos/Sonos/jobs"
+            },
+            {
+                "name": "Checkout.com",
+                "company": "Checkout.com",
+                "base_url": "https://checkout.wd3.myworkdayjobs.com/wday/cxs/checkout/CheckoutCareers/jobs"
+            },
+            {
+                "name": "RELX",
+                "company": "RELX",
+                "base_url": "https://relx.wd3.myworkdayjobs.com/wday/cxs/relx/RiskSolutions/jobs"
+            },
+            {
+                "name": "Red Hat",
+                "company": "Red Hat",
+                "base_url": "https://redhat.wd5.myworkdayjobs.com/wday/cxs/redhat/Jobs/jobs"
+            },
+            {
+                "name": "Globus Medical",
+                "company": "Globus Medical",
+                "base_url": "https://globusmedical.wd5.myworkdayjobs.com/wday/cxs/globusmedical/GMED_Careers/jobs"
+            },
+            {
+                "name": "Columbia Sportswear",
+                "company": "Columbia Sportswear",
+                "base_url": "https://columbiasportswearcompany.wd5.myworkdayjobs.com/wday/cxs/columbiasportswearcompany/CSC_Careers/jobs"
+            },
+            {
+                "name": "Airbus",
+                "company": "Airbus",
+                "base_url": "https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus_Specific/jobs"
+            },
+            {
+                "name": "Franklin Templeton",
+                "company": "Franklin Templeton",
+                "base_url": "https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Invitation-Only/jobs"
+            },
+            {
+                "name": "Morgan Stanley",
+                "company": "Morgan Stanley",
+                "base_url": "https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/external/jobs"
+            },
+            {
+                "name": "Tempus",
+                "company": "Tempus",
+                "base_url": "https://tempus.wd5.myworkdayjobs.com/wday/cxs/tempus/Tempus_Careers/jobs"
+            },
+            {
+                "name": "Zillow",
+                "company": "Zillow",
+                "base_url": "https://zillow.wd5.myworkdayjobs.com/wday/cxs/zillow/Zillow_Group_External/jobs"
+            },
+            {
+                "name": "Broadcom",
+                "company": "Broadcom",
+                "base_url": "https://broadcom.wd1.myworkdayjobs.com/wday/cxs/broadcom/External_Career/jobs"
+            },
+            {
+                "name": "Bloomberg Industry Group",
+                "company": "Bloomberg Industry Group",
+                "base_url": "https://bloomberg.wd1.myworkdayjobs.com/wday/cxs/bloomberg/Bloombergindustrygroup_External_Career_Site/jobs"
+            },
+            {
+                "name": "Etsy",
+                "company": "Etsy",
+                "base_url": "https://etsy.wd5.myworkdayjobs.com/wday/cxs/etsy/Etsy_Careers/jobs"
+            },
+            {
+                "name": "CrowdStrike",
+                "company": "CrowdStrike",
+                "base_url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/CrowdStrikeCareers/jobs"
+            },
+            {
+                "name": "GDIT",
+                "company": "GDIT",
+                "base_url": "https://gdit.wd5.myworkdayjobs.com/wday/cxs/gdit/External_Career_Site/jobs"
+            },
+            {
+                "name": "Leidos",
+                "company": "Leidos",
+                "base_url": "https://leidos.wd5.myworkdayjobs.com/wday/cxs/leidos/External/jobs"
+            },
+            {
+                "name": "MITRE",
+                "company": "MITRE",
+                "base_url": "https://mitre.wd5.myworkdayjobs.com/wday/cxs/mitre/MITRE/jobs"
+            },
+            {
+                "name": "Snap Inc",
+                "company": "Snap Inc",
+                "base_url": "https://snapchat.wd1.myworkdayjobs.com/wday/cxs/snapchat/Snap/jobs"
+            },
+            {
+                "name": "Thomson Reuters",
+                "company": "Thomson Reuters",
+                "base_url": "https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
+            }
+        ],
+        "google": {
+            "name": "Google",
+            "company": "Google",
+            "feed_url": "https://www.google.com/about/careers/applications/jobs/feed.xml",
+            "poll_interval_seconds": 120
+        },
+        "amazon": {
+            "name": "Amazon",
+            "company": "Amazon",
+            "base_url": "https://www.amazon.jobs/en/search.json",
+            "result_limit": 100,
+            "poll_interval_seconds": 120
+        },
+        "netflix": {
+            "name": "Netflix",
+            "company": "Netflix",
+            "poll_interval_seconds": 120
+        },
+        "apple": {
+            "name": "Apple",
+            "company": "Apple",
+            "poll_interval_seconds": 120
+        },
+        "meta": {
+            "name": "Meta",
+            "company": "Meta",
+            "doc_id": "24779400495047796",
+            "poll_interval_seconds": 300
+        },
+        "icims": [
+            {
+                "name": "Council of Industry",
+                "company": "Council of Industry",
+                "portal_url": "https://careers-councilofindustry.icims.com"
+            },
+            {
+                "name": "ConstructConnect",
+                "company": "ConstructConnect",
+                "portal_url": "https://careers-constructconnect.icims.com"
+            },
+            {
+                "name": "Applied Systems",
+                "company": "Applied Systems",
+                "portal_url": "https://careers-appliedsystems.icims.com"
+            },
+            {
+                "name": "HealthEquity",
+                "company": "HealthEquity",
+                "portal_url": "https://careers-healthequity.icims.com"
+            },
+            {
+                "name": "Waters Corporation",
+                "company": "Waters Corporation",
+                "portal_url": "https://uscareers-waters.icims.com"
+            },
+            {
+                "name": "Connection",
+                "company": "Connection",
+                "portal_url": "https://careers-connection.icims.com"
+            },
+            {
+                "name": "Cotiviti",
+                "company": "Cotiviti",
+                "portal_url": "https://globalcareers-cotiviti.icims.com"
+            },
+            {
+                "name": "Chiron Technology Services",
+                "company": "Chiron Technology Services",
+                "portal_url": "https://careers-chirontech.icims.com"
+            },
+            {
+                "name": "Axway",
+                "company": "Axway",
+                "portal_url": "https://careers-axway.icims.com"
+            },
+            {
+                "name": "Markon",
+                "company": "Markon",
+                "portal_url": "https://careers-markon.icims.com"
+            },
+            {
+                "name": "General Dynamics Mission Systems",
+                "company": "General Dynamics Mission Systems",
+                "portal_url": "https://careers-gdms.icims.com"
+            },
+            {
+                "name": "HealthEdge",
+                "company": "HealthEdge",
+                "portal_url": "https://careers-healthedge.icims.com"
+            },
+            {
+                "name": "Peraton",
+                "company": "Peraton",
+                "portal_url": "https://careers-peraton.icims.com"
+            },
+            {
+                "name": "Wellbe Senior Medical",
+                "company": "Wellbe Senior Medical",
+                "portal_url": "https://careers-wellbeseniormedical.icims.com"
+            },
+            {
+                "name": "Uber",
+                "company": "Uber",
+                "portal_url": "https://university-uber.icims.com"
+            },
+            {
+                "name": "Atlassian",
+                "company": "Atlassian",
+                "portal_url": "https://campus-globalcareers-atlassian.icims.com"
+            },
+            {
+                "name": "SAS",
+                "company": "SAS",
+                "portal_url": "https://careers-sas.icims.com"
+            },
+            {
+                "name": "Chick-fil-A",
+                "company": "Chick-fil-A",
+                "portal_url": "https://careers-chickfila.icims.com"
+            },
+            {
+                "name": "Enterprise Mobility",
+                "company": "Enterprise Mobility",
+                "portal_url": "https://us-erac.icims.com"
+            }
+        ],
+        "yc": {
+            "name": "YC Jobs",
+            "poll_interval_seconds": 1800
+        },
+        "jpmorgan": [
+            {
+                "name": "JPMorgan Chase",
+                "company": "JPMorgan Chase",
+                "department": "Software Engineering"
+            }
+        ],
+        "oracle": [
+            {
+                "name": "Oracle",
+                "company": "Oracle",
+                "requisition_area": "Software Development"
+            }
+        ],
+        "qualcomm": [
+            {
+                "name": "Qualcomm",
+                "company": "Qualcomm"
+            }
+        ],
+        "rivian": [
+            {
+                "name": "Rivian",
+                "company": "Rivian"
+            }
+        ],
+        "yelp": [
+            {
+                "name": "Yelp",
+                "company": "Yelp"
+            }
+        ],
+        "shopify": [
+            {
+                "name": "Shopify",
+                "company": "Shopify",
+                "keywords": [
+                    "engineer",
+                    "software",
+                    "new grad",
+                    "intern",
+                    "early career"
+                ],
+                "use_selenium": false,
+                "auto_fallback_to_selenium": true,
+                "request_delay": 2.0,
+                "poll_interval_seconds": 300
+            }
+        ],
+        "tiktok": [
+            {
+                "name": "TikTok",
+                "company": "TikTok",
+                "brand": "tiktok",
+                "headless": true,
+                "max_scrolls": 5,
+                "keywords": [
+                    "software",
+                    "engineer",
+                    "new grad",
+                    "graduate",
+                    "early career"
+                ]
+            },
+            {
+                "name": "ByteDance",
+                "company": "ByteDance",
+                "brand": "bytedance",
+                "headless": true,
+                "max_scrolls": 5,
+                "keywords": [
+                    "software",
+                    "engineer",
+                    "new grad",
+                    "graduate",
+                    "early career"
+                ]
+            }
+        ],
+        "goldmansachs": [
+            {
+                "name": "Goldman Sachs",
+                "company": "Goldman Sachs",
+                "experiences": [
+                    "EARLY_CAREER",
+                    "PROFESSIONAL"
+                ],
+                "search_term": "software engineer",
+                "keywords": [
+                    "software",
+                    "engineering",
+                    "technology",
+                    "developer"
+                ],
+                "page_size": 50
+            }
+        ],
+        "intuit": [
+            {
+                "name": "Intuit",
+                "company": "Intuit",
+                "query": "software engineer",
+                "max_pages": 10,
+                "results_per_page": 15,
+                "headless": true
+            }
+        ],
+        "amd": [
+            {
+                "name": "AMD",
+                "company": "AMD",
+                "base_url": "https://careers.amd.com",
+                "categories": [
+                    "Engineering"
+                ],
+                "max_pages": 200
+            }
+        ],
+        "jibe": [
+            {
+                "name": "iCIMS",
+                "company": "iCIMS",
+                "base_url": "https://careers.icims.com",
+                "max_pages": 50
+            }
+        ],
+        "linkedin": {
+            "name": "LinkedIn Jobs",
+            "poll_interval_seconds": 300,
+            "request_delay": [
+                3,
+                5
+            ],
+            "companies": [
+                {
+                    "name": "Accenture",
+                    "linkedin_id": "1033"
+                },
+                {
+                    "name": "Deloitte",
+                    "linkedin_id": "1038"
+                },
+                {
+                    "name": "Fidelity",
+                    "linkedin_id": "1307"
+                },
+                {
+                    "name": "IBM",
+                    "linkedin_id": "1009"
+                },
+                {
+                    "name": "Honeywell",
+                    "linkedin_id": "1344"
+                },
+                {
+                    "name": "Lockheed Martin",
+                    "linkedin_id": "1319"
+                },
+                {
+                    "name": "Northrop Grumman",
+                    "linkedin_id": "1412"
+                },
+                {
+                    "name": "John Deere",
+                    "linkedin_id": "3789"
+                },
+                {
+                    "name": "AT&T",
+                    "linkedin_id": "1052"
+                },
+                {
+                    "name": "American Express",
+                    "linkedin_id": "1277"
+                },
+                {
+                    "name": "Bank of America",
+                    "linkedin_id": "1123"
+                },
+                {
+                    "name": "Booking",
+                    "linkedin_id": "11348"
+                },
+                {
+                    "name": "Caterpillar",
+                    "linkedin_id": "2622"
+                },
+                {
+                    "name": "Charles Schwab",
+                    "linkedin_id": "1855"
+                },
+                {
+                    "name": "GE Aerospace",
+                    "linkedin_id": "570550"
+                },
+                {
+                    "name": "GE Vernova",
+                    "linkedin_id": "82315716"
+                },
+                {
+                    "name": "GE HealthCare",
+                    "linkedin_id": "1016"
+                },
+                {
+                    "name": "Puma",
+                    "linkedin_id": "165597"
+                },
+                {
+                    "name": "Verizon",
+                    "linkedin_id": "1103"
+                },
+                {
+                    "name": "X",
+                    "linkedin_id": "96622"
+                },
+                {
+                    "name": "Microsoft",
+                    "linkedin_id": "1035"
+                }
+            ]
+        }
     }
-  },
-  "routing": {
-    "yc": "DISCORD_WEBHOOK_YC",
-    "wellfound": "DISCORD_WEBHOOK_WELLFOUND",
-    "hn": "DISCORD_WEBHOOK_HN",
-    "github": "DISCORD_WEBHOOK_GITHUB",
-    "newgrad": "DISCORD_WEBHOOK_GITHUB",
-    "newgrad_json": "DISCORD_WEBHOOK_GITHUB",
-    "newgrad_markdown": "DISCORD_WEBHOOK_GITHUB",
-    "greenhouse": "DISCORD_WEBHOOK_GREENHOUSE",
-    "lever": "DISCORD_WEBHOOK_LEVER",
-    "ashby": "DISCORD_WEBHOOK_ASHBY",
-    "workable": "DISCORD_WEBHOOK_WORKABLE",
-    "workday": "DISCORD_WEBHOOK_WORKDAY",
-    "maang": "DISCORD_WEBHOOK_MAANG",
-    "icims": "DISCORD_WEBHOOK_ICIMS",
-    "smartrecruiters": "DISCORD_WEBHOOK_SMARTRECRUITERS",
-    "frontier_ai": "DISCORD_WEBHOOK_FRONTIER_AI",
-    "jpmorgan": "DISCORD_WEBHOOK_CUSTOM",
-    "oracle": "DISCORD_WEBHOOK_CUSTOM",
-    "qualcomm": "DISCORD_WEBHOOK_CUSTOM",
-    "rivian": "DISCORD_WEBHOOK_CUSTOM",
-    "yelp": "DISCORD_WEBHOOK_CUSTOM",
-    "shopify": "DISCORD_WEBHOOK_CUSTOM",
-    "tiktok": "DISCORD_WEBHOOK_CUSTOM",
-    "goldmansachs": "DISCORD_WEBHOOK_CUSTOM",
-    "intuit": "DISCORD_WEBHOOK_CUSTOM",
-    "amd": "DISCORD_WEBHOOK_CUSTOM",
-    "jibe": "DISCORD_WEBHOOK_CUSTOM",
-    "linkedin": "DISCORD_WEBHOOK_LINKEDIN"
-  },
-  "sources": {
-    "newgrad_json": [
-      {
-        "name": "vanshb03-New-Grad-2026",
-        "owner": "vanshb03",
-        "repo": "New-Grad-2026",
-        "branch": "dev",
-        "json_path": ".github/scripts/listings.json",
-        "poll_interval_seconds": 1800
-      },
-      {
-        "name": "SimplifyJobs-New-Grad",
-        "owner": "SimplifyJobs",
-        "repo": "New-Grad-Positions",
-        "branch": "dev",
-        "json_path": ".github/scripts/listings.json",
-        "poll_interval_seconds": 1800
-      }
-    ],
-    "newgrad_markdown": [
-      {
-        "name": "speedyapply-2026",
-        "owner": "speedyapply",
-        "repo": "2026-SWE-College-Jobs",
-        "branch": "main",
-        "files": [
-          "NEW_GRAD_USA.md"
-        ],
-        "poll_interval_seconds": 3600
-      }
-    ],
-    "hn_hiring": {
-      "feed_url": "https://hnrss.org/whoishiring/jobs",
-      "poll_interval_seconds": 600
-    },
-    "greenhouse": [
-      {
-        "name": "Airbnb",
-        "board_token": "airbnb",
-        "company": "Airbnb"
-      },
-      {
-        "name": "Affirm",
-        "board_token": "affirm",
-        "company": "Affirm"
-      },
-      {
-        "name": "Airtable",
-        "board_token": "airtable",
-        "company": "Airtable"
-      },
-      {
-        "name": "Amplitude",
-        "board_token": "amplitude",
-        "company": "Amplitude"
-      },
-      {
-        "name": "Anduril",
-        "board_token": "andurilindustries",
-        "company": "Anduril"
-      },
-      {
-        "name": "Anthropic",
-        "board_token": "anthropic",
-        "company": "Anthropic",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Asana",
-        "board_token": "asana",
-        "company": "Asana"
-      },
-      {
-        "name": "Ava Labs",
-        "board_token": "avalabs",
-        "company": "Ava Labs"
-      },
-      {
-        "name": "Block",
-        "board_token": "block",
-        "company": "Block"
-      },
-      {
-        "name": "Brex",
-        "board_token": "brex",
-        "company": "Brex"
-      },
-      {
-        "name": "Checkr",
-        "board_token": "checkr",
-        "company": "Checkr"
-      },
-      {
-        "name": "Chime",
-        "board_token": "chime",
-        "company": "Chime"
-      },
-      {
-        "name": "Cloudflare",
-        "board_token": "cloudflare",
-        "company": "Cloudflare"
-      },
-      {
-        "name": "Cockroach Labs",
-        "board_token": "cockroachlabs",
-        "company": "Cockroach Labs"
-      },
-      {
-        "name": "Coinbase",
-        "board_token": "coinbase",
-        "company": "Coinbase"
-      },
-      {
-        "name": "Databricks",
-        "board_token": "databricks",
-        "company": "Databricks"
-      },
-      {
-        "name": "Datadog",
-        "board_token": "datadog",
-        "company": "Datadog"
-      },
-      {
-        "name": "Discord",
-        "board_token": "discord",
-        "company": "Discord"
-      },
-      {
-        "name": "DoorDash",
-        "board_token": "doordashusa",
-        "company": "DoorDash"
-      },
-      {
-        "name": "Dropbox",
-        "board_token": "dropbox",
-        "company": "Dropbox"
-      },
-      {
-        "name": "Duolingo",
-        "board_token": "duolingo",
-        "company": "Duolingo"
-      },
-      {
-        "name": "Elastic",
-        "board_token": "elastic",
-        "company": "Elastic"
-      },
-      {
-        "name": "Epic Games",
-        "board_token": "epicgames",
-        "company": "Epic Games"
-      },
-      {
-        "name": "Faire",
-        "board_token": "faire",
-        "company": "Faire"
-      },
-      {
-        "name": "FERMAT",
-        "board_token": "fermat",
-        "company": "FERMAT"
-      },
-      {
-        "name": "Figma",
-        "board_token": "figma",
-        "company": "Figma"
-      },
-      {
-        "name": "Flexport",
-        "board_token": "flexport",
-        "company": "Flexport"
-      },
-      {
-        "name": "GitLab",
-        "board_token": "gitlab",
-        "company": "GitLab"
-      },
-      {
-        "name": "Grammarly",
-        "board_token": "grammarly",
-        "company": "Grammarly"
-      },
-      {
-        "name": "Gusto",
-        "board_token": "gusto",
-        "company": "Gusto"
-      },
-      {
-        "name": "HubSpot",
-        "board_token": "hubspotjobs",
-        "company": "HubSpot"
-      },
-      {
-        "name": "Instacart",
-        "board_token": "instacart",
-        "company": "Instacart"
-      },
-      {
-        "name": "Lyft",
-        "board_token": "lyft",
-        "company": "Lyft"
-      },
-      {
-        "name": "MongoDB",
-        "board_token": "mongodb",
-        "company": "MongoDB"
-      },
-      {
-        "name": "Nuro",
-        "board_token": "nuro",
-        "company": "Nuro"
-      },
-      {
-        "name": "Okta",
-        "board_token": "okta",
-        "company": "Okta"
-      },
-      {
-        "name": "Oklo",
-        "board_token": "oklo",
-        "company": "Oklo"
-      },
-      {
-        "name": "Oscar Health",
-        "board_token": "oscar",
-        "company": "Oscar Health"
-      },
-      {
-        "name": "PagerDuty",
-        "board_token": "pagerduty",
-        "company": "PagerDuty"
-      },
-      {
-        "name": "Pinterest",
-        "board_token": "pinterest",
-        "company": "Pinterest"
-      },
-      {
-        "name": "Postman",
-        "board_token": "postman",
-        "company": "Postman"
-      },
-      {
-        "name": "Reddit",
-        "board_token": "reddit",
-        "company": "Reddit"
-      },
-      {
-        "name": "Robinhood",
-        "board_token": "robinhood",
-        "company": "Robinhood"
-      },
-      {
-        "name": "Roku",
-        "board_token": "roku",
-        "company": "Roku"
-      },
-      {
-        "name": "Scale AI",
-        "board_token": "scaleai",
-        "company": "Scale AI"
-      },
-      {
-        "name": "SoFi",
-        "board_token": "sofi",
-        "company": "SoFi"
-      },
-      {
-        "name": "Samsara",
-        "board_token": "samsara",
-        "company": "Samsara"
-      },
-      {
-        "name": "SpaceX",
-        "board_token": "spacex",
-        "company": "SpaceX"
-      },
-      {
-        "name": "Stripe",
-        "board_token": "stripe",
-        "company": "Stripe"
-      },
-      {
-        "name": "The Trade Desk",
-        "board_token": "thetradedesk",
-        "company": "The Trade Desk"
-      },
-      {
-        "name": "Toast",
-        "board_token": "toast",
-        "company": "Toast"
-      },
-      {
-        "name": "Twilio",
-        "board_token": "twilio",
-        "company": "Twilio"
-      },
-      {
-        "name": "Unity",
-        "board_token": "unity3d",
-        "company": "Unity"
-      },
-      {
-        "name": "Upstart",
-        "board_token": "upstart",
-        "company": "Upstart"
-      },
-      {
-        "name": "Vercel",
-        "board_token": "vercel",
-        "company": "Vercel"
-      },
-      {
-        "name": "Waymo",
-        "board_token": "waymo",
-        "company": "Waymo"
-      },
-      {
-        "name": "Zscaler",
-        "board_token": "zscaler",
-        "company": "Zscaler"
-      },
-      {
-        "name": "Plaid",
-        "board_token": "plaid",
-        "company": "Plaid"
-      },
-      {
-        "name": "Thumbtack",
-        "board_token": "thumbtack",
-        "company": "Thumbtack"
-      },
-      {
-        "name": "Webflow",
-        "board_token": "webflow",
-        "company": "Webflow"
-      },
-      {
-        "name": "StubHub",
-        "board_token": "stubhubinc",
-        "company": "StubHub"
-      },
-      {
-        "name": "Flex",
-        "board_token": "flex",
-        "company": "Flex"
-      },
-      {
-        "name": "Applied Intuition",
-        "board_token": "appliedintuition",
-        "company": "Applied Intuition"
-      },
-      {
-        "name": "Cribl",
-        "board_token": "cribl",
-        "company": "Cribl"
-      },
-      {
-        "name": "IXL Learning",
-        "board_token": "ixllearning",
-        "company": "IXL Learning"
-      },
-      {
-        "name": "Jump Trading",
-        "board_token": "jumptrading",
-        "company": "Jump Trading"
-      },
-      {
-        "name": "Remote",
-        "board_token": "remotecom",
-        "company": "Remote"
-      },
-      {
-        "name": "Penn Interactive",
-        "board_token": "penninteractive",
-        "company": "Penn Interactive"
-      },
-      {
-        "name": "Nerdy",
-        "board_token": "nerdy",
-        "company": "Nerdy"
-      },
-      {
-        "name": "Two Six Technologies",
-        "board_token": "twosixtechnologies",
-        "company": "Two Six Technologies"
-      },
-      {
-        "name": "Relativity Space",
-        "board_token": "relativity",
-        "company": "Relativity Space"
-      },
-      {
-        "name": "Philadelphia Eagles",
-        "board_token": "philadelphiaeagles",
-        "company": "Philadelphia Eagles"
-      },
-      {
-        "name": "Alma",
-        "board_token": "alma",
-        "company": "Alma"
-      },
-      {
-        "name": "The New York Times",
-        "board_token": "thenewyorktimes",
-        "company": "The New York Times"
-      },
-      {
-        "name": "Bloomberg Philanthropies",
-        "board_token": "bloombergorg",
-        "company": "Bloomberg Philanthropies"
-      },
-      {
-        "company": "PDT Partners",
-        "board_token": "pdtpartners"
-      },
-      {
-        "company": "Dagster Labs",
-        "board_token": "dagsterlabs"
-      },
-      {
-        "company": "IMC Trading",
-        "board_token": "imc"
-      },
-      {
-        "company": "Schonfeld",
-        "board_token": "schonfeld"
-      },
-      {
-        "company": "SingleStore",
-        "board_token": "singlestore"
-      },
-      {
-        "company": "Twilio Students",
-        "board_token": "twiliostudents"
-      },
-      {
-        "company": "Raft",
-        "board_token": "raft"
-      },
-      {
-        "company": "Radiant",
-        "board_token": "radiant"
-      },
-      {
-        "company": "SeatGeek",
-        "board_token": "seatgeek"
-      },
-      {
-        "company": "ZipRecruiter",
-        "board_token": "ziprecruiter"
-      },
-      {
-        "company": "Neuralink",
-        "board_token": "neuralink"
-      },
-      {
-        "company": "DoorDash Canada",
-        "board_token": "doordashcanada"
-      },
-      {
-        "company": "Perpay",
-        "board_token": "perpay"
-      },
-      {
-        "company": "Tubi",
-        "board_token": "tubitv"
-      },
-      {
-        "company": "Sigma Computing",
-        "board_token": "sigmacomputing"
-      },
-      {
-        "company": "Metronome",
-        "board_token": "metronome"
-      },
-      {
-        "company": "EarnIn",
-        "board_token": "earnin"
-      },
-      {
-        "company": "NPR",
-        "board_token": "nationalpublicradioinc"
-      },
-      {
-        "company": "GlossGenius",
-        "board_token": "glossgenius"
-      },
-      {
-        "company": "Zora",
-        "board_token": "zora"
-      },
-      {
-        "company": "Forage",
-        "board_token": "joinforage"
-      },
-      {
-        "company": "CoreWeave",
-        "board_token": "coreweave"
-      },
-      {
-        "company": "Rubrik",
-        "board_token": "rubrik"
-      },
-      {
-        "company": "Navan",
-        "board_token": "TripActions"
-      },
-      {
-        "company": "Verkada",
-        "board_token": "verkada"
-      },
-      {
-        "company": "N26",
-        "board_token": "n26"
-      },
-      {
-        "company": "Scale to Win",
-        "board_token": "scaletowinllc"
-      },
-      {
-        "company": "NinjaTrader",
-        "board_token": "ninjatrader"
-      },
-      {
-        "company": "Avela Education",
-        "board_token": "avelaeducation"
-      },
-      {
-        "company": "B12",
-        "board_token": "b12"
-      },
-      {
-        "company": "Glean",
-        "board_token": "gleanwork"
-      },
-      {
-        "company": "Loop",
-        "board_token": "loop"
-      },
-      {
-        "company": "Freeform",
-        "board_token": "freeformfuturecorp"
-      },
-      {
-        "company": "Aquatic Capital Management",
-        "board_token": "aquaticcapitalmanagement"
-      },
-      {
-        "company": "HP IQ",
-        "board_token": "hpiq"
-      },
-      {
-        "company": "Obsidian Security",
-        "board_token": "obsidiansecurity"
-      },
-      {
-        "company": "Harmonic",
-        "board_token": "harmonic"
-      },
-      {
-        "company": "Underdog Fantasy",
-        "board_token": "underdogfantasy"
-      },
-      {
-        "company": "Point72",
-        "board_token": "point72"
-      },
-      {
-        "company": "Wiz",
-        "board_token": "wizinc"
-      },
-      {
-        "company": "Squarespace",
-        "board_token": "squarespace"
-      },
-      {
-        "company": "Abnormal Security",
-        "board_token": "abnormalsecurity"
-      },
-      {
-        "company": "Carta",
-        "board_token": "carta"
-      },
-      {
-        "company": "Marqeta",
-        "board_token": "marqeta"
-      },
-      {
-        "company": "Mercury",
-        "board_token": "mercury"
-      },
-      {
-        "company": "CLEAR",
-        "board_token": "clear"
-      },
-      {
-        "company": "Brave",
-        "board_token": "brave"
-      },
-      {
-        "company": "Five Rings",
-        "board_token": "fiveringsllc"
-      },
-      {
-        "company": "MEMX",
-        "board_token": "memx"
-      },
-      {
-        "company": "Roblox",
-        "board_token": "roblox"
-      },
-      {
-        "company": "Hudson River Trading",
-        "board_token": "wehrtyou"
-      },
-      {
-        "company": "Jane Street",
-        "board_token": "janestreet"
-      },
-      {
-        "company": "Cross River",
-        "board_token": "crossriverbank"
-      },
-      {
-        "company": "JFrog",
-        "board_token": "jfrog"
-      },
-      {
-        "company": "Gemini",
-        "board_token": "gemini"
-      },
-      {
-        "company": "Moveworks",
-        "board_token": "Moveworks"
-      },
-      {
-        "company": "Druva",
-        "board_token": "druva"
-      },
-      {
-        "company": "Jump Crypto",
-        "board_token": "jumpcrypto"
-      },
-      {
-        "company": "SentinelOne",
-        "board_token": "sentinellabs"
-      },
-      {
-        "company": "Celonis",
-        "board_token": "celonis"
-      },
-      {
-        "company": "Virtu Financial",
-        "board_token": "virtu"
-      },
-      {
-        "company": "Corelight",
-        "board_token": "corelight"
-      },
-      {
-        "company": "Pave",
-        "board_token": "paveakatroveinformationtechnologies"
-      },
-      {
-        "company": "Instawork",
-        "board_token": "instawork"
-      },
-      {
-        "company": "AppLovin",
-        "board_token": "applovin"
-      },
-      {
-        "company": "Aurora Innovation",
-        "board_token": "aurorainnovation"
-      },
-      {
-        "company": "Braze",
-        "board_token": "braze"
-      },
-      {
-        "company": "Contentful",
-        "board_token": "contentful"
-      },
-      {
-        "company": "Coupang",
-        "board_token": "coupang"
-      },
-      {
-        "company": "Dremio",
-        "board_token": "dremio"
-      },
-      {
-        "company": "LaunchDarkly",
-        "board_token": "launchdarkly"
-      },
-      {
-        "company": "Liftoff",
-        "board_token": "liftoff"
-      },
-      {
-        "company": "Movable Ink",
-        "board_token": "movableink"
-      },
-      {
-        "company": "Snorkel AI",
-        "board_token": "snorkelai"
-      },
-      {
-        "company": "ZoomInfo",
-        "board_token": "zoominfo"
-      },
-      {
-        "name": "xAI",
-        "company": "xAI",
-        "board_token": "xai",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Cerebras",
-        "company": "Cerebras",
-        "board_token": "cerebrassystems",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Runway",
-        "company": "Runway",
-        "board_token": "runwayml",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Together AI",
-        "company": "Together AI",
-        "board_token": "TogetherAI",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Inflection AI",
-        "company": "Inflection AI",
-        "board_token": "inflectionai",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "AI2",
-        "company": "Allen Institute for AI",
-        "board_token": "thealleninstitute",
-        "source_group": "frontier_ai"
-      },
-      {
-        "company": "NewsBreak",
-        "board_token": "newsbreak"
-      },
-      {
-        "company": "C3 AI",
-        "board_token": "c3ascend"
-      },
-      {
-        "company": "DeepMind",
-        "board_token": "deepmind",
-        "source_group": "frontier_ai"
-      },
-      {
-        "company": "Pendo",
-        "board_token": "pendo"
-      },
-      {
-        "company": "Justworks",
-        "board_token": "justworks"
-      },
-      {
-        "company": "Coalition",
-        "board_token": "coalition"
-      },
-      {
-        "company": "Nextdoor",
-        "board_token": "nextdoor"
-      },
-      {
-        "company": "Twitch",
-        "board_token": "twitch"
-      },
-      {
-        "company": "Lob",
-        "board_token": "lob"
-      },
-      {
-        "company": "Viam",
-        "board_token": "viamrobotics"
-      },
-      {
-        "company": "Pie Insurance",
-        "board_token": "pieinsurance"
-      },
-      {
-        "company": "Zeta Global",
-        "board_token": "zetaglobal"
-      },
-      {
-        "company": "Fivetran",
-        "board_token": "fivetran"
-      },
-      {
-        "company": "Sourcegraph",
-        "board_token": "sourcegraph91"
-      }
-    ],
-    "lever": [
-      {
-        "name": "Kraken",
-        "slug": "kraken",
-        "company": "Kraken"
-      },
-      {
-        "name": "Olo",
-        "slug": "olo",
-        "company": "Olo"
-      },
-      {
-        "name": "Palantir",
-        "slug": "palantir",
-        "company": "Palantir"
-      },
-      {
-        "name": "Spotify",
-        "slug": "spotify",
-        "company": "Spotify"
-      },
-      {
-        "name": "Zoox",
-        "slug": "zoox",
-        "company": "Zoox"
-      },
-      {
-        "name": "Peak Games",
-        "slug": "peakgames",
-        "company": "Peak Games"
-      },
-      {
-        "name": "WHOOP",
-        "slug": "whoop",
-        "company": "WHOOP"
-      },
-      {
-        "name": "Dream Games",
-        "slug": "dreamgames",
-        "company": "Dream Games"
-      },
-      {
-        "name": "Mistral AI",
-        "slug": "mistral",
-        "company": "Mistral AI"
-      },
-      {
-        "name": "Midas",
-        "slug": "getmidas",
-        "company": "Midas"
-      },
-      {
-        "name": "SpruceID",
-        "slug": "sprucesystems",
-        "company": "SpruceID"
-      },
-      {
-        "name": "Metabase",
-        "slug": "metabase",
-        "company": "Metabase"
-      },
-      {
-        "name": "HighLevel",
-        "slug": "gohighlevel",
-        "company": "HighLevel"
-      },
-      {
-        "name": "Basis",
-        "slug": "basis",
-        "company": "Basis"
-      },
-      {
-        "name": "Match Group",
-        "slug": "matchgroup",
-        "company": "Match Group"
-      },
-      {
-        "name": "Ro",
-        "slug": "ro",
-        "company": "Ro"
-      },
-      {
-        "name": "Regrello",
-        "slug": "regrello",
-        "company": "Regrello"
-      },
-      {
-        "company": "Nominal",
-        "slug": "nominal"
-      },
-      {
-        "company": "Veeva Systems",
-        "slug": "veeva"
-      },
-      {
-        "company": "WeRide",
-        "slug": "weride"
-      },
-      {
-        "company": "NimbleRx",
-        "slug": "nimblerx"
-      },
-      {
-        "company": "Belvedere Trading",
-        "slug": "belvederetrading"
-      },
-      {
-        "company": "Alignable",
-        "slug": "Alignable"
-      },
-      {
-        "company": "Shield AI",
-        "slug": "shieldai"
-      },
-      {
-        "company": "Valkyrie Trading",
-        "slug": "valkyrietrading"
-      },
-      {
-        "company": "WebFX",
-        "slug": "webfx"
-      },
-      {
-        "company": "Ladders",
-        "slug": "ladders"
-      },
-      {
-        "company": "Voleon Group",
-        "slug": "voleon"
-      },
-      {
-        "company": "Pison Technology",
-        "slug": "pison"
-      },
-      {
-        "company": "Brilliant",
-        "slug": "brilliant"
-      },
-      {
-        "company": "Field AI",
-        "slug": "field-ai"
-      },
-      {
-        "company": "GoTo Group",
-        "slug": "GoToGroup"
-      },
-      {
-        "company": "Narmi",
-        "slug": "narmi"
-      },
-      {
-        "company": "Decentraland",
-        "slug": "Decentraland"
-      },
-      {
-        "company": "Aragon",
-        "slug": "aragon"
-      },
-      {
-        "company": "Rackspace",
-        "slug": "rackspace"
-      },
-      {
-        "company": "Peerspace",
-        "slug": "peerspace"
-      },
-      {
-        "company": "Loft Orbital",
-        "slug": "loftorbital"
-      },
-      {
-        "company": "CesiumAstro",
-        "slug": "CesiumAstro"
-      },
-      {
-        "company": "E-Space",
-        "slug": "espace"
-      },
-      {
-        "company": "Color Health",
-        "slug": "color"
-      },
-      {
-        "company": "Reliable Robotics",
-        "slug": "reliable"
-      },
-      {
-        "company": "Artera",
-        "slug": "artera"
-      }
-    ],
-    "ashby": [
-      {
-        "name": "Abridge",
-        "clientname": "abridge",
-        "company": "Abridge"
-      },
-      {
-        "name": "Anyscale",
-        "clientname": "anyscale",
-        "company": "Anyscale"
-      },
-      {
-        "name": "Benchling",
-        "clientname": "benchling",
-        "company": "Benchling"
-      },
-      {
-        "name": "Braintrust",
-        "clientname": "braintrust",
-        "company": "Braintrust"
-      },
-      {
-        "name": "Clerk",
-        "clientname": "clerk",
-        "company": "Clerk"
-      },
-      {
-        "name": "Cohere",
-        "clientname": "cohere",
-        "company": "Cohere",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Cursor",
-        "clientname": "cursor",
-        "company": "Cursor",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Deepgram",
-        "clientname": "deepgram",
-        "company": "Deepgram"
-      },
-      {
-        "name": "Harvey",
-        "clientname": "harvey",
-        "company": "Harvey"
-      },
-      {
-        "name": "Jerry",
-        "clientname": "jerry.ai",
-        "company": "Jerry"
-      },
-      {
-        "name": "LangChain",
-        "clientname": "langchain",
-        "company": "LangChain"
-      },
-      {
-        "name": "Linear",
-        "clientname": "linear",
-        "company": "Linear"
-      },
-      {
-        "name": "Modal",
-        "clientname": "modal",
-        "company": "Modal"
-      },
-      {
-        "name": "Neon",
-        "clientname": "neon",
-        "company": "Neon"
-      },
-      {
-        "name": "Notion",
-        "clientname": "notion",
-        "company": "Notion"
-      },
-      {
-        "name": "OpenAI",
-        "clientname": "openai",
-        "company": "OpenAI",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Perplexity",
-        "clientname": "perplexity",
-        "company": "Perplexity",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Pinecone",
-        "clientname": "pinecone",
-        "company": "Pinecone"
-      },
-      {
-        "name": "Pylon",
-        "clientname": "pylon",
-        "company": "Pylon"
-      },
-      {
-        "name": "Railway",
-        "clientname": "railway",
-        "company": "Railway"
-      },
-      {
-        "name": "Ramp",
-        "clientname": "ramp",
-        "company": "Ramp"
-      },
-      {
-        "name": "Render",
-        "clientname": "render",
-        "company": "Render"
-      },
-      {
-        "name": "Replit",
-        "clientname": "replit",
-        "company": "Replit"
-      },
-      {
-        "name": "Resend",
-        "clientname": "resend",
-        "company": "Resend"
-      },
-      {
-        "name": "Retool",
-        "clientname": "retool",
-        "company": "Retool"
-      },
-      {
-        "name": "Sentry",
-        "clientname": "sentry",
-        "company": "Sentry"
-      },
-      {
-        "name": "Supabase",
-        "clientname": "supabase",
-        "company": "Supabase"
-      },
-      {
-        "name": "Temporal",
-        "clientname": "temporal",
-        "company": "Temporal"
-      },
-      {
-        "name": "Hightouch",
-        "clientname": "hightouch",
-        "company": "Hightouch"
-      },
-      {
-        "name": "Watershed",
-        "clientname": "watershed",
-        "company": "Watershed"
-      },
-      {
-        "name": "Zip",
-        "clientname": "zip",
-        "company": "Zip"
-      },
-      {
-        "name": "Whatnot",
-        "clientname": "whatnot",
-        "company": "Whatnot"
-      },
-      {
-        "name": "N1",
-        "clientname": "n1",
-        "company": "N1"
-      },
-      {
-        "name": "Kernel",
-        "clientname": "usekernel",
-        "company": "Kernel"
-      },
-      {
-        "name": "Magical",
-        "clientname": "magical",
-        "company": "Magical"
-      },
-      {
-        "name": "Anima",
-        "clientname": "anima",
-        "company": "Anima"
-      },
-      {
-        "name": "Point One",
-        "clientname": "PointOne",
-        "company": "Point One"
-      },
-      {
-        "name": "Ashby",
-        "clientname": "ashby",
-        "company": "Ashby"
-      },
-      {
-        "name": "Deel",
-        "clientname": "deel",
-        "company": "Deel"
-      },
-      {
-        "name": "Notable",
-        "clientname": "notable",
-        "company": "Notable"
-      },
-      {
-        "name": "Sola",
-        "clientname": "sola",
-        "company": "Sola"
-      },
-      {
-        "name": "Clipboard",
-        "clientname": "clipboard",
-        "company": "Clipboard"
-      },
-      {
-        "name": "Confluent",
-        "clientname": "confluent",
-        "company": "Confluent"
-      },
-      {
-        "company": "Acorns",
-        "clientname": "Acorns"
-      },
-      {
-        "company": "EliseAI",
-        "clientname": "eliseai"
-      },
-      {
-        "company": "Kikoff",
-        "clientname": "kikoff"
-      },
-      {
-        "company": "Solace",
-        "clientname": "solace"
-      },
-      {
-        "company": "Giga ML",
-        "clientname": "gigaml"
-      },
-      {
-        "company": "Valon",
-        "clientname": "Valon"
-      },
-      {
-        "company": "Replo",
-        "clientname": "replo"
-      },
-      {
-        "company": "Rightfoot",
-        "clientname": "rightfoot"
-      },
-      {
-        "company": "Continue",
-        "clientname": "continue"
-      },
-      {
-        "company": "Decagon",
-        "clientname": "decagon"
-      },
-      {
-        "company": "Fern",
-        "clientname": "buildwithfern"
-      },
-      {
-        "company": "G2",
-        "clientname": "g2"
-      },
-      {
-        "company": "Inngest",
-        "clientname": "inngest"
-      },
-      {
-        "company": "Mintlify",
-        "clientname": "mintlify"
-      },
-      {
-        "company": "Paraform",
-        "clientname": "paraform"
-      },
-      {
-        "company": "Stytch",
-        "clientname": "stytch"
-      },
-      {
-        "company": "Suno",
-        "clientname": "suno"
-      },
-      {
-        "company": "The Browser Company",
-        "clientname": "The Browser Company"
-      },
-      {
-        "company": "Unify",
-        "clientname": "unify"
-      },
-      {
-        "company": "Vanta",
-        "clientname": "vanta"
-      },
-      {
-        "company": "Warp",
-        "clientname": "warp"
-      },
-      {
-        "company": "Writer",
-        "clientname": "writer"
-      },
-      {
-        "name": "ElevenLabs",
-        "clientname": "elevenlabs",
-        "company": "ElevenLabs",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Reka AI",
-        "clientname": "Reka",
-        "company": "Reka AI",
-        "source_group": "frontier_ai"
-      },
-      {
-        "name": "Cognition",
-        "clientname": "cognition",
-        "company": "Cognition",
-        "source_group": "frontier_ai"
-      },
-      {
-        "company": "Commure + Athelas",
-        "clientname": "commure"
-      },
-      {
-        "company": "Meshy",
-        "clientname": "meshy"
-      },
-      {
-        "company": "Mach Industries",
-        "clientname": "mach"
-      },
-      {
-        "company": "Kong",
-        "clientname": "kong"
-      },
-      {
-        "company": "Gecko Robotics",
-        "clientname": "gecko-robotics"
-      },
-      {
-        "company": "Persona",
-        "clientname": "persona"
-      },
-      {
-        "company": "Drata",
-        "clientname": "drata"
-      },
-      {
-        "company": "Material Security",
-        "clientname": "materialsecurity"
-      },
-      {
-        "company": "Skyflow",
-        "clientname": "skyflow"
-      },
-      {
-        "company": "Raycast",
-        "clientname": "raycast"
-      },
-      {
-        "company": "Zed Industries",
-        "clientname": "zed"
-      }
-    ],
-    "workable": [
-      {
-        "name": "Bolt.eu",
-        "subdomain": "bolt",
-        "company": "Bolt.eu"
-      },
-      {
-        "name": "Cal.com",
-        "subdomain": "cal",
-        "company": "Cal.com"
-      },
-      {
-        "name": "Hugging Face",
-        "subdomain": "huggingface",
-        "company": "Hugging Face"
-      },
-      {
-        "name": "N8n",
-        "subdomain": "n8n",
-        "company": "N8n"
-      },
-      {
-        "name": "PostHog",
-        "subdomain": "posthog",
-        "company": "PostHog"
-      },
-      {
-        "name": "Slab",
-        "subdomain": "slab",
-        "company": "Slab"
-      },
-      {
-        "name": "Gitpod (ONA)",
-        "subdomain": "ona",
-        "company": "Gitpod (ONA)"
-      },
-      {
-        "name": "Rokt",
-        "subdomain": "rokt",
-        "company": "Rokt"
-      },
-      {
-        "name": "DataVisor",
-        "subdomain": "datavisor",
-        "company": "DataVisor"
-      },
-      {
-        "name": "Darkhive",
-        "subdomain": "darkhive",
-        "company": "Darkhive"
-      },
-      {
-        "name": "MLabs",
-        "subdomain": "mlabs",
-        "company": "MLabs"
-      }
-    ],
-    "smartrecruiters": [
-      {
-        "name": "NBCUniversal",
-        "company": "NBCUniversal",
-        "company_id": "NBCUniversal3"
-      },
-      {
-        "name": "Turnitin",
-        "company": "Turnitin",
-        "company_id": "TurnitinLLC"
-      },
-      {
-        "name": "Walmart",
-        "company": "Walmart",
-        "company_id": "Walmart30"
-      },
-      {
-        "name": "ServiceNow",
-        "company": "ServiceNow",
-        "company_id": "ServiceNow"
-      },
-      {
-        "name": "Klick",
-        "company": "Klick",
-        "company_id": "Klick1"
-      },
-      {
-        "name": "Oteemo",
-        "company": "Oteemo",
-        "company_id": "OteemoInc"
-      },
-      {
-        "name": "Bosch",
-        "company": "Bosch",
-        "company_id": "bosch"
-      },
-      {
-        "name": "Equinix",
-        "company": "Equinix",
-        "company_id": "equinix"
-      },
-      {
-        "name": "IKEA",
-        "company": "IKEA",
-        "company_id": "ikea"
-      },
-      {
-        "name": "Visa",
-        "company": "Visa",
-        "company_id": "visa"
-      },
-      {
-        "name": "Canva",
-        "company": "Canva",
-        "company_id": "canva"
-      },
-      {
-        "name": "Delivery Hero",
-        "company": "Delivery Hero",
-        "company_id": "deliveryhero"
-      }
-    ],
-    "workday": [
-      {
-        "name": "Adobe",
-        "company": "Adobe",
-        "base_url": "https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs"
-      },
-      {
-        "name": "Boeing",
-        "company": "Boeing",
-        "base_url": "https://boeing.wd1.myworkdayjobs.com/wday/cxs/boeing/EXTERNAL_CAREERS/jobs"
-      },
-      {
-        "name": "Capital One",
-        "company": "Capital One",
-        "base_url": "https://capitalone.wd12.myworkdayjobs.com/wday/cxs/capitalone/Capital_One/jobs"
-      },
-      {
-        "name": "Cisco",
-        "company": "Cisco",
-        "base_url": "https://cisco.wd5.myworkdayjobs.com/wday/cxs/cisco/Cisco_Careers/jobs"
-      },
-      {
-        "name": "Citi",
-        "company": "Citi",
-        "base_url": "https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
-      },
-      {
-        "name": "Dell",
-        "company": "Dell",
-        "base_url": "https://dell.wd1.myworkdayjobs.com/wday/cxs/dell/External/jobs"
-      },
-      {
-        "name": "General Motors",
-        "company": "General Motors",
-        "base_url": "https://generalmotors.wd5.myworkdayjobs.com/wday/cxs/generalmotors/Careers_GM/jobs"
-      },
-      {
-        "name": "HP",
-        "company": "HP",
-        "base_url": "https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
-      },
-      {
-        "name": "HPE",
-        "company": "HPE",
-        "base_url": "https://hpe.wd5.myworkdayjobs.com/wday/cxs/hpe/Jobsathpe/jobs"
-      },
-      {
-        "name": "Intel",
-        "company": "Intel",
-        "base_url": "https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
-      },
-      {
-        "name": "NVIDIA",
-        "company": "NVIDIA",
-        "base_url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
-      },
-      {
-        "name": "PayPal",
-        "company": "PayPal",
-        "base_url": "https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/jobs/jobs"
-      },
-      {
-        "name": "Palo Alto Networks",
-        "company": "Palo Alto Networks",
-        "base_url": "https://paloaltonetworks.wd5.myworkdayjobs.com/wday/cxs/paloaltonetworks/panwexternalcareers/jobs"
-      },
-      {
-        "name": "PwC",
-        "company": "PwC",
-        "base_url": "https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
-      },
-      {
-        "name": "Salesforce",
-        "company": "Salesforce",
-        "base_url": "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
-      },
-      {
-        "name": "T-Mobile",
-        "company": "T-Mobile",
-        "base_url": "https://tmobile.wd1.myworkdayjobs.com/wday/cxs/tmobile/External/jobs"
-      },
-      {
-        "name": "Target",
-        "company": "Target",
-        "base_url": "https://target.wd5.myworkdayjobs.com/wday/cxs/target/targetcareers/jobs"
-      },
-      {
-        "name": "Walmart",
-        "company": "Walmart",
-        "base_url": "https://walmart.wd5.myworkdayjobs.com/wday/cxs/walmart/WalmartExternal/jobs"
-      },
-      {
-        "name": "Workday",
-        "company": "Workday",
-        "base_url": "https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
-      },
-      {
-        "name": "Comcast",
-        "company": "Comcast",
-        "base_url": "https://comcast.wd5.myworkdayjobs.com/wday/cxs/comcast/Comcast_Careers/jobs"
-      },
-      {
-        "name": "Sanofi",
-        "company": "Sanofi",
-        "base_url": "https://sanofi.wd3.myworkdayjobs.com/wday/cxs/sanofi/SanofiCareers/jobs"
-      },
-      {
-        "name": "Blue Origin",
-        "company": "Blue Origin",
-        "base_url": "https://blueorigin.wd5.myworkdayjobs.com/wday/cxs/blueorigin/BlueOrigin/jobs"
-      },
-      {
-        "name": "Pima County",
-        "company": "Pima County",
-        "base_url": "https://pimacounty.wd5.myworkdayjobs.com/wday/cxs/pimacounty/pimacareers/jobs"
-      },
-      {
-        "name": "Travelers",
-        "company": "Travelers",
-        "base_url": "https://travelers.wd5.myworkdayjobs.com/wday/cxs/travelers/External/jobs"
-      },
-      {
-        "name": "KBR",
-        "company": "KBR",
-        "base_url": "https://kbr.wd5.myworkdayjobs.com/wday/cxs/kbr/KBR_Careers/jobs"
-      },
-      {
-        "name": "Mimecast",
-        "company": "Mimecast",
-        "base_url": "https://mimecast.wd5.myworkdayjobs.com/wday/cxs/mimecast/Mimecast-Careers/jobs"
-      },
-      {
-        "name": "RTX",
-        "company": "RTX",
-        "base_url": "https://globalhr.wd5.myworkdayjobs.com/wday/cxs/globalhr/REC_RTX_Ext_Gateway/jobs"
-      },
-      {
-        "name": "Cadence",
-        "company": "Cadence",
-        "base_url": "https://cadence.wd1.myworkdayjobs.com/wday/cxs/cadence/External_Careers/jobs"
-      },
-      {
-        "name": "Nelnet",
-        "company": "Nelnet",
-        "base_url": "https://nelnet.wd1.myworkdayjobs.com/wday/cxs/nelnet/MyNelnet/jobs"
-      },
-      {
-        "name": "USAA",
-        "company": "USAA",
-        "base_url": "https://usaa.wd1.myworkdayjobs.com/wday/cxs/usaa/USAAJOBSWD/jobs"
-      },
-      {
-        "name": "Danaher",
-        "company": "Danaher",
-        "base_url": "https://danaher.wd1.myworkdayjobs.com/wday/cxs/danaher/DanaherJobs/jobs"
-      },
-      {
-        "name": "Mastercard",
-        "company": "Mastercard",
-        "base_url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
-      },
-      {
-        "name": "Medtronic",
-        "company": "Medtronic",
-        "base_url": "https://medtronic.wd1.myworkdayjobs.com/wday/cxs/medtronic/MedtronicCareers/jobs"
-      },
-      {
-        "name": "Solera",
-        "company": "Solera",
-        "base_url": "https://solera.wd5.myworkdayjobs.com/wday/cxs/solera/Global_Career_Site/jobs"
-      },
-      {
-        "name": "Sonos",
-        "company": "Sonos",
-        "base_url": "https://sonos.wd1.myworkdayjobs.com/wday/cxs/sonos/Sonos/jobs"
-      },
-      {
-        "name": "Checkout.com",
-        "company": "Checkout.com",
-        "base_url": "https://checkout.wd3.myworkdayjobs.com/wday/cxs/checkout/CheckoutCareers/jobs"
-      },
-      {
-        "name": "RELX",
-        "company": "RELX",
-        "base_url": "https://relx.wd3.myworkdayjobs.com/wday/cxs/relx/RiskSolutions/jobs"
-      },
-      {
-        "name": "Red Hat",
-        "company": "Red Hat",
-        "base_url": "https://redhat.wd5.myworkdayjobs.com/wday/cxs/redhat/Jobs/jobs"
-      },
-      {
-        "name": "Globus Medical",
-        "company": "Globus Medical",
-        "base_url": "https://globusmedical.wd5.myworkdayjobs.com/wday/cxs/globusmedical/GMED_Careers/jobs"
-      },
-      {
-        "name": "Columbia Sportswear",
-        "company": "Columbia Sportswear",
-        "base_url": "https://columbiasportswearcompany.wd5.myworkdayjobs.com/wday/cxs/columbiasportswearcompany/CSC_Careers/jobs"
-      },
-      {
-        "name": "Airbus",
-        "company": "Airbus",
-        "base_url": "https://ag.wd3.myworkdayjobs.com/wday/cxs/ag/Airbus_Specific/jobs"
-      },
-      {
-        "name": "Franklin Templeton",
-        "company": "Franklin Templeton",
-        "base_url": "https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Invitation-Only/jobs"
-      },
-      {
-        "name": "Morgan Stanley",
-        "company": "Morgan Stanley",
-        "base_url": "https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/external/jobs"
-      },
-      {
-        "name": "Tempus",
-        "company": "Tempus",
-        "base_url": "https://tempus.wd5.myworkdayjobs.com/wday/cxs/tempus/Tempus_Careers/jobs"
-      },
-      {
-        "name": "Zillow",
-        "company": "Zillow",
-        "base_url": "https://zillow.wd5.myworkdayjobs.com/wday/cxs/zillow/Zillow_Group_External/jobs"
-      },
-      {
-        "name": "Broadcom",
-        "company": "Broadcom",
-        "base_url": "https://broadcom.wd1.myworkdayjobs.com/wday/cxs/broadcom/External_Career/jobs"
-      },
-      {
-        "name": "Bloomberg Industry Group",
-        "company": "Bloomberg Industry Group",
-        "base_url": "https://bloomberg.wd1.myworkdayjobs.com/wday/cxs/bloomberg/Bloombergindustrygroup_External_Career_Site/jobs"
-      },
-      {
-        "name": "Etsy",
-        "company": "Etsy",
-        "base_url": "https://etsy.wd5.myworkdayjobs.com/wday/cxs/etsy/Etsy_Careers/jobs"
-      },
-      {
-        "name": "CrowdStrike",
-        "company": "CrowdStrike",
-        "base_url": "https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/CrowdStrikeCareers/jobs"
-      },
-      {
-        "name": "GDIT",
-        "company": "GDIT",
-        "base_url": "https://gdit.wd5.myworkdayjobs.com/wday/cxs/gdit/External_Career_Site/jobs"
-      },
-      {
-        "name": "Leidos",
-        "company": "Leidos",
-        "base_url": "https://leidos.wd5.myworkdayjobs.com/wday/cxs/leidos/External/jobs"
-      },
-      {
-        "name": "MITRE",
-        "company": "MITRE",
-        "base_url": "https://mitre.wd5.myworkdayjobs.com/wday/cxs/mitre/MITRE/jobs"
-      },
-      {
-        "name": "Snap Inc",
-        "company": "Snap Inc",
-        "base_url": "https://snapchat.wd1.myworkdayjobs.com/wday/cxs/snapchat/Snap/jobs"
-      },
-      {
-        "name": "Thomson Reuters",
-        "company": "Thomson Reuters",
-        "base_url": "https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
-      }
-    ],
-    "google": {
-      "name": "Google",
-      "company": "Google",
-      "feed_url": "https://www.google.com/about/careers/applications/jobs/feed.xml",
-      "poll_interval_seconds": 120
-    },
-    "amazon": {
-      "name": "Amazon",
-      "company": "Amazon",
-      "base_url": "https://www.amazon.jobs/en/search.json",
-      "result_limit": 100,
-      "poll_interval_seconds": 120
-    },
-    "microsoft": {
-      "name": "Microsoft",
-      "company": "Microsoft",
-      "query": "software engineer",
-      "max_pages": 5,
-      "results_per_page": 100,
-      "headless": true,
-      "poll_interval_seconds": 300
-    },
-    "netflix": {
-      "name": "Netflix",
-      "company": "Netflix",
-      "poll_interval_seconds": 120
-    },
-    "apple": {
-      "name": "Apple",
-      "company": "Apple",
-      "poll_interval_seconds": 120
-    },
-    "meta": {
-      "name": "Meta",
-      "company": "Meta",
-      "doc_id": "24779400495047796",
-      "poll_interval_seconds": 300
-    },
-    "icims": [
-      {
-        "name": "Council of Industry",
-        "company": "Council of Industry",
-        "portal_url": "https://careers-councilofindustry.icims.com"
-      },
-      {
-        "name": "ConstructConnect",
-        "company": "ConstructConnect",
-        "portal_url": "https://careers-constructconnect.icims.com"
-      },
-      {
-        "name": "Applied Systems",
-        "company": "Applied Systems",
-        "portal_url": "https://careers-appliedsystems.icims.com"
-      },
-      {
-        "name": "HealthEquity",
-        "company": "HealthEquity",
-        "portal_url": "https://careers-healthequity.icims.com"
-      },
-      {
-        "name": "Waters Corporation",
-        "company": "Waters Corporation",
-        "portal_url": "https://uscareers-waters.icims.com"
-      },
-      {
-        "name": "Connection",
-        "company": "Connection",
-        "portal_url": "https://careers-connection.icims.com"
-      },
-      {
-        "name": "Cotiviti",
-        "company": "Cotiviti",
-        "portal_url": "https://globalcareers-cotiviti.icims.com"
-      },
-      {
-        "name": "Chiron Technology Services",
-        "company": "Chiron Technology Services",
-        "portal_url": "https://careers-chirontech.icims.com"
-      },
-      {
-        "name": "Axway",
-        "company": "Axway",
-        "portal_url": "https://careers-axway.icims.com"
-      },
-      {
-        "name": "Markon",
-        "company": "Markon",
-        "portal_url": "https://careers-markon.icims.com"
-      },
-      {
-        "name": "General Dynamics Mission Systems",
-        "company": "General Dynamics Mission Systems",
-        "portal_url": "https://careers-gdms.icims.com"
-      },
-      {
-        "name": "HealthEdge",
-        "company": "HealthEdge",
-        "portal_url": "https://careers-healthedge.icims.com"
-      },
-      {
-        "name": "Peraton",
-        "company": "Peraton",
-        "portal_url": "https://careers-peraton.icims.com"
-      },
-      {
-        "name": "Wellbe Senior Medical",
-        "company": "Wellbe Senior Medical",
-        "portal_url": "https://careers-wellbeseniormedical.icims.com"
-      },
-      {
-        "name": "Uber",
-        "company": "Uber",
-        "portal_url": "https://university-uber.icims.com"
-      },
-      {
-        "name": "Atlassian",
-        "company": "Atlassian",
-        "portal_url": "https://campus-globalcareers-atlassian.icims.com"
-      },
-      {
-        "name": "SAS",
-        "company": "SAS",
-        "portal_url": "https://careers-sas.icims.com"
-      },
-      {
-        "name": "Chick-fil-A",
-        "company": "Chick-fil-A",
-        "portal_url": "https://careers-chickfila.icims.com"
-      },
-      {
-        "name": "Enterprise Mobility",
-        "company": "Enterprise Mobility",
-        "portal_url": "https://us-erac.icims.com"
-      }
-    ],
-    "yc": {
-      "name": "YC Jobs",
-      "poll_interval_seconds": 1800
-    },
-    "wellfound": {
-      "name": "Wellfound",
-      "max_scrolls": 15,
-      "headless": true,
-      "poll_interval_seconds": 3600
-    },
-    "jpmorgan": [
-      {
-        "name": "JPMorgan Chase",
-        "company": "JPMorgan Chase",
-        "department": "Software Engineering"
-      }
-    ],
-    "oracle": [
-      {
-        "name": "Oracle",
-        "company": "Oracle",
-        "requisition_area": "Software Development"
-      }
-    ],
-    "qualcomm": [
-      {
-        "name": "Qualcomm",
-        "company": "Qualcomm"
-      }
-    ],
-    "rivian": [
-      {
-        "name": "Rivian",
-        "company": "Rivian"
-      }
-    ],
-    "yelp": [
-      {
-        "name": "Yelp",
-        "company": "Yelp"
-      }
-    ],
-    "shopify": [
-      {
-        "name": "Shopify",
-        "company": "Shopify",
-        "keywords": [
-          "engineer",
-          "software",
-          "new grad",
-          "intern",
-          "early career"
-        ],
-        "use_selenium": false,
-        "auto_fallback_to_selenium": true,
-        "request_delay": 2.0,
-        "poll_interval_seconds": 300
-      }
-    ],
-    "tiktok": [
-      {
-        "name": "TikTok",
-        "company": "TikTok",
-        "brand": "tiktok",
-        "headless": true,
-        "max_scrolls": 5,
-        "keywords": [
-          "software",
-          "engineer",
-          "new grad",
-          "graduate",
-          "early career"
-        ]
-      },
-      {
-        "name": "ByteDance",
-        "company": "ByteDance",
-        "brand": "bytedance",
-        "headless": true,
-        "max_scrolls": 5,
-        "keywords": [
-          "software",
-          "engineer",
-          "new grad",
-          "graduate",
-          "early career"
-        ]
-      }
-    ],
-    "goldmansachs": [
-      {
-        "name": "Goldman Sachs",
-        "company": "Goldman Sachs",
-        "experiences": [
-          "EARLY_CAREER",
-          "PROFESSIONAL"
-        ],
-        "search_term": "software engineer",
-        "keywords": [
-          "software",
-          "engineering",
-          "technology",
-          "developer"
-        ],
-        "page_size": 50
-      }
-    ],
-    "intuit": [
-      {
-        "name": "Intuit",
-        "company": "Intuit",
-        "query": "software engineer",
-        "max_pages": 10,
-        "results_per_page": 15,
-        "headless": true
-      }
-    ],
-    "amd": [
-      {
-        "name": "AMD",
-        "company": "AMD",
-        "base_url": "https://careers.amd.com",
-        "categories": ["Engineering"],
-        "max_pages": 200
-      }
-    ],
-    "jibe": [
-      {
-        "name": "iCIMS",
-        "company": "iCIMS",
-        "base_url": "https://careers.icims.com",
-        "max_pages": 50
-      }
-    ],
-    "linkedin": {
-      "name": "LinkedIn Jobs",
-      "poll_interval_seconds": 300,
-      "request_delay": [3, 5],
-      "companies": [
-        {"name": "Accenture", "linkedin_id": "1033"},
-        {"name": "Deloitte", "linkedin_id": "1038"},
-        {"name": "Fidelity", "linkedin_id": "1307"},
-        {"name": "IBM", "linkedin_id": "1009"},
-        {"name": "Honeywell", "linkedin_id": "1344"},
-        {"name": "Lockheed Martin", "linkedin_id": "1319"},
-        {"name": "Northrop Grumman", "linkedin_id": "1412"},
-        {"name": "John Deere", "linkedin_id": "3789"},
-        {"name": "AT&T", "linkedin_id": "1052"},
-        {"name": "American Express", "linkedin_id": "1277"},
-        {"name": "Bank of America", "linkedin_id": "1123"},
-        {"name": "Booking", "linkedin_id": "11348"},
-        {"name": "Caterpillar", "linkedin_id": "2622"},
-        {"name": "Charles Schwab", "linkedin_id": "1855"},
-        {"name": "GE Aerospace", "linkedin_id": "570550"},
-        {"name": "GE Vernova", "linkedin_id": "82315716"},
-        {"name": "GE HealthCare", "linkedin_id": "1016"},
-        {"name": "Puma", "linkedin_id": "165597"},
-        {"name": "Verizon", "linkedin_id": "1103"},
-        {"name": "X", "linkedin_id": "96622"}
-      ]
-    }
-  }
 }
