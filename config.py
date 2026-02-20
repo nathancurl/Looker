@@ -26,6 +26,7 @@ class LocationConfig(BaseModel):
 class FilteringConfig(BaseModel):
     include_keywords: list[str] = []
     exclude_keywords: list[str] = []
+    max_experience_years: Optional[int] = None
     level_keywords: LevelKeywordsConfig = LevelKeywordsConfig()
     location: LocationConfig = LocationConfig()
 

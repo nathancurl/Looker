@@ -1,7 +1,7 @@
 """Tests for filtering.py."""
 
 from config import AppConfig
-from filtering import filter_job
+from filtering import exceeds_experience_years, filter_job
 from models import Job
 
 
@@ -18,11 +18,13 @@ def _make_job(**kwargs):
     return Job(**defaults)
 
 
-def _make_config(include=None, exclude=None, level_enabled=False, level_terms=None):
+def _make_config(include=None, exclude=None, level_enabled=False, level_terms=None,
+                 max_experience_years=None):
     return AppConfig(
         filtering={
             "include_keywords": include or [],
             "exclude_keywords": exclude or [],
+            "max_experience_years": max_experience_years,
             "level_keywords": {
                 "enabled": level_enabled,
                 "terms": level_terms or [],
@@ -133,4 +135,59 @@ class TestFiltering:
         job = _make_job(title="Full-Stack Developer")
         config = _make_config(include=["full-stack"])
         passed, matched = filter_job(job, config)
+        assert passed is True
+
+
+class TestExceedsExperienceYears:
+    def test_exact_plus_format(self):
+        assert exceeds_experience_years("3+ years of experience", 2) is True
+
+    def test_plain_years(self):
+        assert exceeds_experience_years("5 years of experience required", 2) is True
+
+    def test_range_format(self):
+        assert exceeds_experience_years("3-5 years of experience", 2) is True
+
+    def test_range_with_to(self):
+        assert exceeds_experience_years("3 to 5 years of experience", 2) is True
+
+    def test_at_threshold_passes(self):
+        assert exceeds_experience_years("2 years of experience", 2) is False
+
+    def test_below_threshold_passes(self):
+        assert exceeds_experience_years("1 year of experience", 2) is False
+
+    def test_one_to_two_range_passes(self):
+        assert exceeds_experience_years("1-2 years of experience", 2) is False
+
+    def test_no_years_mentioned(self):
+        assert exceeds_experience_years("Great opportunity for new grads", 2) is False
+
+    def test_singular_year(self):
+        assert exceeds_experience_years("1 year minimum", 2) is False
+
+    def test_two_to_three_range_fails(self):
+        assert exceeds_experience_years("2-3 years of experience", 2) is True
+
+    def test_en_dash_range(self):
+        assert exceeds_experience_years("3\u20135 years", 2) is True
+
+
+class TestExperienceFilterIntegration:
+    def test_job_filtered_by_experience_in_snippet(self):
+        job = _make_job(snippet="Requires 5 years of experience in Python")
+        config = _make_config(include=["software engineer"], max_experience_years=2)
+        passed, _ = filter_job(job, config)
+        assert passed is False
+
+    def test_job_passes_with_low_experience(self):
+        job = _make_job(snippet="1-2 years of experience preferred")
+        config = _make_config(include=["software engineer"], max_experience_years=2)
+        passed, _ = filter_job(job, config)
+        assert passed is True
+
+    def test_filter_disabled_when_none(self):
+        job = _make_job(snippet="Requires 10 years of experience")
+        config = _make_config(include=["software engineer"], max_experience_years=None)
+        passed, _ = filter_job(job, config)
         assert passed is True

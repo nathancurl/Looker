@@ -5,12 +5,31 @@ import re
 from config import AppConfig
 from models import Job
 
+# Matches experience year patterns: "3 years", "3+ years", "3-5 years", "3 to 5 years"
+# Uses \d{1,2} to avoid matching things like "2024 years"
+_EXPERIENCE_YEARS_RE = re.compile(
+    r"(\d{1,2})\s*\+?\s*"
+    r"(?:[-–]\s*(\d{1,2})\s*)?"
+    r"(?:to\s+(\d{1,2})\s+)?"
+    r"years?\b",
+    re.IGNORECASE,
+)
+
+
+def exceeds_experience_years(text: str, max_years: int) -> bool:
+    """Check if text mentions experience requirements exceeding max_years."""
+    for match in _EXPERIENCE_YEARS_RE.finditer(text):
+        for group in match.groups():
+            if group and int(group) > max_years:
+                return True
+    return False
+
 
 def filter_job(job: Job, config: AppConfig) -> tuple[bool, list[str]]:
     """Check if a job matches filtering criteria.
 
     Returns (should_notify, matched_keywords).
-    Order: exclude check -> location check -> include check -> optional level gate.
+    Order: exclude check -> experience check -> location check -> include check -> optional level gate.
     """
     searchable = f"{job.title} {job.snippet} {job.company}".lower()
     filtering = config.filtering
@@ -18,6 +37,11 @@ def filter_job(job: Job, config: AppConfig) -> tuple[bool, list[str]]:
     # Exclude check — if any exclude keyword matches, reject
     for kw in filtering.exclude_keywords:
         if keyword_matches(kw, searchable):
+            return False, []
+
+    # Experience years check — reject if description mentions too many years
+    if filtering.max_experience_years is not None:
+        if exceeds_experience_years(searchable, filtering.max_experience_years):
             return False, []
 
     # Location check — if enabled, check if location is in allowed list

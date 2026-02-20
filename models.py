@@ -28,8 +28,8 @@ class Job(BaseModel):
     @field_validator("snippet", mode="before")
     @classmethod
     def truncate_snippet(cls, v: str) -> str:
-        if v and len(v) > 300:
-            return v[:297] + "..."
+        if v and len(v) > 2000:
+            return v[:1997] + "..."
         return v or ""
 
     @staticmethod
